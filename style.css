@@ -1,0 +1,76 @@
+/* style.css */
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+.l-header {
+    background-color: #2e2e2e;
+    padding: 20px;
+}
+
+.c-primaryLogo img {
+    max-width: 150px;
+}
+
+.c-globalNav_list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.c-globalNav_list a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.c-heroLrg {
+    background-image: url('img/hero.jpg');
+    height: 500px;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-heroBg_filter {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.l-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.m-btnUrge {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.m-btnUrge:hover {
+    background-color: #555;
+}
+
+/* ドロップダウンメニュー */
+.m-dropMenu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    list-style: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.c-globalNav_list li:hover .m-dropMenu {
+    display: block;
+}
