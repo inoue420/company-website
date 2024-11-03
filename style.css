@@ -589,7 +589,7 @@ a:hover {
 
 .m-heroTop {
   height: 50vw;
-  background-image: url(../img/TOP.jpg);
+  background-image: url(../TOP.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -620,22 +620,22 @@ a:hover {
 }
 
 .m-heroBusiness_agy {
-  background-image: url(../img/bg/picHero_business_agy.jpg);
+  background-image: url(../appdevelop.jpg); /* 1番目 */
   background-position: center;
 }
 
 .m-heroBusiness_pub {
-  background-image: url(../img/bg/picHero_business_pub.jpg);
+  background-image: url(../kensyu.jpg);/* 2番目 */
   background-position: center;
 }
 
 .m-heroBusiness_ptf {
-  background-image: url(../img/bg/picHero_business_ptf.jpg);
+  background-image: url(../img/bg/picHero_business_ptf.jpg);/* 3番目 */
   background-position: center;
 }
 
 .m-heroBusiness_med {
-  background-image: url(../img/bg/picHero_business_med.jpg);
+  background-image: url(../appdevelop.jpg);/* 4番目 */
   background-position: center;
 }
 
