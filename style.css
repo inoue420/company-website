@@ -620,22 +620,22 @@ a:hover {
 }
 
 .m-heroBusiness_agy {
-  background-image: url(../appdevelop.jpg); /* 1番目 */
+  background-image: url(../appdevelop.jpg); 
   background-position: center;
 }
 
 .m-heroBusiness_pub {
-  background-image: url(../kensyu.jpg);/* 2番目 */
+  background-image: url(../kensyu.jpg);
   background-position: center;
 }
 
 .m-heroBusiness_ptf {
-  background-image: url(../img/bg/picHero_business_ptf.jpg);/* 3番目 */
+  background-image: url(../img/bg/picHero_business_ptf.jpg);
   background-position: center;
 }
 
 .m-heroBusiness_med {
-  background-image: url(../appdevelop.jpg);/* 4番目 */
+  background-image: url(../appdevelop.jpg);
   background-position: center;
 }
 
