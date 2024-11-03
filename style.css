@@ -45,7 +45,8 @@ body {
   letter-spacing: .06em;
   font-feature-settings: "palt" 1;
   font-kerning: auto;
-  background: #f7f7f7 url("https://inoue420.github.io/company-website/TOP.jpg") repeat top left;
+  background: #f7f7f7 
+/*   background: #f7f7f7 url("https://inoue420.github.io/company-website/TOP.jpg") repeat top left; */
   -webkit-font-smoothing: antialiased;
 }
 
