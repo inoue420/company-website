@@ -589,7 +589,7 @@ a:hover {
 
 .m-heroTop {
   height: 50vw;
-  background-image: url(../TOP.jpg);
+  background-image: url(../.jpg);
   background-size: cover;
   background-position: center;
 }
