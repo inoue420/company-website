@@ -7,6 +7,7 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -15,10 +16,27 @@
             background-color: #f7f7f7;
             color: #333;
         }
+        iframe {
+            width: 80%;
+            height: 80%;
+            border: none;
+        }
+        a {
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <h1>スキルアップ研修ページ作成中</h1>
+    <!-- PDFファイルを埋め込む -->
+    <iframe src="https://inoue420.github.io/company-website/チラシ.pdf" title="PDF表示"></iframe>
+    <!-- ダウンロードリンク -->
+    <a href="https://inoue420.github.io/company-website/チラシ.pdf" download>チラシ.pdfをダウンロード</a>
 </body>
 </html>
-
