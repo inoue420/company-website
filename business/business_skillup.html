@@ -8,18 +8,19 @@
         body {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: #f7f7f7;
             color: #333;
+            overflow-y: scroll; /* 縦方向のスクロールを許可 */
         }
-        iframe {
-            width: 80%;
-            height: 80%;
-            border: none;
+        img {
+            max-width: 100%; /* 横幅を画面幅に制限 */
+            height: auto; /* 縦横比を保持 */
+            margin-top: 20px; /* ヘッダーとの余白を追加 */
         }
         a {
             margin-top: 20px;
@@ -34,8 +35,9 @@
 </head>
 <body>
     <h1>スキルアップ研修ページ作成中</h1>
-    <!-- JPGファイルを埋め込む -->
+    <!-- JPGファイルを表示 -->
     <img src="https://inoue420.github.io/company-website/チラシ.jpg" alt="チラシ">
-
+    <!-- 元の画像をダウンロードできるリンク -->
+    <a href="https://inoue420.github.io/company-website/チラシ.jpg" download>チラシをダウンロード</a>
 </body>
 </html>
