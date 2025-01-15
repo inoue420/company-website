@@ -14,24 +14,24 @@
     <h1>お問い合わせフォーム</h1>
     <form action="https://formspree.io/f/xnnnbkdg" method="POST">
       <div>
-        <label for="company">企業名<span>*</span></label>
+        <label for="company">企業名<span>：</span></label><br>
         <input type="text" id="company" name="企業名" required>
       </div>
       <div>
-        <label for="name">お名前<span>*</span></label>
+        <label for="name">お名前<span>：</span></label><br>
         <input type="text" id="name" name="お名前" required>
       </div>
       <div>
-        <label for="email">連絡先(メールアドレス)<span>*</span></label>
+        <label for="email">メールアドレス<span>：</span></label><br>
         <input type="email" id="email" name="連絡先" required>
       </div>
       <div>
-        <label for="phone">電話番号(任意)</label>
+        <label for="phone">電話番号(任意)</label><br>
         <input type="tel" id="phone" name="電話番号">
       </div>
       <div>
-        <label for="inquiry">問い合わせ内容<span>*</span></label>
-        <textarea id="inquiry" name="問い合わせ内容" rows="5" required></textarea>
+        <label for="inquiry">問い合わせ内容<span>：</span></label><br>
+        <textarea id="inquiry" name="問い合わせ内容" rows="5" required></textarea><br>
       </div>
       <div>
         <button type="submit">送信</button>
