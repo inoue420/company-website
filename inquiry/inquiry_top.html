@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <title>お問い合わせ - シャープライズ</title>
-  <!-- 必要なスタイルシートやメタ情報をここに追加 -->
   <style>
     /* 簡単なスタイル例。必要に応じて調整してください。 */
     .back-to-top {
@@ -18,6 +17,11 @@
     .back-to-top:hover {
       background-color: #0056b3;
     }
+
+    /* 入力フィールド間のスペースを確保するためのスタイル */
+    form div {
+      margin-bottom: 15px;  /* 各入力項目の下に15pxのスペースを追加 */
+    }
   </style>
 </head>
 <body>
@@ -30,7 +34,7 @@
     <form action="https://formspree.io/f/xnnnbkdg" method="POST">
       <div>
         <label for="company">企業名<span>：</span></label><br>
-        <input type="text" id="company" name="企業名" required><br>
+        <input type="text" id="company" name="企業名" required>
       </div>
       <div>
         <label for="name">お名前<span>：</span></label><br>
@@ -46,7 +50,7 @@
       </div>
       <div>
         <label for="inquiry">問い合わせ内容<span>：</span></label><br>
-        <textarea id="inquiry" name="問い合わせ内容" rows="5" required></textarea><br>
+        <textarea id="inquiry" name="問い合わせ内容" rows="5" required></textarea>
       </div>
       <div>
         <button type="submit">送信</button>
