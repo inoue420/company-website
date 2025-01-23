@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!--   <meta charset="utf-8"> -->
-<!--   <meta name="theme-color" content="#2e2e2e"> -->
-<!--   <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-<!--   <meta name="robots" content="index,follow,archive"> -->
+  <!-- メタ情報やタイトル、CSSリンクなど -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>シャープライズ</title>
   <meta name="description" content="シャープライズは、海外のスマートフォンアプリデベロッパーに対し、日本市場における包括的なマーケティングソリューションの提供およびにグローバル市場向けのパブリッシング事業を展開しております。">
+  
   <link href="reset.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="style.js"></script>
+  
   <link rel="icon" href="Logo2.png">
   <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192×192" href="./android-chrome-192×192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./android-chrome-192x192.png">
+
+  <!-- jQueryを先に読み込み -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <!-- 外部JSファイルの読み込み -->
+  <script src="/style.js"></script>
 </head>
+
 <body>
 
 <div class="wrapper">
@@ -25,7 +30,7 @@
     <div class="s-headPrimary">
       <h1 class="c-primaryLogo">
         <a href="./">
-          <img src="Logo2.png">
+          <img src='../img/Logo2.png'>
         </a>
       </h1>
       <nav class="c-globalNav">
@@ -67,7 +72,7 @@
           </ul>
         </div>
         <div class="c-urgeInquiry">
-          <a href="inquiry/inquiry_top" class="m-urgeInquiry_btn">お問い合わせ</a>
+          <a href="inquiry/inquiry_top.html" class="m-urgeInquiry_btn">お問い合わせ</a>
         </div>
       </div>
     </div>
@@ -75,17 +80,32 @@
 
   <main id="main" role="main">
     <div class="c-heroLrg m-heroTop">
-      <p class="c-heroBg_filter"><span class="m-titleLine_fst"><em>シャープライズ</em></span><span class="m-titleLine_sec">sharpRise</span></p>
+      <p class="c-heroBg_filter"><span class="m-titleLine_fst"><em>シャープライズ</em></span><span class="m-titleLine_sec">SharpRise</span></p>
     </div>
     <div class="c-catchArea">
       <div class="c-catchArea_Content">
-        <p>シャープライズは、エンジニア育成を通じてクライアント企業従業員様のスキルアップに貢献します。</p>
-        <p>また、自社で開発したIOTソリューションを世の中に提案していきます。</p>
+        <p>弊社では、北陸富山を中心にクライアント企業様の困りごと解決のお手伝いを行っています。</p>
+        <p>生成AIを活用した業務改善コンサルティング・従業員様へのスキルアップ教育・IOT製品の自社商品販売など</p>
         <div class="c-introUrge">
-          <a href="company/company" class="m-btnUrge m-btnSmall">くわしく見る<span></span></a>
+          <a href="company/company.html" class="m-btnUrge m-btnSmall">くわしく見る<span></span></a>
         </div>
       </div>
     </div>
+
+ <!-- お知らせセクション追加開始 -->
+ <section id="news-section" class="l-innerJustify u-mbLrg">
+    <h2 class="m-emphasisHead" style="font-size: 80px;">News</h2>
+    <ul id="news-list" class="p-postList -type-simple">
+    </ul>
+  <div class="u-mtMid">
+    <a href="news/news.html" class="m-btnUrge m-btnSmall">くわしく見る<span></span></a>
+  </div>
+    </a>
+  </div>
+</section>
+<!-- お知らせセクション追加終了 -->
+
+
 
     <div class="l-container">
 
@@ -93,49 +113,41 @@
         <h2 class="m-emphasisHead">Business</h2>
         <ul class="s-boxHorizon">
           <li class="c-boxHorizon_2center u-mlrSml u-grayScale_pic">
-            <a href="business/business_skillup">
+            <a href="business/business_app">
+              <div class="c-worksCategory">
+                <div class="u-grayScale_picHide">
+                  <h3>業務コンサルティング事業</h3>
+                  <img src='../img/appdevelop.jpg' class="u-objectFit">
+                </div>
+                <p>クライアント企業内での本業外作業を最小化し、本業の質向上に貢献します。AI活用スペシャリストのエージェントが伴走し、ご提案を行います。</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="c-boxHorizon_2center u-mlrSml u-grayScale_pic">
+            <a href="business/business_skillup.html">
               <div class="c-worksCategory">
                 <div class="u-grayScale_picHide">
                   <h3>スキルアップ研修事業</h3>
-                  <img src="kensyu.jpg" class="u-objectFit">
+                  <img src='../img/kensyu.jpg' class="u-objectFit">
                 </div>
-                <p>半日程度の研修によるスキルアップ教育　マクロなどの自動化ツールの自作</p>
+                <p>生成AIの活用法を教育します。受講生ご自身の手で効率化ツールを作成するなどアウトプットにつながる研修を提供します。</p>
               </div>
             </a>
           </li>
-          <li class="c-boxHorizon_2center u-mlrSml u-grayScale_pic">
-            <a href="business/business_iotskill">
-              <div class="c-worksCategory">
-                <div class="u-grayScale_picHide">
-                  <h3>IOTスキル習得研修事業</h3>
-                  <img src="iotskill.jpg" class="u-objectFit">
-                </div>
-                <p>IOTソリューションの開発ができるエンジニア育成研修　アプリ作成・マイコンプログラミング・3Dプリンティング</p>
-              </div>
-            </a>
-          </li>
+
           <li class="c-boxHorizon_2center u-mlrSml u-grayScale_pic">
             <a href="business/business_iotsolution">
               <div class="c-worksCategory">
                 <div class="u-grayScale_picHide">
                   <h3>自社開発事業</h3>
-                  <img src="iotdev.jpg" class="u-objectFit">
+                  <img src='../img/iotdev.jpg' class="u-objectFit">
                 </div>
-                <p>自社で製作したIOTソリューションの提供</p>
+                <p>効率化ツール・アプリ・IOT機器など弊社で製作したサービスツールやIOTソリューションを提供します。</p>
               </div>
             </a>
           </li>
-          <li class="c-boxHorizon_2center u-mlrSml u-grayScale_pic">
-            <a href="business/business_app">
-              <div class="c-worksCategory">
-                <div class="u-grayScale_picHide">
-                  <h3>アプリ開発事業</h3>
-                  <img src="appdevelop.jpg" class="u-objectFit">
-                </div>
-                <p>開発アプリによる社会貢献活動</p>
-              </div>
-            </a>
-          </li>
+
         </ul>
         <div class="u-mtMid">
           <a href="business/business" class="m-btnUrge m-btnLarge">くわしく見る<span></span></a>
@@ -144,8 +156,16 @@
 
       <section class="l-innerfull is-fadeinUp">
         <h2 class="c-headLv2 c-urgeLine u-mbXsml">Contact Us</h2>
-        <p class="c-leadJustify u-mbSml">シャープライズは、エンジニア育成を通じてクライアント企業従業員様のスキルアップに貢献します。</p>
+        <p class="c-leadJustify u-mbSml">シャープライズは、生成AI活用・IOTスキルを強みとしたベンチャー企業です</p>
         <ul class="s-boxHorizon s-cta">
+
+          <li class="c-boxHorizon_2center c-cta_filter">
+            <a href="inquiry/inquiry_iotskill">
+              <h3 class="u-mbXsml">業務コンサルティング事業</h3>
+              <p class="u-mbMid">業務コンサルティングに関してはこちら</p>
+              <p class="m-btnUrge m-btnCta m-btnSmall u-txtAlign_left">お問い合わせはこちら<span></span></p>
+            </a>
+          </li>
           <li class="c-boxHorizon_2center c-cta_filter">
             <a href="inquiry/inquiry_skillup">
               <h3 class="u-mbXsml">スキルアップ研修事業</h3>
@@ -154,16 +174,9 @@
             </a>
           </li>
           <li class="c-boxHorizon_2center c-cta_filter">
-            <a href="inquiry/inquiry_iotskill">
-              <h3 class="u-mbXsml">IOTスキル習得研修事業</h3>
-              <p class="u-mbMid">IOTソリューションの開発改修に関してはこちら</p>
-              <p class="m-btnUrge m-btnCta m-btnSmall u-txtAlign_left">お問い合わせはこちら<span></span></p>
-            </a>
-          </li>
-          <li class="c-boxHorizon_2center c-cta_filter">
             <a href="inquiry/inquiry_iotsolution">
-              <h3 class="u-mbXsml">自社で製作したIOTソリューション</h3>
-              <p class="u-mbMid">自社製品に関してはこちら</p>
+              <h3 class="u-mbXsml">自社開発商品</h3>
+              <p class="u-mbMid">自社開発商品に関してはこちら</p>
               <p class="m-btnUrge m-btnCta m-btnSmall u-txtAlign_left">お問い合わせはこちら<span></span></p>
             </a>
           </li>
@@ -178,7 +191,7 @@
       <nav class="c-footSitemap">
         <p class="c-footLogo">
           <a href="./">
-            <img src="img/Logo2.png">
+            <img src='../img/Logo2.png'>
           </a>
         </p>
         <section>

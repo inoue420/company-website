@@ -79,3 +79,42 @@ $(function() {
       }
   });
 });
+
+
+$(document).ready(function() {
+  $.getJSON('/news/articles.json', function(data) {
+    // 日付でソート（最新順）
+    data.sort(function(a, b) {
+      return new Date(b.date) - new Date(a.date);
+    });
+
+    // 最新3件を取得
+    var latestArticles = data.slice(0, 3);
+
+    // リストに挿入
+    var $newsList = $('#news-list');
+    latestArticles.forEach(function(article) {
+      var listItem = `
+        <li class="p-postList__item">
+          <a href="${article.link}" class="p-postList__link">
+            <div class="p-postList__body">
+              <div class="p-postList__meta">
+                <div class="p-postList__times c-postTimes u-thin">
+                  <time class="c-postTimes__posted" datetime="${article.date}" aria-label="公開日">
+                    ${new Date(article.date).toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' })}
+                  </time>
+                </div>
+
+              </div>
+              <h2 class="p-postList__title">${article.title}</h2>
+            </div>
+          </a>
+        </li>
+      `;
+      $newsList.append(listItem);
+    });
+  }).fail(function(jqxhr, textStatus, error) {
+    console.error("JSONの読み込みエラー:", textStatus, error);
+  });
+});
+

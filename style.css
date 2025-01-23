@@ -47,7 +47,7 @@ body {
   font-kerning: auto;
   background: #f7f7f7 
 /*   background: #f7f7f7 url("https://inoue420.github.io/company-website/TOP.jpg") repeat top left; */
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing antialiased;
 }
 
 em {
@@ -590,7 +590,7 @@ a:hover {
 
 .m-heroTop {
   height: 50vw;
-  background-image: url(../.jpg);
+  background-image: url('../img/TOP2.webp');
   background-size: cover;
   background-position: center;
 }
@@ -663,9 +663,9 @@ a:hover {
   width: 100%;
   height: 100%;
   color: #fff;
-  background-image: url(../TOP.jpg);
-/*  radial-gradient(rgba(0,0,0,0.6) 20%, transparent 70%), radial-gradient(rgba(0,0,0,0.6) 30%, transparent 80%); */
-  background-color: rgba(0,0,0,0.3);
+    background-image: none;  
+  background-color: rgba(0, 0, 0, 0.4);  /* 透明度をここで調整 */
+  
   background-size: 4px 4px;
   background-position: 0 0, 2px 2px;
 }
@@ -836,17 +836,6 @@ a:hover {
   background: #fff;
 }
 
-.c-catchArea_Content::before {
-  content: " Intro";
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-family: 'Oswald';
-  font-size: 12rem;
-  color: #f4f5f9;
-  line-height: 1;
-  writing-mode: vertical-rl;
-}
 
 .c-catchArea_Content p {
   position: relative;
@@ -3112,3 +3101,70 @@ select {
     font-size: 1.3rem;
   }
 }
+
+/* お知らせセクション全体の中央揃え（一部上書きあり） */
+#news-section {
+  text-align: center;
+  padding: 0em 0em;
+  margin-top: -6em;  /* 必要に応じて値を調整 */
+  margin-bottom: 2em;  /* 必要に応じて値を調整 */
+
+}
+
+/* 見出しのスタイル（左揃えに設定） */
+#news-section h2.m-emphasisHead {
+  font-size: 2em;
+  margin-bottom: 0em;
+  text-align: left;
+}
+
+/* リストのリセットと中央揃え */
+#news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+/* 各記事項目のスタイル */
+#news-list li.p-postList__item {
+  padding: 1em 0;
+  border-bottom: 1px solid #ccc;
+}
+
+/* 最初の記事の上に境界線を追加 */
+#news-list li.p-postList__item:first-child {
+  border-top: 1px solid #ccc;
+}
+
+/* 最後の記事には追加の処理は不要（既に下線あり） */
+
+/* 記事リンク全体のスタイル */
+#news-list a.p-postList__link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* 記事内のタイトルと日付の中央揃え */
+.p-postList__body {
+  text-align: center;
+}
+
+/* 日付を小さく、薄い色で表示 */
+.p-postList__times {
+  font-size: 0.8em;
+  color: #666;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+/* タイトルを大きめに協調して表示 */
+.p-postList__title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0.5em 0;
+}
+
+
