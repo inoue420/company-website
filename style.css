@@ -1623,3 +1623,368 @@ a:hover {
 }
 
 
+/* =========================================================
+  news・サイドバー
+========================================================= */
+/* 基本スタイル */
+body {
+  font-family: 'Oswald', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #ffffff;
+  margin: 0;
+}
+
+/* コンテナ */
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 20px; /* サイドバー間のスペース */
+}
+
+/* サイドバー共通スタイル */
+.sidebar {
+  background-color: #f9f9f9;
+
+  border-radius: 5px;
+}
+
+/* 左サイドバーのスタイル */
+.left-sidebar {
+  flex: 0 0 10%; /* 幅を10%に設定 */
+}
+
+/* 右サイドバーのスタイル */
+.right-sidebar {
+  flex: 0 0 20%; /* 幅を20%に設定 */
+}
+
+/* メインコンテンツのスタイル */
+.content {
+  flex: 1; /* 残りのスペースを使用 */
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/* ナビゲーションとバックナンバーのスタイル */
+.left-sidebar-nav h3,
+.right-sidebar h3 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+}
+
+.left-sidebar-nav ul,
+.right-sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.left-sidebar-nav ul li,
+.right-sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.left-sidebar-nav ul li a,
+.right-sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.left-sidebar-nav ul li a:hover,
+.right-sidebar ul li a:hover {
+  color: #007BFF;
+}
+
+/* バックナンバーのスタイル */
+.right-sidebar ul#back-issues {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.right-sidebar ul#back-issues li {
+  border-bottom: 1px solid #ccc; /* 仕切り線 */
+  padding: 8px 0; /* 上下の余白 */
+}
+
+.right-sidebar ul#back-issues li:last-child {
+  border-bottom: none; /* 最後のアイテムには仕切り線を表示しない */
+}
+
+.right-sidebar ul#back-issues li a {
+  color: #00aaff; /* 水色 */
+  text-decoration: none; /* 下線を消す */
+  transition: color 0.3s; /* ホバー時の滑らかな色変更 */
+}
+
+.right-sidebar ul#back-issues li a:hover {
+  color: #0077cc; /* ホバー時の色 */
+  text-decoration: underline; /* ホバー時に下線を表示 */
+}
+
+/* 記事タイトルのスタイル */
+.c-articleTitle {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #222;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+/* メタ情報のスタイル */
+.c-articleMeta {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 1.5em;
+}
+
+.c-articleMeta time {
+  display: inline-block;
+  margin-right: 1em;
+  color: #555;
+}
+
+
+/* 記事画像のスタイル */
+.c-articleImage img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 1em;
+}
+
+/* 記事コンテンツのスタイル */
+.c-articleContent {
+  font-size: 1.1em;
+  color: #444;
+  margin-bottom: 2em;
+}
+
+.c-articleContent h2,
+.c-articleContent h3 {
+  color: #222;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+.c-articleContent p {
+  margin-bottom: 1em;
+}
+
+.c-articleContent ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.c-articleContent ul li {
+  margin-bottom: 0.5em;
+}
+
+/* 記事フッターのスタイル */
+.c-articleFooter {
+  margin-top: 2em;
+  border-top: 1px solid #ddd;
+  padding-top: 1.5em;
+}
+
+.c-articleTags {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.c-articleTags a {
+  color: #007acc;
+  text-decoration: none;
+  margin-right: 0.5em;
+  transition: color 0.3s;
+}
+
+.c-articleTags a:hover {
+  color: #005fa3;
+  text-decoration: underline;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+  }
+  .sidebar {
+      flex: 0 0 100%;
+  }
+
+  .c-articleTitle {
+      font-size: 2em;
+  }
+
+  .c-articleMeta {
+      font-size: 0.8em;
+  }
+
+  .c-articleContent {
+      font-size: 1em;
+  }
+
+  .c-articleContent h2,
+  .c-articleContent h3 {
+      font-size: 1.5em;
+  }
+}
+
+/* 高コントラスト */
+.c-articleTitle {
+  color: #111;
+}
+
+.c-articleMeta {
+  color: #555;
+}
+
+.c-articleContent {
+  color: #333;
+}
+
+.c-articleContent h2,
+.c-articleContent h3 {
+  color: #111;
+}
+
+.c-articleTags a {
+  color: #007acc;
+}
+
+.c-articleTags a:hover {
+  color: #005fa3;
+}
+
+/* スペーシングの最適化 */
+.c-articleHeader {
+  margin-bottom: 2em;
+}
+
+.c-articleImage {
+  margin-bottom: 2em;
+}
+
+.c-articleContent {
+  margin-bottom: 2em;
+}
+
+.c-articleFooter {
+  padding-top: 1.5em;
+}
+
+/* フォントのカスタマイズ */
+.c-articleContent h2,
+.c-articleContent h3 {
+  font-family: 'Oswald', sans-serif;
+}
+
+.c-articleTitle,
+.c-articleContent h2,
+.c-articleContent h3 {
+  font-weight: 700;
+}
+
+/* ボーダーとシャドウ */
+.c-article {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 2em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.c-articleImage img {
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* バックナンバーの日付スタイル */
+.issue-date {
+  display: block; /* ブロック要素として表示し、改行 */
+  font-size: 0.8em; /* フォントサイズを調整 */
+  color: #777; /* フォントカラーを変更 */
+  margin-top: 5px; /* タイトルと日付の間に余白を追加 */
+}
+
+
+/* 記事一覧のスタイル */
+.c-articleList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* 記事間のスペース */
+  padding: 20px;
+}
+
+.c-articleSummary {
+  border-bottom: 1px solid #ddd; /* 記事間を線で仕切る */
+  padding-bottom: 15px;
+}
+
+.c-summaryContent {
+  padding: 10px 0;
+}
+
+.c-summaryTitle {
+  font-size: 1.5em; /* 初期フォントサイズ */
+  color: #333; /* 初期フォントカラー */
+  margin: 0;
+}
+
+.c-summaryTitle a {
+  text-decoration: none;
+  color: inherit; /* 親要素の色を継承 */
+}
+
+.c-summaryTitle a:hover {
+  color: #007BFF; /* ホバー時の色 */
+  text-decoration: underline;
+}
+
+.c-summaryDate {
+  font-size: 1em; /* 初期フォントサイズ */
+  color: #777; /* 初期フォントカラー */
+  margin: 5px 0 10px 0;
+}
+
+/* カスタマイズ可能なクラス */
+/* タイトルのフォントサイズと色を調整 */
+.custom-title {
+  font-size: 1.8em; /* 例: 大きめのフォントサイズ */
+  color: #0056b3; /* 例: 青色 */
+}
+
+/* 日付のフォントサイズと色を調整 */
+.custom-date {
+  font-size: 1.1em; /* 例: 少し大きめのフォントサイズ */
+  color: #555; /* 例: 濃いグレー */
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .c-summaryTitle {
+      font-size: 1.3em;
+  }
+
+  .c-summaryDate {
+      font-size: 0.9em;
+  }
+}
+
+/* 最上部の仕切り線のスタイル */
+.c-articleList::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  margin-bottom: -10px; /* 仕切り線と最初の記事とのスペース */
+}

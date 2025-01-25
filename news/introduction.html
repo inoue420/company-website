@@ -1,25 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
   <!-- メタ情報やタイトル、CSSリンクなど -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>シャープライズ</title>
-  <meta name="description" content="シャープライズは、海外のスマートフォンアプリデベロッパーに対し、日本市場における包括的なマーケティングソリューションの提供およびにグローバル市場向けのパブリッシング事業を展開しております。">
-  
+  <title>北陸・富山で最先端の生成AIソリューション | シャープライズ</title>
+  <meta name="description" content="シャープライズは北陸・富山で生成AI技術を活用した革新的なソリューションを提供します。企業のデジタルトランスフォーメーションを支援します。">
+
+  <!-- Open Graph メタタグ（ソーシャルメディア共有用） -->
+  <meta property="og:title" content="北陸・富山で最先端の生成AIソリューション | シャープライズ">
+  <meta property="og:description" content="シャープライズは北陸・富山で生成AI技術を活用した革新的なソリューションを提供します。企業のデジタルトランスフォーメーションを支援します。">
+  <meta property="og:image" content="../img/company-intro.jpg">
+  <meta property="og:url" content="https://yourdomain.com/company/about.html">
+  <meta property="og:type" content="website">
+
+  <!-- Twitterカードメタタグ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="北陸・富山で最先端の生成AIソリューション | シャープライズ">
+  <meta name="twitter:description" content="シャープライズは北陸・富山で生成AI技術を活用した革新的なソリューションを提供します。企業のデジタルトランスフォーメーションを支援します。">
+  <meta name="twitter:image" content="../img/company-intro.jpg">
+
+  <!-- CSSファイルへのリンク -->
   <link href="../reset.css" rel="stylesheet">
   <link href="../style.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
   
+  <!-- ファビコン -->
   <link rel="icon" href='../img/Logo2.png'>
-  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="./android-chrome-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
 
-  <!-- jQueryを先に読み込み -->
+  <!-- jQueryの読み込み -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <!-- 外部JSファイルの読み込み -->
-  <script src="/style.js"></script>
+  <script src="../style.js"></script>
+
+  <!-- 構造化データ（Schema.org） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "シャープライズ",
+    "url": "https://sharprise.jp/",
+    "logo": "https://sharprise.jp/img/Logo2.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+81-90-2099-8017",
+      "contactType": "Customer Service"
+    }
+  }
+  </script>
 </head>
 
 <body>
@@ -29,25 +60,26 @@
   <header class="l-header">
     <div class="s-headPrimary">
       <h1 class="c-primaryLogo">
-        <a href="./">
-          <img src='../img/Logo2.png' alt="シャープライズ">
+        <a href="../">
+          <img src='../img/Logo2.png' alt="シャープライズのロゴ">
         </a>
       </h1>
-      <nav class="c-globalNav">
+      <nav class="c-globalNav" aria-label="メインナビゲーション">
         <ul class="c-globalNav_list">
           <li>
-            <a href="company/company.html" class="m-globalNav_listLink u-flxAlign_c">会社概要</a>
+            <a href="../company/company.html" class="m-globalNav_listLink u-flxAlign_c">会社概要</a>
           </li>
-          <li><a href="business/business.html" class="m-globalNav_listLink u-flxAlign_c">事業内容<span class="m-arrow"></span></a>
+          <li>
+            <a href="../business/business.html" class="m-globalNav_listLink u-flxAlign_c">事業内容<span class="m-arrow"></span></a>
             <ul class="m-dropMenu">
               <li>
-                <a href="business/business_consult.html">業務コンサルティング事業</a>
+                <a href="../business/business_consult.html">業務コンサルティング事業</a>
               </li>
               <li>
-                <a href="business/business_skillup.html">スキルアップ研修事業</a>
+                <a href="../business/business_skillup.html">スキルアップ研修事業</a>
               </li>
               <li>
-                <a href="business/business_iotsolution.html">自社開発事業</a>
+                <a href="../business/business_iotsolution.html">自社開発事業</a>
               </li>
             </ul>
           </li>
@@ -59,46 +91,117 @@
       <div class="c-primarySub">
         <div>
           <ul class="c-langSwitcher">
-            <li class="c-langSwitcher_select"><a href="./" class="u-flxAlign_c">日本語<span class="m-arrow"></span></a>
+            <li class="c-langSwitcher_select">
+              <a href="../" class="u-flxAlign_c">日本語<span class="m-arrow"></span></a>
               <ul class="m-dropMenu">
                 <li>
-                  <a href="en/index">English</a>
+                  <a href="../en/index.html">English</a>
                 </li>
               </ul>
             </li>
           </ul>
         </div>
         <div class="c-urgeInquiry">
-          <a href="inquiry/inquiry_top.html" class="m-urgeInquiry_btn">お問い合わせ</a>
+          <a href="../inquiry/inquiry_top.html" class="m-urgeInquiry_btn">お問い合わせ</a>
         </div>
       </div>
     </div>
   </header><!-- /.l-header -->
 
- 
+  <main id="main" role="main" class="container">
+    <!-- 左サイドバー -->
+    <aside class="sidebar left-sidebar">
+      <nav class="left-sidebar-nav" aria-label="サイドナビゲーション">
+        <!-- <h3>ナビゲーション</h3>
+        <ul>
+          <li><a href="../category/category1.html">カテゴリー1</a></li>
+          <li><a href="../category/category2.html">カテゴリー2</a></li>
+          <li><a href="../category/category3.html">カテゴリー3</a></li>
+          <li><a href="../category/category4.html">カテゴリー4</a></li>
+        </ul> -->
+      </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <section class="content">
+      <article class="c-article">
+        <header class="c-articleHeader">
+          <h1 class="c-articleTitle">弊社のご紹介</h1>
+          <p class="c-articleMeta">
+            <time class="c-articleDate" datetime="2025-01-05">2025年1月24日</time>
+          </p>
+        </header>
+
+        <!-- <figure class="c-articleImage">
+          <img src="../img/company-intro.jpg" alt="シャープライズ 北陸・富山 生成AIソリューション">
+          <figcaption>弊社が提供する生成AIソリューションの一例</figcaption>
+        </figure> -->
+
+        <div class="c-articleContent">
+          <h2>弊社シャープライズとは</h2>
+          <p>　シャープライズは、北陸・富山地域において<a href="https://www.openai.com/" target="_blank" rel="noopener">生成AI</a>技術を駆使した革新的なソリューションを提供しています。私たちのミッションは、企業のデジタルトランスフォーメーションを支援し、業務効率化や新たなビジネスチャンスの創出を実現することです。</p>
+          <p>　また、スキルアップ研修として生成AI活用による業務効率化という従業員教育を行っています。数時間の研修で、意図したエクセルマクロを作成するスキルを学べるため時間効率よく実用的なスキルを習得できます。</p>
+          
+          <h2>シャープライズのコア</h2>
+          <p>　シャープライズは、AI技術の専門知識と地域密着型のサービスを組み合わせ、北陸地方を中心とした企業に対して最適な生成AIソリューションを提供しています。私たちのチームは、多様な業界経験を持つ専門家で構成されており、お客様のニーズに合わせたカスタマイズ可能なサービスを展開しています。</p>
+          
+          <h2>生成AI技術の活用事例</h2>
+          <p>　弊社が手がけた生成AIプロジェクトの一例として、富山市内の製造業企業における物流効率化システム導入があります。生成AIを活用することで、受注から仕入れ先判別～見積PDF作成～依頼メール作成までを自動化し、従来と比較し90％の時間削減に成功しました。また、副次効果として判別ミスの低減・受注キャパシティの拡大効果を得られています。</p>
+          
+          <h2>北陸・富山における弊社の強み</h2>
+          <ul>
+            <li>地域密着型サービス: 地元企業のニーズを深く理解し、迅速かつ柔軟に対応。</li>
+            <li>専門知識: 最新の生成AI技術を駆使し、最適なソリューションを提供。</li>
+            <li>サポート体制: 導入後のサポートも充実しており、長期的なパートナーシップを築きます。</li>
+          </ul>
+          
+          
+          <h2>お問い合わせ</h2>
+          <p>　生成AI導入に関するご相談や研修に関するお問い合わせは、以下のリンクからお気軽にご連絡ください。</p>
+          <p><a href="../inquiry/inquiry_top.html">お問い合わせフォーム</a></p>
+        </div>
+
+        <footer class="c-articleFooter">
+          <p class="c-articleTags">タグ: 
+            <a>北陸・富山</a>, 
+            <a>生成AI</a>, 
+            <a>業務効率化</a>, 
+          </p>
+        </footer>
+      </article>
+    </section>
+
+    <!-- 右サイドバー -->
+    <aside class="sidebar right-sidebar">
+      <h3>バックナンバー</h3>
+      <ul id="back-issues">
+        <!-- バックナンバーがここに挿入されます -->
+      </ul>
+    </aside>
+  </main>
 
   <footer class="l-footer">
     <div class="s-footContent">
       <nav class="c-footSitemap">
         <p class="c-footLogo">
-          <a href="./">
-            <img src='../img/Logo2.png' alt="シャープライズ">
+          <a href="../">
+            <img src='../img/Logo2.png' alt="シャープライズのロゴ">
           </a>
         </p>
         <section>
           <h3>会社について</h3>
           <ul>
-            <li><a href="company/company.html">会社概要</a></li>
-            <li><a href="business/business.html">事業内容</a></li>
+            <li><a href="../company/company.html">会社概要</a></li>
+            <li><a href="../business/business.html">事業内容</a></li>
           </ul>
         </section>
         <section>
           <h3>お問い合わせ</h3>
           <ul>
-            <li><a href="business/business_consult.html">業務コンサルティング事業</a></li>
-            <li><a href="business/business_skillup.html">スキルアップ研修事業</a></li>
-            <li><a href="inquiry/inquiry_iotsolution.html">自社開発事業</a></li>
-            <li><a href="privacypolicy/privacypolicy.html">プライバシーポリシー</a></li>
+            <li><a href="../business/business_consult.html">業務コンサルティング事業</a></li>
+            <li><a href="../business/business_skillup.html">スキルアップ研修事業</a></li>
+            <li><a href="../inquiry/inquiry_iotsolution.html">自社開発事業</a></li>
+            <li><a href="../privacypolicy/privacypolicy.html">プライバシーポリシー</a></li>
           </ul>
         </section>
       </nav>
@@ -111,6 +214,35 @@
   </footer><!-- /.l-footer -->
 
 </div><!-- /.wrapper -->
+
+<!-- バックナンバーを読み込むためのスクリプト -->
+<script>
+  $(document).ready(function() {
+    $.getJSON('../news/articles.json', function(data) {
+      var backIssues = $('#back-issues');
+      $.each(data, function(index, article) {
+        // 日付をフォーマット（例: YYYY-MM-DD を YYYY年MM月DD日に変換）
+        var formattedDate = new Date(article.date).toLocaleDateString('ja-JP', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+
+        // リストアイテムにタイトルと日付を追加
+        var listItem = '<li>' +
+                         '<a href="' + article.url + '">' + article.title + '</a>' +
+                         '<br>' + // 改行を挿入
+                         '<span class="issue-date">' + formattedDate + '</span>' +
+                       '</li>';
+        backIssues.append(listItem);
+      });
+    }).fail(function() {
+      $('#back-issues').append('<li>バックナンバーの読み込みに失敗しました。</li>');
+    });
+  });
+</script>
+
+
 
 </body>
 </html>

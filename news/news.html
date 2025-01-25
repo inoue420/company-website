@@ -1,24 +1,324 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Newsページ作成中</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
-            color: #333;
+  <!-- メタ情報やタイトル、CSSリンクなど -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ニュース記事一覧 | シャープライズ</title>
+  <meta name="description" content="シャープライズの最新ニュース記事一覧です。北陸・富山地域における生成AIソリューションに関する最新情報をご覧ください。">
+
+  <!-- Open Graph メタタグ（ソーシャルメディア共有用） -->
+  <meta property="og:title" content="ニュース記事一覧 | シャープライズ">
+  <meta property="og:description" content="シャープライズの最新ニュース記事一覧です。北陸・富山地域における生成AIソリューションに関する最新情報をご覧ください。">
+  <meta property="og:image" content="../img/company-intro.jpg">
+  <meta property="og:url" content="https://yourdomain.com/news/index.html">
+  <meta property="og:type" content="website">
+
+  <!-- Twitterカードメタタグ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ニュース記事一覧 | シャープライズ">
+  <meta name="twitter:description" content="シャープライズの最新ニュース記事一覧です。北陸・富山地域における生成AIソリューションに関する最新情報をご覧ください。">
+  <meta name="twitter:image" content="../img/company-intro.jpg">
+
+  <!-- CSSファイルへのリンク -->
+  <link href="../reset.css" rel="stylesheet">
+  <link href="../style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- ファビコン -->
+  <link rel="icon" href='../img/Logo2.png'>
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+
+  <!-- jQueryの読み込み -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <!-- 外部JSファイルの読み込み -->
+  <script src="../style.js"></script>
+
+  <!-- 構造化データ（Schema.org） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "シャープライズ",
+    "url": "https://sharprise.jp/",
+    "logo": "https://sharprise.jp/img/Logo2.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+81-90-2099-8017",
+      "contactType": "Customer Service"
+    }
+  }
+  </script>
+  
+  <!-- カスタムCSSの追加 -->
+  <style>
+    /* 記事一覧のスタイル */
+    .c-articleList {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* 記事間のスペース */
+        padding: 20px;
+    }
+
+    .c-articleSummary {
+        /* 仕切り線を削除 */
+    }
+
+    .c-summaryContent {
+        padding: 20px 10px; /* クリック可能エリアの拡大 */
+        cursor: pointer; /* ポインターを表示 */
+        transition: background-color 0.3s ease;
+    }
+
+    .c-summaryContent:hover {
+        background-color: #f9f9f9; /* ホバー時の背景色 */
+    }
+
+    .c-summaryTitle {
+        font-size: 1.5em; /* 初期フォントサイズ */
+        color: #333; /* 初期フォントカラー */
+        margin: 5px 0;
+    }
+
+    .c-summaryTitle a {
+        text-decoration: none;
+        color: inherit; /* 親要素の色を継承 */
+        display: block; /* タイトル全体をリンクエリアに */
+    }
+
+    .c-summaryTitle a:hover {
+        color: #007BFF; /* ホバー時の色 */
+        text-decoration: underline;
+    }
+
+    .c-summaryDate {
+        font-size: 1em; /* 初期フォントサイズ */
+        color: #777; /* 初期フォントカラー */
+        margin: 0 0 10px 0;
+    }
+
+    /* カスタマイズ可能なクラス */
+    .custom-title {
+        /* ここにカスタムスタイルを追加可能 */
+    }
+
+    .custom-date {
+        /* ここにカスタムスタイルを追加可能 */
+    }
+
+    /* 最上部の仕切り線のスタイル */
+    .c-articleList::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #ddd;
+        margin-bottom: 20px; /* 仕切り線と最初の記事とのスペース */
+    }
+
+    /* レスポンシブデザイン */
+    @media (max-width: 768px) {
+        .c-summaryTitle {
+            font-size: 1.3em;
         }
-    </style>
+
+        .c-summaryDate {
+            font-size: 0.9em;
+        }
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Newsページ作成中</h1>
+
+<div class="wrapper">
+
+  <header class="l-header">
+    <div class="s-headPrimary">
+      <h1 class="c-primaryLogo">
+        <a href="../">
+          <img src='../img/Logo2.png' alt="シャープライズのロゴ">
+        </a>
+      </h1>
+      <nav class="c-globalNav" aria-label="メインナビゲーション">
+        <ul class="c-globalNav_list">
+          <li>
+            <a href="../company/company.html" class="m-globalNav_listLink u-flxAlign_c">会社概要</a>
+          </li>
+          <li>
+            <a href="../business/business.html" class="m-globalNav_listLink u-flxAlign_c">事業内容<span class="m-arrow"></span></a>
+            <ul class="m-dropMenu">
+              <li>
+                <a href="../business/business_consult.html">業務コンサルティング事業</a>
+              </li>
+              <li>
+                <a href="../business/business_skillup.html">スキルアップ研修事業</a>
+              </li>
+              <li>
+                <a href="../business/business_iotsolution.html">自社開発事業</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="c-navIcon">
+        <span></span>
+      </div>
+      <div class="c-primarySub">
+        <div>
+          <ul class="c-langSwitcher">
+            <li class="c-langSwitcher_select">
+              <a href="../" class="u-flxAlign_c">日本語<span class="m-arrow"></span></a>
+              <ul class="m-dropMenu">
+                <li>
+                  <a href="../en/index.html">English</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="c-urgeInquiry">
+          <a href="../inquiry/inquiry_top.html" class="m-urgeInquiry_btn">お問い合わせ</a>
+        </div>
+      </div>
+    </div>
+  </header><!-- /.l-header -->
+
+  <main id="main" role="main" class="container">
+    <!-- 左サイドバー -->
+    <aside class="sidebar left-sidebar">
+      <nav class="left-sidebar-nav" aria-label="サイドナビゲーション">
+        <!-- 必要に応じてナビゲーションを追加 -->
+      </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <section class="content">
+      <h1 class="page-title">ニュース記事一覧</h1>
+      
+      <!-- 記事一覧コンテナ -->
+      <div class="c-articleList" id="article-list">
+        <!-- 最上部の仕切り線はCSSで追加 -->
+        <!-- 記事がここに挿入されます -->
+      </div>
+    </section>
+
+    <!-- 右サイドバー -->
+    <aside class="sidebar right-sidebar">
+      <h3>バックナンバー</h3>
+      <ul id="back-issues">
+        <!-- バックナンバーがここに挿入されます -->
+      </ul>
+    </aside>
+  </main>
+
+  <footer class="l-footer">
+    <div class="s-footContent">
+      <nav class="c-footSitemap">
+        <p class="c-footLogo">
+          <a href="../">
+            <img src='../img/Logo2.png' alt="シャープライズのロゴ">
+          </a>
+        </p>
+        <section>
+          <h3>会社について</h3>
+          <ul>
+            <li><a href="../company/company.html">会社概要</a></li>
+            <li><a href="../business/business.html">事業内容</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>お問い合わせ</h3>
+          <ul>
+            <li><a href="../business/business_consult.html">業務コンサルティング事業</a></li>
+            <li><a href="../business/business_skillup.html">スキルアップ研修事業</a></li>
+            <li><a href="../inquiry/inquiry_iotsolution.html">自社開発事業</a></li>
+            <li><a href="../privacypolicy/privacypolicy.html">プライバシーポリシー</a></li>
+          </ul>
+        </section>
+      </nav>
+      <div class="c-footMeta">
+        <p class="c-footMeta_copy">
+          <small>&copy;2024 sharprise </small>
+        </p>
+      </div>
+    </div>
+  </footer><!-- /.l-footer -->
+
+</div><!-- /.wrapper -->
+
+<!-- バックナンバーを読み込むためのスクリプト -->
+<script>
+  $(document).ready(function() {
+    $.getJSON('../news/articles.json', function(data) {
+      var backIssues = $('#back-issues');
+      $.each(data, function(index, article) {
+        // 日付をフォーマット（例: YYYY-MM-DD を YYYY年MM月DD日に変換）
+        var formattedDate = new Date(article.date).toLocaleDateString('ja-JP', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+
+        // リストアイテムにタイトルと日付を追加
+        var listItem = '<li>' +
+                         '<a href="' + article.link + '">' + article.title + '</a>' +
+                         '<br>' +
+                         '<span class="issue-date">' + formattedDate + '</span>' +
+                       '</li>';
+        backIssues.append(listItem);
+      });
+    }).fail(function() {
+      $('#back-issues').append('<li>バックナンバーの読み込みに失敗しました。</li>');
+    });
+  });
+</script>
+
+<!-- 記事一覧を読み込むためのスクリプト -->
+<script>
+  $(document).ready(function() {
+    $.getJSON('../news/articles.json', function(data) {
+      var articleList = $('#article-list');
+
+      $.each(data, function(index, article) {
+        // 日付をフォーマット
+        var formattedDate = new Date(article.date).toLocaleDateString('ja-JP', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+
+        // 記事の概要を生成（クリック可能エリア）
+        var articleItem = '<article class="c-articleSummary">' +
+                           '  <div class="c-summaryContent">' +
+                           '    <p class="c-summaryDate custom-date">' + formattedDate + '</p>' +
+                           '    <h2 class="c-summaryTitle custom-title"><a href="' + article.link + '">' + article.title + '</a></h2>' +
+                           '  </div>' +
+                           '</article>';
+
+        articleList.append(articleItem);
+      });
+
+      // クリック可能なエリアを設定
+      $('.c-summaryContent').on('click', function() {
+        var link = $(this).find('a').attr('href');
+        if (link) {
+          window.location.href = link;
+        }
+      });
+
+      // リンククリック時に親のクリックイベントを無効化
+      $('.c-summaryContent a').on('click', function(event) {
+        event.stopPropagation();
+      });
+
+    }).fail(function() {
+      $('#article-list').append('<p>記事の読み込みに失敗しました。</p>');
+    });
+  });
+</script>
+
 </body>
 </html>
