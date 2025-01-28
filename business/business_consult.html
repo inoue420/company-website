@@ -1,32 +1,264 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P5JNF2RSVK"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-P5JNF2RSVK');
-    </script>    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>アプリ事業説明ページ作成中</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
-            color: #333;
-        }
-    </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P5JNF2RSVK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-P5JNF2RSVK');
+  </script>
+
+  <!-- メタ情報やタイトル、CSSリンクなど -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>北陸・富山で最先端の生成AIソリューション | シャープライズ</title>
+  <meta name="description" content="シャープライズは北陸・富山で生成AI技術を活用した革新的なソリューションを提供します。企業のデジタルトランスフォーメーションを支援します。">
+
+  <!-- Open Graph メタタグ（ソーシャルメディア共有用） -->
+  <meta property="og:title" content="北陸・富山で最先端の生成AIソリューション | シャープライズ">
+  <meta property="og:description" content="シャープライズは北陸・富山で生成AI技術を活用した革新的なソリューションを提供します。企業のデジタルトランスフォーメーションを支援します。">
+  <meta property="og:image" content="../img/company-intro.jpg">
+  <meta property="og:url" content="https://yourdomain.com/company/about.html">
+  <meta property="og:type" content="website">
+
+  <!-- Twitterカードメタタグ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="北陸・富山で最先端の生成AIソリューション | シャープライズ">
+  <meta name="twitter:description" content="シャープライズは北陸・富山で生成AI技術を活用した革新的なソリューションを提供します。企業のデジタルトランスフォーメーションを支援します。">
+  <meta name="twitter:image" content="../img/company-intro.jpg">
+
+  <!-- CSSファイルへのリンク -->
+  <link href="../reset.css" rel="stylesheet">
+  <link href="../style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- ファビコン -->
+  <link rel="icon" href='../img/Logo2.png'>
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+
+  <!-- jQueryの読み込み -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <!-- 外部JSファイルの読み込み -->
+  <script src="../style.js"></script>
+
+  <!-- 構造化データ（Schema.org） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "シャープライズ",
+    "url": "https://sharprise.jp/",
+    "logo": "https://sharprise.jp/img/Logo2.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+81-90-2099-8017",
+      "contactType": "Customer Service"
+    }
+  }
+  </script>
 </head>
+
 <body>
-    <h1>〇〇〇ページ作成中</h1>
+
+<div class="wrapper">
+
+  <header class="l-header">
+    <div class="s-headPrimary">
+      <h1 class="c-primaryLogo">
+        <a href="../">
+          <img src='../img/Logo2.png' alt="シャープライズのロゴ">
+        </a>
+      </h1>
+      <nav class="c-globalNav" aria-label="メインナビゲーション">
+        <ul class="c-globalNav_list">
+          <li>
+            <a href="../company/company.html" class="m-globalNav_listLink u-flxAlign_c">会社概要</a>
+          </li>
+          <li>
+            <a href="../business/business.html" class="m-globalNav_listLink u-flxAlign_c">事業内容<span class="m-arrow"></span></a>
+            <ul class="m-dropMenu">
+              <li>
+                <a href="../business/business_consult.html">業務コンサルティング事業</a>
+              </li>
+              <li>
+                <a href="../business/business_skillup.html">スキルアップ研修事業</a>
+              </li>
+              <li>
+                <a href="../business/business_iotsolution.html">自社開発事業</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="c-navIcon">
+        <span></span>
+      </div>
+      <div class="c-primarySub">
+
+        <div class="c-urgeInquiry">
+          <a href="../inquiry/inquiry_top.html" class="m-urgeInquiry_btn">お問い合わせ</a>
+        </div>
+      </div>
+    </div>
+  </header><!-- /.l-header -->
+
+  <main id="main" role="main" class="container">
+    <!-- 左サイドバー -->
+    <aside class="sidebar left-sidebar">
+      <nav class="left-sidebar-nav" aria-label="サイドナビゲーション">
+        <!-- <h3>ナビゲーション</h3>
+        <ul>
+          <li><a href="../category/category1.html">カテゴリー1</a></li>
+          <li><a href="../category/category2.html">カテゴリー2</a></li>
+          <li><a href="../category/category3.html">カテゴリー3</a></li>
+          <li><a href="../category/category4.html">カテゴリー4</a></li>
+        </ul> -->
+      </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <section class="content">
+      <article class="c-article">
+        <header class="c-articleHeader">
+          <h1 class="c-articleTitle">業務改善コンサルティング事業について</h1>
+          <p class="c-articleMeta">
+            <time class="c-articleDate" datetime="2025-01-05">2025年1月27日</time>
+          </p>
+        </header>
+
+            <!-- 記事のメイン画像 -->
+        <figure class="c-articleImage">
+          <img src="../img/consultimage.jpg" alt="中小企業向け業務改善コンサルティングプロセス図">
+          <figcaption>　</figcaption>
+        </figure>
+
+            <!-- 記事の本文 -->        
+        <div class="c-articleContent">
+          <h2>はじめに</h2>
+          <p>　現代のビジネス環境は急速に変化しており、中小企業にとっても業務効率化は競争力を維持・向上させるための重要な課題となっています。限られたリソースを最大限に活用し、生産性を高めるためには、専門的な支援が不可欠です。そこで、弊社の「現場密着型業務改善コンサルティングサービス」が、貴社の成長をサポートします。</p>
+
+          <h2>現場に入り込んだ業務改善コンサルティングとは</h2>
+          <p>弊社のコンサルティングサービスは、単なるアドバイス提供にとどまらず、実際に現場に入り込み、日々の業務を観察・分析することから始まります。具体的には以下のステップで進めます。　</p>
+          <ul>
+            <li>現状分析</li>
+            <p>貴社の業務プロセスを詳細に調査・分析し、現場での課題や非効率な点を洗い出します。</p>
+            <li>課題の特定</li>
+            <p>抽出された問題点を具体的に特定し、改善が必要な領域を明確化します。明確化した項目について、優先順位づけにより改善行動の効率も最大化されます。</p>
+            <li>改善策の提案</li>
+            <p>Excelマクロや自動化ツールを活用した具体的な効率改善策を提案します。これにより、手作業の削減や情報の一元化を図ります。時間面での削減にとどまらず、ポカミス防止による質向上の視点も加えます。</p>
+            <li>実行支援</li>
+            <p>提案した改善策の導入をサポートし、必要に応じてトレーニングやフォローアップを行います。</p>
+            <li>効果測定と継続改善</li>
+            <p>導入後の効果を測定し、継続的な改善を図るためのフィードバックを提供します。</p>
+
+          </ul>   
+
+          <h2>効率改善ツールの提供</h2>
+          <p>　私たちが提供する効率改善ツールは、以下のような特徴を持っています。</p>
+          <ul>
+            <li> カスタマイズ可能なマクロ</li>
+            <p>貴社の業務に合わせて最適化されたマクロ・プロンプトを作成し、日常業務の自動化を実現します。</p>
+
+            <li>トレーニングプログラム</li>
+            <p>新しいツールの導入に伴い、社員へのトレーニングを実施し、スムーズな移行をサポートします。</p>
+
+            <li>従業員のスキルアップ教育(オプション)</li>
+            <p>弊社では、効率改善ツール自体を従業員ご自身の手で作成できる教育プログラムをご用意しています。チャットGPTを始めとした<a href="https://www.openai.com/" target="_blank" rel="noopener">生成AI</a>をフル活用した研修であり、受講者のスキルアップは確約します。詳しくは弊社提供の<a href="../business/business_skillup.html">スキルアップ研修事業</a>をご覧ください。</p>
+
+          </ul>
+          
+          <h2>お問い合わせ</h2>
+          <p>業務効率化をお考えの中小企業の皆様、ぜひ一度ご相談ください。専門のコンサルタントが持続可能な成長をサポートいたします。ページ上部"お問い合わせ"もしくはこちらの<a href="../inquiry/inquiry_top.html">"リンク"</a>からお問い合わせください。</p>
+        </div>
+
+        <!-- 記事のタグ -->        
+
+        <footer class="c-articleFooter">
+          <p class="c-articleTags">タグ: 
+            <a>業務効率化</a>, 
+            <a>生成AI活用</a>, 
+            <a>北陸中小企業　業務改善　コンサルティング</a>, 
+          </p>
+        </footer>
+      </article>
+    </section>
+
+    <!-- 右サイドバー -->
+    <aside class="sidebar right-sidebar">
+      <h3>バックナンバー</h3>
+      <ul id="back-issues">
+        <!-- バックナンバーがここに挿入されます -->
+      </ul>
+    </aside>
+  </main>
+
+  <footer class="l-footer">
+    <div class="s-footContent">
+      <nav class="c-footSitemap">
+        <p class="c-footLogo">
+          <a href="../">
+            <img src='../img/Logo2.png' alt="シャープライズのロゴ">
+          </a>
+        </p>
+        <section>
+          <h3>会社について</h3>
+          <ul>
+            <li><a href="../company/company.html">会社概要</a></li>
+            <li><a href="../business/business.html">事業内容</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>お問い合わせ</h3>
+          <ul>
+            <li><a href="../business/business_consult.html">業務コンサルティング事業</a></li>
+            <li><a href="../business/business_skillup.html">スキルアップ研修事業</a></li>
+            <li><a href="../inquiry/inquiry_iotsolution.html">自社開発事業</a></li>
+            <li><a href="../privacypolicy/privacypolicy.html">プライバシーポリシー</a></li>
+          </ul>
+        </section>
+      </nav>
+      <div class="c-footMeta">
+        <p class="c-footMeta_copy">
+          <small>&copy;2024 sharprise </small>
+        </p>
+      </div>
+    </div>
+  </footer><!-- /.l-footer -->
+
+</div><!-- /.wrapper -->
+
+<!-- バックナンバーを読み込むためのスクリプト -->
+<script>
+  $(document).ready(function() {
+    $.getJSON('../news/articles.json', function(data) {
+      var backIssues = $('#back-issues');
+      $.each(data, function(index, article) {
+        // 日付をフォーマット（例: YYYY-MM-DD を YYYY年MM月DD日に変換）
+        var formattedDate = new Date(article.date).toLocaleDateString('ja-JP', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+
+        // リストアイテムにタイトルと日付を追加
+        var listItem = '<li>' +
+                         '<a href="' + article.url + '">' + article.title + '</a>' +
+                         '<br>' + // 改行を挿入
+                         '<span class="issue-date">' + formattedDate + '</span>' +
+                       '</li>';
+        backIssues.append(listItem);
+      });
+    }).fail(function() {
+      $('#back-issues').append('<li>バックナンバーの読み込みに失敗しました。</li>');
+    });
+  });
+</script>
+
+
+
 </body>
 </html>
-
