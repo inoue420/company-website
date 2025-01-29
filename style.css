@@ -977,49 +977,189 @@ a:hover {
   }
 }
 
-/******************* privacy policy_page *******************/
+/******************* Privacy Policy Page Styles *******************/
 
-.c-policyArticle h4 {
-  margin: 0 0 1em;
+/* コンテナ */
+.c-policyArticle {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* 見出し */
+.c-policyArticle h1 {
+  font-size: 2.5rem;
+  color: #2e2e2e;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+
+.c-policyArticle h2 {
   font-size: 2rem;
   color: #2e2e2e;
-  line-height: 1.4;
-  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #4a90e2;
+  padding-left: 0.5rem;
 }
 
+.c-policyArticle h3 {
+  font-size: 1.5rem;
+  color: #2e2e2e;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* 段落 */
 .c-policyArticle p {
-  margin: 0 0 1em;
-  line-height: 1.8;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  margin-bottom: 1em;
+  color: #555555;
 }
 
-.c-policyArticle td {
-  padding: 1rem;
-  border: 1px solid #202020;
-}
-
-.c-policyArticle thead {
-  background-color: #cbcbcb;
+/* リスト */
+.c-policyArticle ul,
+.c-policyArticle ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1em;
 }
 
 .c-policyArticle li {
-  margin: 0 0 .5em;
-  line-height: 1.8;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  margin-bottom: 0.5em;
+  position: relative;
+  padding-left: 1.2em;
 }
 
-.c-policyArticle dt,
-.c-policyArticle dd{
-  margin: 0 0 .5em;
+.c-policyArticle ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #4a90e2;
 }
 
-@media all and (max-width: 480px) {
-  .c-policyArticle li {
-    font-size: 1.3rem;
+.c-policyArticle ol li {
+  counter-increment: list-counter;
+}
+
+.c-policyArticle ol {
+  counter-reset: list-counter;
+}
+
+.c-policyArticle ol li::before {
+  content: counter(list-counter) '. ';
+  position: absolute;
+  left: 0;
+  color: #4a90e2;
+}
+
+/* テーブル */
+.c-policyArticle table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5em;
+}
+
+.c-policyArticle th,
+.c-policyArticle td {
+  padding: 1rem;
+  border: 1px solid #dddddd;
+  text-align: left;
+}
+
+.c-policyArticle thead {
+  background-color: #f2f2f2;
+}
+
+.c-policyArticle th {
+  background-color: #4a90e2;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* 定義リスト */
+.c-policyArticle dt {
+  font-weight: 600;
+  margin-top: 1em;
+}
+
+.c-policyArticle dd {
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+  color: #555555;
+}
+
+/* リンク */
+.c-policyArticle a {
+  color: #4a90e2;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.c-policyArticle a:hover {
+  color: #2e6da4;
+  text-decoration: underline;
+}
+
+/* フッター情報 */
+.c-policyArticle .contact-info {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+  color: #777777;
+}
+
+.c-policyArticle .contact-info a {
+  color: #4a90e2;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .c-policyArticle {
+      padding: 1.5rem;
+      margin: 1.5rem;
+  }
+
+  .c-policyArticle h1 {
+      font-size: 2rem;
+  }
+
+  .c-policyArticle h2 {
+      font-size: 1.75rem;
+  }
+
+  .c-policyArticle h3 {
+      font-size: 1.25rem;
   }
 }
+
+@media (max-width: 480px) {
+  .c-policyArticle {
+      padding: 1rem;
+      margin: 1rem;
+  }
+
+  .c-policyArticle h1 {
+      font-size: 1.75rem;
+  }
+
+  .c-policyArticle h2 {
+      font-size: 1.5rem;
+  }
+
+  .c-policyArticle h3 {
+      font-size: 1.1rem;
+  }
+
+  .c-policyArticle li {
+      font-size: 1.2rem;
+  }
+}
+
 
 /* =========================================================
   utility
