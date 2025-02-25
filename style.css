@@ -1907,7 +1907,16 @@ body {
   margin-bottom: 2em;
 }
 
-.c-articleContent h2,
+.c-articleContent h2 {
+  padding: 0.25em 0.5em; /* 上下 左右の余白 */
+  color: #494949;        /* 文字色 */
+  background: transparent; /* 背景透明 */
+  border-left: solid 5px #7db4e6; /* 左線 */
+  margin-top: 2em;    /* 下部の余白を統一 */
+  margin-bottom: 1em;    /* 下部の余白を統一 */
+}
+
+
 .c-articleContent h3 {
   color: #222;
   margin-top: 1.5em;
@@ -1917,6 +1926,7 @@ body {
 
 .c-articleContent p {
   margin-bottom: 1em;
+  line-height: 1.6;
 }
 
 .c-articleContent ul {
