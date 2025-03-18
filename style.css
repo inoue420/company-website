@@ -57,6 +57,7 @@ em {
 }
 
 a {
+  color: #0066cc; /* 青色を追加 */
   transition: all ease .1s;
   outline : none;
 }
@@ -1908,16 +1909,22 @@ body {
 }
 
 .c-articleContent h2 {
-  padding: 0.25em 0.5em; /* 上下 左右の余白 */
-  color: #494949;        /* 文字色 */
-  background: transparent; /* 背景透明 */
-  border-left: solid 5px #7db4e6; /* 左線 */
-  margin-top: 2em;    /* 下部の余白を統一 */
-  margin-bottom: 1em;    /* 下部の余白を統一 */
+  font-size: 1.5em;/* フォントサイズ */
+  font-weight: bold;/* フォント太さ */
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: .5em;
+  margin-top: 3em;
+  margin-bottom: 1em;
+  background-color: #ebf4f6;/* 背景色 */
+  border-left: 5px solid #318496;/* 左の線 */
+  border-bottom: 2px solid #cccccc;/* 下の線 */
+  color: #318496;/* フォント色 */
 }
 
 
 .c-articleContent h3 {
+  font-size: 1.3em;
   color: #222;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
@@ -1962,6 +1969,111 @@ body {
   color: #005fa3;
   text-decoration: underline;
 }
+
+/* 目次全体のスタイル */
+.c-toc {
+  background-color: #f8f9fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 15px 25px;
+  margin: 20px 0 25px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  list-style-position: inside; /* 箇条書きマークを内側に */
+}
+
+/* 目次内のリストアイテムのスタイル */
+.c-toc li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  /* リストスタイルはデフォルトのままでも、または以下で変更可能 */
+  /* list-style-type: square; */
+}
+
+/* 目次内のリンクスタイル */
+.c-toc li a {
+  color: #0366d6; /* 青色のリンク */
+  text-decoration: none;
+  padding-left: 5px; /* リストマークとテキストの間隔 */
+}
+
+.c-toc li a:hover {
+  text-decoration: underline;
+  color: #0056b3; /* ホバー時の色を少し濃くする */
+}
+
+/* 目次の前の見出しスタイル補正（必要に応じて） */
+h2 + .c-toc {
+  margin-top: 10px; /* 見出しと目次の間隔を調整 */
+}
+
+/* ポイントリストのスタイル */
+.point-list-container {
+  border: 1px solid #3cb5e5;
+  border-radius: 5px;
+  padding: 0;
+  margin: 20px 0;
+  position: relative;
+}
+
+.point-list-title {
+  background-color: #3cb5e5;
+  color: white;
+  display: inline-block;
+  padding: 5px 15px;
+  font-weight: bold;
+  position: absolute;
+  top: -15px;
+  left: -1px;
+}
+
+.point-list {
+  list-style: none;
+  counter-reset: point-counter;
+  padding: 30px 15px 15px;
+  margin: 0;
+}
+
+.point-list li {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #e0e0e0;
+}
+
+.point-list li:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.point-list li::before {
+  content: counter(point-counter);
+  counter-increment: point-counter;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  background-color: #3cb5e5;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 25px;
+  font-weight: bold;
+}
+
+.point-list-footer {
+  text-align: right;
+  padding: 5px 10px;
+  font-size: 12px;
+  color: #666;
+}
+
+/* 強調テキスト用 */
+.point-list strong {
+  color: #3cb5e5;
+}
+
 
 /* レスポンシブデザイン */
 @media (max-width: 768px) {
