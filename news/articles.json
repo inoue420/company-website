@@ -1,5 +1,9 @@
 [
-
+  {
+    "title": "【受講生の声】石川県 Y病院様｜生成AI研修の成果（専門職・SE・総務）",
+    "date": "2026-08-16",
+    "link": "/news/voice_y_hospital.html"
+  },
   {
     "title": "【2025年】北陸地方の人材育成に役立つ補助金まとめ｜石川・富山・福井・長野・新潟",
     "date": "2025-03-18",
@@ -10,44 +14,34 @@
     "date": "2025-02-25",
     "link": "/news/plan_usecase.html"
   },
-
   {
     "title": "【DX丸投げプラン対応事例】DXって本当に難しい？マイクロ法人様の業務改善に貢献しました",
     "date": "2025-02-21",
     "link": "/news/DXconsult_stripe.html"
   },
-
-  
   {
     "title": "【DX成功事例】代理店業務の自動化で大幅な業務改善を実現",
     "date": "2025-02-17",
     "link": "/news/contributor_imp.html"
   },
-
   {
     "title": "AI研修プランの価格について",
     "date": "2025-02-14",
     "link": "/news/planprice_education_company.html"
   },
-
-
   {
     "title": "DX丸投げプランの価格について",
     "date": "2025-02-13",
     "link": "/news/planprice_DX.html"
   },
-
-
   {
-      "title": "業務改善コンサルティング事業について",
-      "date": "2025-01-27",
-      "link": "/news/GPTimprovement.html"
-    },
-
-    {
-      "title": "弊社のご紹介",
-      "date": "2025-01-25",
-      "link": "/news/introduction.html"
-    }
-  ]
-  
+    "title": "業務改善コンサルティング事業について",
+    "date": "2025-01-27",
+    "link": "/news/GPTimprovement.html"
+  },
+  {
+    "title": "弊社のご紹介",
+    "date": "2025-01-25",
+    "link": "/news/introduction.html"
+  }
+]
