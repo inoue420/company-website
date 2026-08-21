@@ -1,928 +1,611 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P5JNF2RSVK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-P5JNF2RSVK');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>SMARTBUKATSU アカウント削除申請 | SharpRise</title>
   <meta name="description" content="SMARTBUKATSUのアカウント削除申請ページです。アプリにログインできない場合でも、Webから削除を申請できます。">
   <meta name="robots" content="index,follow">
-  <title>SMARTBUKATSU アカウント削除申請 | SharpRise</title>
 
-  <!-- SharpRise共通デザイン -->
-  <link rel="stylesheet" href="/style.css">
+  <meta property="og:title" content="SMARTBUKATSU アカウント削除申請 | SharpRise">
+  <meta property="og:description" content="SMARTBUKATSUのアカウント削除申請ページです。Webからアカウントおよび関連データの削除を申請できます。">
+  <meta property="og:url" content="https://sharprise.jp/smartbukatsu/account-deletion.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://sharprise.jp/img/Logo2.png">
+
+  <!-- SharpRise 共通CSS：テンプレートと同じ読み込み順 -->
+  <link href="../reset.css" rel="stylesheet">
+  <link href="../style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="../img/Logo2.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+
+  <!-- style.js は jQuery 前提のため、テンプレートと同じ順序で読み込み -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="../style.js"></script>
 
   <!--
-    このページ固有のスタイル。
-    既存のstyle.cssへ影響しないよう、原則 sb-delete- プレフィックスを付けています。
+    このページ固有のスタイルのみ。
+    ヘッダー・フッター・基本文字組み・リンク等は ../style.css に任せる。
   -->
   <style>
-    :root {
-      --sb-navy: #0b2438;
-      --sb-blue: #1976f3;
-      --sb-teal: #18a999;
-      --sb-text: #172433;
-      --sb-muted: #607080;
-      --sb-line: #dce5ec;
-      --sb-soft: #f4f7f9;
-      --sb-white: #ffffff;
-      --sb-danger: #c73c3c;
-      --sb-shadow: 0 12px 30px rgba(12, 35, 54, 0.08);
+    .account-delete-main {
+      padding: 4rem 1.5rem 7rem;
     }
 
-    .sb-delete-page,
-    .sb-delete-page * {
-      box-sizing: border-box;
+    .account-delete.c-policyArticle {
+      max-width: 900px;
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+      padding: 3rem;
     }
 
-    .sb-delete-page {
-      color: var(--sb-text);
-      background: var(--sb-white);
-      line-height: 1.8;
-    }
-
-    .sb-delete-container {
-      width: min(1080px, calc(100% - 40px));
-      margin: 0 auto;
-    }
-
-    /* Header / Footer
-       既存サイトの導線をそのまま残し、ページ単体でも破綻しない最低限の補助CSSです。 */
-    .sb-site-header {
-      position: relative;
-      z-index: 20;
-      background: #fff;
-      border-bottom: 1px solid rgba(11, 36, 56, 0.08);
-    }
-
-    .sb-site-header__inner {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 28px;
-    }
-
-    .sb-site-logo {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--sb-navy);
-      text-decoration: none;
-      font-size: 1.25rem;
-      font-weight: 800;
-      letter-spacing: 0.02em;
-      white-space: nowrap;
-    }
-
-    .sb-site-logo span {
-      font-weight: 500;
-      color: var(--sb-muted);
-      font-size: 0.78rem;
-      letter-spacing: 0.08em;
-    }
-
-    .sb-site-nav ul {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .sb-site-nav a {
-      color: var(--sb-navy);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.92rem;
-    }
-
-    .sb-site-nav a:hover,
-    .sb-site-nav a:focus-visible {
-      color: var(--sb-blue);
-    }
-
-    .sb-site-nav__cta {
-      display: inline-block;
-      padding: 10px 18px;
-      border-radius: 999px;
-      color: #fff !important;
-      background: var(--sb-navy);
-    }
-
-    .sb-menu-button {
-      display: none;
-      appearance: none;
-      border: 1px solid var(--sb-line);
-      border-radius: 8px;
-      background: #fff;
-      color: var(--sb-navy);
-      padding: 8px 12px;
-      font: inherit;
+    .account-delete__product {
+      margin: 0 0 .5rem;
+      color: #4a90e2;
+      text-align: center;
+      font-family: "Oswald", sans-serif;
+      font-size: 1.4rem;
       font-weight: 700;
-      cursor: pointer;
+      letter-spacing: .08em;
     }
 
-    /* Hero */
-    .sb-delete-hero {
-      position: relative;
-      overflow: hidden;
-      padding: 88px 0 76px;
-      background:
-        radial-gradient(circle at 88% 15%, rgba(24, 169, 153, 0.15), transparent 31%),
-        linear-gradient(135deg, #f8fbfd 0%, #eef5f8 100%);
-      border-bottom: 1px solid var(--sb-line);
+    .account-delete__lead {
+      max-width: 720px;
+      margin: 0 auto 2.5rem;
+      text-align: center;
+      color: #555;
+      font-size: 1.5rem;
     }
 
-    .sb-delete-hero::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 8px;
-      background: linear-gradient(var(--sb-blue), var(--sb-teal));
+    .account-delete__info {
+      margin: 2rem 0;
+      padding: 1.5rem 1.8rem;
+      border-left: 4px solid #4a90e2;
+      background: #f4f8fc;
     }
 
-    .sb-delete-eyebrow {
-      margin: 0 0 12px;
-      color: var(--sb-teal);
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      font-size: 0.88rem;
+    .account-delete__warning {
+      margin: 2rem 0;
+      padding: 1.5rem 1.8rem;
+      border-left: 4px solid #c8102e;
+      background: #fff6f7;
     }
 
-    .sb-delete-title {
-      margin: 0;
-      color: var(--sb-navy);
-      font-size: clamp(2rem, 5vw, 3.45rem);
-      line-height: 1.22;
-      letter-spacing: -0.03em;
-    }
-
-    .sb-delete-lead {
-      max-width: 760px;
-      margin: 22px 0 0;
-      color: var(--sb-muted);
-      font-size: 1.05rem;
-    }
-
-    .sb-delete-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 24px;
-      padding: 8px 14px;
-      border: 1px solid rgba(24, 169, 153, 0.35);
-      border-radius: 999px;
-      color: #116f65;
-      background: rgba(255,255,255,0.7);
-      font-size: 0.88rem;
-      font-weight: 700;
-    }
-
-    /* Main */
-    .sb-delete-main {
-      padding: 64px 0 88px;
-    }
-
-    .sb-delete-section {
-      margin-top: 64px;
-    }
-
-    .sb-delete-section:first-child {
-      margin-top: 0;
-    }
-
-    .sb-delete-section-title {
-      margin: 0 0 18px;
-      padding-bottom: 12px;
-      color: var(--sb-navy);
-      border-bottom: 2px solid var(--sb-teal);
-      font-size: clamp(1.35rem, 3vw, 1.8rem);
-      line-height: 1.4;
-    }
-
-    .sb-delete-note {
-      padding: 18px 20px;
-      border-left: 4px solid var(--sb-blue);
-      background: #eef6ff;
-      border-radius: 0 10px 10px 0;
-    }
-
-    .sb-delete-note strong {
-      color: var(--sb-navy);
-    }
-
-    .sb-delete-grid {
+    .account-delete__steps {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 1.5rem;
+      margin: 1.5rem 0 2.5rem;
     }
 
-    .sb-delete-card {
-      padding: 24px;
-      border: 1px solid var(--sb-line);
-      border-radius: 14px;
+    .account-delete__step {
+      padding: 1.8rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
       background: #fff;
-      box-shadow: var(--sb-shadow);
     }
 
-    .sb-delete-card__number {
-      display: inline-grid;
-      place-items: center;
-      width: 38px;
-      height: 38px;
-      margin-bottom: 12px;
+    .account-delete__step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 3rem;
+      height: 3rem;
+      margin-bottom: 1rem;
       border-radius: 50%;
+      background: #4a90e2;
       color: #fff;
-      background: var(--sb-blue);
-      font-weight: 800;
-    }
-
-    .sb-delete-card h3 {
-      margin: 0 0 8px;
-      color: var(--sb-navy);
-      font-size: 1.08rem;
-    }
-
-    .sb-delete-card p {
-      margin: 0;
-      color: var(--sb-muted);
-      font-size: 0.94rem;
-    }
-
-    .sb-delete-list {
-      margin: 0;
-      padding-left: 1.3em;
-    }
-
-    .sb-delete-list li + li {
-      margin-top: 8px;
-    }
-
-    .sb-delete-warning {
-      padding: 22px 24px;
-      border: 1px solid #efd7d7;
-      border-radius: 12px;
-      background: #fff8f8;
-    }
-
-    .sb-delete-warning h3 {
-      margin: 0 0 8px;
-      color: var(--sb-danger);
-      font-size: 1.05rem;
-    }
-
-    .sb-delete-warning p {
-      margin: 0;
-    }
-
-    /* Form */
-    .sb-delete-form-wrap {
-      padding: clamp(24px, 5vw, 42px);
-      border-radius: 18px;
-      background: var(--sb-navy);
-      box-shadow: 0 18px 45px rgba(11, 36, 56, 0.18);
-    }
-
-    .sb-delete-form-wrap .sb-delete-section-title {
-      color: #fff;
-      border-bottom-color: var(--sb-teal);
-    }
-
-    .sb-delete-form-intro {
-      margin: 0 0 24px;
-      color: rgba(255,255,255,0.78);
-    }
-
-    .sb-delete-form {
-      display: grid;
-      gap: 18px;
-    }
-
-    .sb-delete-form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .sb-delete-field label {
-      display: block;
-      margin-bottom: 7px;
-      color: #fff;
-      font-size: 0.9rem;
       font-weight: 700;
     }
 
-    .sb-delete-field .sb-delete-required {
-      margin-left: 6px;
-      color: #7edbd1;
-      font-size: 0.75rem;
+    .account-delete__step h3 {
+      margin: 0 0 .7rem;
+      font-size: 1.6rem;
     }
 
-    .sb-delete-field input,
-    .sb-delete-field textarea {
-      width: 100%;
-      border: 1px solid rgba(255,255,255,0.28);
-      border-radius: 9px;
-      background: #fff;
-      color: var(--sb-text);
-      padding: 13px 14px;
-      font: inherit;
+    .account-delete__step p {
+      margin: 0;
     }
 
-    .sb-delete-field input:focus,
-    .sb-delete-field textarea:focus {
-      outline: 3px solid rgba(24,169,153,0.32);
-      border-color: var(--sb-teal);
-    }
-
-    .sb-delete-field textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    .sb-delete-check {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      color: #fff;
-      font-size: 0.9rem;
-    }
-
-    .sb-delete-check input {
-      margin-top: 6px;
-      flex: 0 0 auto;
-    }
-
-    .sb-delete-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 6px;
-    }
-
-    .sb-delete-button {
-      appearance: none;
-      border: 0;
-      border-radius: 999px;
-      padding: 13px 24px;
-      background: var(--sb-teal);
-      color: #fff;
-      font: inherit;
-      font-weight: 800;
-      cursor: pointer;
-      transition: transform .15s ease, opacity .15s ease;
-    }
-
-    .sb-delete-button:hover,
-    .sb-delete-button:focus-visible {
-      transform: translateY(-1px);
-      opacity: .92;
-    }
-
-    .sb-delete-button--sub {
-      border: 1px solid rgba(255,255,255,.42);
-      background: transparent;
-    }
-
-    .sb-delete-form-help {
-      margin: 14px 0 0;
-      color: rgba(255,255,255,0.72);
-      font-size: 0.82rem;
-    }
-
-    .sb-delete-form-help a {
-      color: #b8fff6;
-    }
-
-    .sb-delete-status {
-      display: none;
-      margin-top: 16px;
-      padding: 12px 14px;
+    .account-delete__form {
+      margin-top: 1.5rem;
+      padding: 2rem;
+      border: 1px solid #ddd;
       border-radius: 8px;
-      color: #fff;
-      background: rgba(24,169,153,.2);
-      font-size: .9rem;
+      background: #fafafa;
     }
 
-    /* FAQ */
-    .sb-delete-faq details {
-      padding: 18px 0;
-      border-bottom: 1px solid var(--sb-line);
-    }
-
-    .sb-delete-faq summary {
-      cursor: pointer;
-      color: var(--sb-navy);
-      font-weight: 800;
-    }
-
-    .sb-delete-faq details p {
-      margin: 10px 0 0;
-      color: var(--sb-muted);
-    }
-
-    /* Footer */
-    .sb-site-footer {
-      padding: 48px 0 22px;
-      color: rgba(255,255,255,.82);
-      background: var(--sb-navy);
-    }
-
-    .sb-site-footer__grid {
+    .account-delete__form-grid {
       display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr;
-      gap: 36px;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
     }
 
-    .sb-site-footer h2,
-    .sb-site-footer h3 {
-      color: #fff;
-      margin-top: 0;
+    .account-delete__field {
+      margin-bottom: 1.5rem;
     }
 
-    .sb-site-footer h2 {
+    .account-delete__field label {
+      display: block;
+      margin-bottom: .5rem;
+      font-weight: 600;
+    }
+
+    .account-delete__required {
+      margin-left: .5rem;
+      color: #c8102e;
       font-size: 1.2rem;
     }
 
-    .sb-site-footer h3 {
-      font-size: .92rem;
+    .account-delete__field input,
+    .account-delete__field textarea {
+      width: 100%;
+      padding: 1.1rem 1.2rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #fff;
+      color: #202020;
+      font: inherit;
     }
 
-    .sb-site-footer ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
+    .account-delete__field textarea {
+      min-height: 11rem;
+      resize: vertical;
     }
 
-    .sb-site-footer li + li {
-      margin-top: 8px;
+    .account-delete__field input:focus,
+    .account-delete__field textarea:focus {
+      border-color: #4a90e2;
+      outline: 2px solid rgba(74, 144, 226, .18);
     }
 
-    .sb-site-footer a {
-      color: rgba(255,255,255,.82);
-      text-decoration: none;
+    .account-delete__agree {
+      display: flex;
+      gap: .8rem;
+      align-items: flex-start;
+      margin: 1rem 0 1.5rem;
     }
 
-    .sb-site-footer a:hover,
-    .sb-site-footer a:focus-visible {
+    .account-delete__agree input {
+      margin-top: .5rem;
+      flex: 0 0 auto;
+    }
+
+    .account-delete__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .account-delete__button {
+      display: inline-block;
+      padding: 1.1rem 2rem;
+      border: 1px solid #2e2e2e;
+      border-radius: 3px;
+      background: #2e2e2e;
       color: #fff;
-      text-decoration: underline;
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
     }
 
-    .sb-site-footer__bottom {
-      margin-top: 34px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(255,255,255,.15);
-      font-size: .8rem;
+    .account-delete__button:hover {
+      background: #555;
     }
 
-    @media (max-width: 860px) {
-      .sb-menu-button {
-        display: inline-block;
+    .account-delete__button--sub {
+      background: #fff;
+      color: #2e2e2e;
+    }
+
+    .account-delete__button--sub:hover {
+      background: #f0f0f0;
+    }
+
+    .account-delete__help,
+    .account-delete__status {
+      margin-top: 1.2rem;
+      font-size: 1.3rem;
+    }
+
+    .account-delete__status {
+      display: none;
+      padding: 1rem 1.2rem;
+      background: #eef6ff;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .account-delete.c-policyArticle {
+        margin: 2rem auto;
+        padding: 2rem;
       }
 
-      .sb-site-nav {
-        display: none;
-        position: absolute;
-        top: 76px;
-        left: 0;
-        right: 0;
-        padding: 18px 20px 24px;
-        background: #fff;
-        border-bottom: 1px solid var(--sb-line);
-        box-shadow: 0 16px 30px rgba(11, 36, 56, .08);
-      }
-
-      .sb-site-nav.is-open {
-        display: block;
-      }
-
-      .sb-site-nav ul {
-        align-items: stretch;
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .sb-delete-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .sb-delete-form-row,
-      .sb-site-footer__grid {
+      .account-delete__steps,
+      .account-delete__form-grid {
         grid-template-columns: 1fr;
       }
     }
 
-    @media (max-width: 560px) {
-      .sb-delete-container {
-        width: min(100% - 28px, 1080px);
+    @media (max-width: 480px) {
+      .account-delete-main {
+        padding: 2rem .5rem 4rem;
       }
 
-      .sb-delete-hero {
-        padding: 62px 0 54px;
-      }
-
-      .sb-delete-main {
-        padding: 48px 0 64px;
-      }
-
-      .sb-delete-section {
-        margin-top: 48px;
-      }
-
-      .sb-delete-actions {
+      .account-delete__actions {
         flex-direction: column;
       }
 
-      .sb-delete-button {
+      .account-delete__button {
         width: 100%;
+        text-align: center;
       }
     }
   </style>
 
-  <script src="/style.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "SMARTBUKATSU アカウント削除申請",
+    "url": "https://sharprise.jp/smartbukatsu/account-deletion.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "SharpRise",
+      "url": "https://sharprise.jp/"
+    }
+  }
+  </script>
 </head>
 
 <body>
-  <!-- ===== SharpRise 共通ヘッダー ===== -->
-  <header class="sb-site-header">
-    <div class="sb-delete-container sb-site-header__inner">
-      <a class="sb-site-logo" href="/" aria-label="SharpRise トップページ">
-        SharpRise <span>シャープライズ</span>
-      </a>
+<div class="wrapper">
 
-      <button
-        class="sb-menu-button"
-        type="button"
-        aria-expanded="false"
-        aria-controls="sb-global-nav"
-      >
-        MENU
-      </button>
+  <!-- ===== SharpRise 共通ヘッダー：既存テンプレートと同一構造 ===== -->
+  <header class="l-header">
+    <div class="s-headPrimary">
+      <h1 class="c-primaryLogo">
+        <a href="../">
+          <img src="../img/Logo2.png" alt="シャープライズのロゴ">
+        </a>
+      </h1>
 
-      <nav id="sb-global-nav" class="sb-site-nav" aria-label="メインメニュー">
-        <ul>
-          <li><a href="/company/company.html">会社概要</a></li>
-          <li><a href="/business/business.html">事業内容</a></li>
-          <li><a href="/business/business_skillup.html">スキルアップ研修事業</a></li>
-          <li><a href="/business/business_iotsolution.html">自社開発事業</a></li>
-          <li><a class="sb-site-nav__cta" href="/inquiry/inquiry_top.html">お問い合わせ</a></li>
+      <nav class="c-globalNav" aria-label="メインナビゲーション">
+        <ul class="c-globalNav_list">
+          <li>
+            <a href="../company/company.html" class="m-globalNav_listLink u-flxAlign_c">会社概要</a>
+          </li>
+          <li>
+            <a href="../business/business.html" class="m-globalNav_listLink u-flxAlign_c">
+              事業内容<span class="m-arrow"></span>
+            </a>
+            <ul class="m-dropMenu">
+              <li><a href="../business/business_consult.html">業務コンサルティング事業</a></li>
+              <li><a href="../business/business_skillup.html">スキルアップ研修事業</a></li>
+              <li><a href="../business/business_iotsolution.html">自社開発事業</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
+
+      <div class="c-navIcon" aria-label="メニューを開く">
+        <span></span>
+      </div>
+
+      <div class="c-primarySub">
+        <div class="c-urgeInquiry">
+          <a href="../inquiry/inquiry_top.html" class="m-urgeInquiry_btn">お問い合わせ</a>
+        </div>
+      </div>
     </div>
   </header>
 
-  <main class="sb-delete-page">
-    <!-- ===== Hero ===== -->
-    <section class="sb-delete-hero">
-      <div class="sb-delete-container">
-        <p class="sb-delete-eyebrow">SMARTBUKATSU</p>
-        <h1 class="sb-delete-title">アカウント削除申請</h1>
-        <p class="sb-delete-lead">
-          SMARTBUKATSUをご利用いただいた方は、アプリにログインできない場合でも、
-          このページからアカウントおよび関連データの削除を申請できます。
-        </p>
-        <span class="sb-delete-badge">運営：SharpRise（シャープライズ）</span>
+  <!-- ===== ページ固有コンテンツ ===== -->
+  <main id="main" role="main" class="account-delete-main">
+    <article class="c-policyArticle account-delete">
+      <p class="account-delete__product">SMARTBUKATSU</p>
+      <h1>アカウント削除申請</h1>
+      <p class="account-delete__lead">
+        SMARTBUKATSUをご利用の方は、アプリにログインできない場合でも、
+        このページからアカウントおよび関連データの削除を申請できます。
+      </p>
+
+      <div class="account-delete__info">
+        <strong>アプリ外からも削除を申請できます。</strong><br>
+        本ページからの申請についても、SMARTBUKATSUアプリ内のアカウント削除と同じ基準で処理します。
+        第三者による不正な削除を防ぐため、登録メールアドレス等を用いて本人確認を行います。
       </div>
-    </section>
 
-    <div class="sb-delete-container sb-delete-main">
-      <!-- ===== About ===== -->
-      <section class="sb-delete-section" aria-labelledby="about-delete">
-        <h2 id="about-delete" class="sb-delete-section-title">削除申請について</h2>
-        <div class="sb-delete-note">
-          <strong>アプリ内から削除できない場合も申請できます。</strong><br>
-          本ページからの申請についても、SMARTBUKATSUアプリ内のアカウント削除と同一の基準で処理します。
-          第三者による不正な削除を防ぐため、登録メールアドレス等を用いて本人確認を行った後に削除します。
+      <h2>削除完了までの流れ</h2>
+      <div class="account-delete__steps">
+        <section class="account-delete__step">
+          <span class="account-delete__step-number">1</span>
+          <h3>削除を申請</h3>
+          <p>下のフォームへ必要事項を入力し、登録メールアドレスから削除依頼メールを送信します。</p>
+        </section>
+        <section class="account-delete__step">
+          <span class="account-delete__step-number">2</span>
+          <h3>本人確認</h3>
+          <p>登録情報と照合し、必要に応じて登録メールアドレス宛てに確認のご連絡を行います。</p>
+        </section>
+        <section class="account-delete__step">
+          <span class="account-delete__step-number">3</span>
+          <h3>削除・完了連絡</h3>
+          <p>本人確認完了後、原則7営業日以内に削除処理を行い、完了をご連絡します。</p>
+        </section>
+      </div>
+
+      <h2>削除対象となる主なデータ</h2>
+      <ul>
+        <li>SMARTBUKATSUのアカウント情報（登録メールアドレス等）</li>
+        <li>プロフィール情報、個人設定、チームへの所属情報</li>
+        <li>個人予定、日誌など、利用者本人に紐づく個人データ</li>
+        <li>その他、アプリ内のアカウント削除基準により削除対象となるデータ</li>
+      </ul>
+
+      <div class="account-delete__warning">
+        <strong>削除後も一定期間保全する場合があるデータ</strong><br>
+        法令上の保存義務、不正利用の防止、セキュリティ対応、通報・紛争対応等のために必要な記録については、
+        必要最小限の範囲で一定期間保全する場合があります。
+        また、チーム内で他の利用者と共有された情報については、他者の利用や記録との関係を確認したうえで、
+        削除または匿名化等の適切な措置を行います。
+      </div>
+
+      <h2>Webから削除を申請する</h2>
+      <p>
+        下記を入力して「メールアプリを開いて削除申請」を押すと、
+        <strong>inoue@sharprise.jp</strong> 宛ての申請メールが作成されます。
+        内容を確認し、メールアプリ側で送信してください。
+      </p>
+
+      <form id="accountDeletionForm" class="account-delete__form">
+        <div class="account-delete__form-grid">
+          <div class="account-delete__field">
+            <label for="registeredEmail">
+              SMARTBUKATSU登録メールアドレス
+              <span class="account-delete__required">必須</span>
+            </label>
+            <input
+              id="registeredEmail"
+              name="registeredEmail"
+              type="email"
+              autocomplete="email"
+              inputmode="email"
+              required
+              placeholder="example@example.com"
+            >
+          </div>
+
+          <div class="account-delete__field">
+            <label for="userName">氏名 <span class="account-delete__required">任意</span></label>
+            <input id="userName" name="userName" type="text" autocomplete="name" maxlength="100">
+          </div>
         </div>
-      </section>
 
-      <!-- ===== Flow ===== -->
-      <section class="sb-delete-section" aria-labelledby="delete-flow">
-        <h2 id="delete-flow" class="sb-delete-section-title">削除完了までの流れ</h2>
-        <div class="sb-delete-grid">
-          <article class="sb-delete-card">
-            <div class="sb-delete-card__number">1</div>
-            <h3>削除を申請</h3>
-            <p>下のフォームに必要事項を入力し、登録メールアドレスから削除依頼メールを送信してください。</p>
-          </article>
+        <div class="account-delete__form-grid">
+          <div class="account-delete__field">
+            <label for="teamName">所属チーム名 <span class="account-delete__required">任意</span></label>
+            <input id="teamName" name="teamName" type="text" maxlength="120">
+          </div>
 
-          <article class="sb-delete-card">
-            <div class="sb-delete-card__number">2</div>
-            <h3>本人確認</h3>
-            <p>内容を確認し、必要に応じてSMARTBUKATSUに登録されたメールアドレス宛に確認のご連絡を行います。</p>
-          </article>
-
-          <article class="sb-delete-card">
-            <div class="sb-delete-card__number">3</div>
-            <h3>削除・完了連絡</h3>
-            <p>本人確認完了後、削除基準に従って処理を行い、登録メールアドレス等へ完了をご連絡します。</p>
-          </article>
+          <div class="account-delete__field">
+            <label for="role">役割 <span class="account-delete__required">任意</span></label>
+            <input id="role" name="role" type="text" maxlength="80" placeholder="例：管理者、スタッフ、選手、保護者">
+          </div>
         </div>
-      </section>
 
-      <!-- ===== Data ===== -->
-      <section class="sb-delete-section" aria-labelledby="delete-data">
-        <h2 id="delete-data" class="sb-delete-section-title">削除対象となる主なデータ</h2>
-        <ul class="sb-delete-list">
-          <li>SMARTBUKATSUのアカウント情報（登録メールアドレス等）</li>
-          <li>プロフィール情報、個人設定、チームへの所属情報</li>
-          <li>個人予定、日誌など、利用者本人に紐づく個人データ</li>
-          <li>その他、アプリ内のアカウント削除基準により削除対象となるデータ</li>
-        </ul>
-
-        <div class="sb-delete-warning" style="margin-top: 22px;">
-          <h3>削除後も一定期間保全する場合があるデータ</h3>
-          <p>
-            法令上の保存義務、不正利用の防止、セキュリティ対応、通報・紛争対応等のために必要な記録については、
-            必要最小限の範囲で一定期間保全する場合があります。また、チーム内で他の利用者と共有された情報については、
-            他者の利用や記録との関係を確認したうえで、削除または匿名化等の適切な措置を行います。
-          </p>
+        <div class="account-delete__field">
+          <label for="note">補足事項 <span class="account-delete__required">任意</span></label>
+          <textarea
+            id="note"
+            name="note"
+            maxlength="1000"
+            placeholder="ログインできない等、確認に必要な情報があればご記入ください。パスワードや招待コードは記載しないでください。"
+          ></textarea>
         </div>
-      </section>
 
-      <!-- ===== Form ===== -->
-      <section class="sb-delete-section sb-delete-form-wrap" aria-labelledby="delete-form-title">
-        <h2 id="delete-form-title" class="sb-delete-section-title">Webから削除を申請する</h2>
-        <p class="sb-delete-form-intro">
-          送信ボタンを押すと、お使いのメールアプリが起動し、
-          <strong>inoue@sharprise.jp</strong> 宛ての削除申請メールが作成されます。
-          内容をご確認のうえ、メールアプリ側で送信してください。
+        <label class="account-delete__agree">
+          <input id="confirmDelete" type="checkbox" required>
+          <span>
+            アカウント削除後は原則として元のアカウントへ戻せないことを理解し、
+            本人確認のためSharpRiseから連絡を受けることに同意します。
+          </span>
+        </label>
+
+        <div class="account-delete__actions">
+          <button class="account-delete__button" type="submit">
+            メールアプリを開いて削除申請
+          </button>
+          <button class="account-delete__button account-delete__button--sub" id="copyRequestButton" type="button">
+            申請内容をコピー
+          </button>
+        </div>
+
+        <p class="account-delete__help">
+          可能な限りSMARTBUKATSUに登録しているメールアドレスから送信してください。
+          メールアプリが起動しない場合は
+          <a href="mailto:inoue@sharprise.jp">inoue@sharprise.jp</a>
+          まで直接ご連絡ください。
         </p>
 
-        <form id="accountDeletionForm" class="sb-delete-form">
-          <div class="sb-delete-form-row">
-            <div class="sb-delete-field">
-              <label for="registeredEmail">
-                SMARTBUKATSU登録メールアドレス
-                <span class="sb-delete-required">必須</span>
-              </label>
-              <input
-                id="registeredEmail"
-                name="registeredEmail"
-                type="email"
-                autocomplete="email"
-                inputmode="email"
-                required
-                placeholder="example@example.com"
-              >
-            </div>
+        <div id="deleteStatus" class="account-delete__status" role="status" aria-live="polite"></div>
+      </form>
 
-            <div class="sb-delete-field">
-              <label for="userName">氏名 <span class="sb-delete-required">任意</span></label>
-              <input
-                id="userName"
-                name="userName"
-                type="text"
-                autocomplete="name"
-                maxlength="100"
-                placeholder="例：山田 太郎"
-              >
-            </div>
-          </div>
+      <h2>受付後の対応</h2>
+      <ul>
+        <li>申請受付後、登録情報と照合して本人確認を行います。</li>
+        <li>本人確認ができない場合は、追加情報の確認をお願いすることがあります。</li>
+        <li>本人確認完了後、原則7営業日以内に削除処理を行います。</li>
+        <li>削除完了後、確認に使用したメールアドレス等へご連絡します。</li>
+        <li>削除申請に含まれる情報は、削除対応および本人確認の目的に限って取り扱います。</li>
+      </ul>
 
-          <div class="sb-delete-form-row">
-            <div class="sb-delete-field">
-              <label for="teamName">所属チーム名 <span class="sb-delete-required">任意</span></label>
-              <input
-                id="teamName"
-                name="teamName"
-                type="text"
-                maxlength="120"
-                placeholder="例：〇〇中学校 〇〇部"
-              >
-            </div>
+      <h2>よくある質問</h2>
 
-            <div class="sb-delete-field">
-              <label for="role">役割 <span class="sb-delete-required">任意</span></label>
-              <input
-                id="role"
-                name="role"
-                type="text"
-                maxlength="80"
-                placeholder="例：管理者、スタッフ、選手、保護者"
-              >
-            </div>
-          </div>
+      <h3>アプリにログインできなくても削除できますか？</h3>
+      <p>
+        はい。本ページから申請できます。登録メールアドレス等を用いて本人確認を行った後に削除処理を行います。
+      </p>
 
-          <div class="sb-delete-field">
-            <label for="note">補足事項 <span class="sb-delete-required">任意</span></label>
-            <textarea
-              id="note"
-              name="note"
-              maxlength="1000"
-              placeholder="ログインできない等、確認に必要な情報があればご記入ください。パスワードや招待コードは記載しないでください。"
-            ></textarea>
-          </div>
+      <h3>別の人のアカウントを削除できますか？</h3>
+      <p>
+        できません。第三者による不正な削除を防ぐため、本人確認が完了しない限りアカウント削除は行いません。
+      </p>
 
-          <label class="sb-delete-check">
-            <input id="confirmDelete" type="checkbox" required>
-            <span>
-              アカウント削除を申請すると、削除完了後は原則として元のアカウントへ戻せないことを理解し、
-              本人確認のため連絡を受けることに同意します。
-            </span>
-          </label>
+      <h3>同じメールアドレスで再登録できますか？</h3>
+      <p>
+        削除完了後に同じメールアドレスで再登録する場合は、新規ユーザーとしての取り扱いとなります。
+        過去のアカウント状態やデータが自動的に復元されるものではありません。
+      </p>
 
-          <div class="sb-delete-actions">
-            <button class="sb-delete-button" type="submit">
-              メールアプリを開いて削除申請
-            </button>
-            <button class="sb-delete-button sb-delete-button--sub" id="copyRequestButton" type="button">
-              申請内容をコピー
-            </button>
-          </div>
-
-          <p class="sb-delete-form-help">
-            可能な限り、SMARTBUKATSUに<strong>登録しているメールアドレスから</strong>送信してください。
-            登録アドレスと送信元が異なる場合は、登録アドレス宛ての確認等を行います。
-            メールアプリが起動しない場合は
-            <a href="mailto:inoue@sharprise.jp">inoue@sharprise.jp</a>
-            まで直接ご連絡ください。
-          </p>
-
-          <div id="deleteStatus" class="sb-delete-status" role="status" aria-live="polite"></div>
-        </form>
-      </section>
-
-      <!-- ===== Operation ===== -->
-      <section class="sb-delete-section" aria-labelledby="processing">
-        <h2 id="processing" class="sb-delete-section-title">受付後の対応</h2>
-        <ul class="sb-delete-list">
-          <li>申請受付後、登録情報と照合して本人確認を行います。</li>
-          <li>本人確認ができない場合、追加情報の確認をお願いすることがあります。</li>
-          <li>削除処理が完了した際は、確認に使用したメールアドレス等へご連絡します。</li>
-          <li>削除申請に含まれる情報は、削除対応および本人確認の目的に限って取り扱います。</li>
-        </ul>
-        <p style="margin-top: 18px;">
-          詳細な個人情報の取り扱いについては、
-          <a href="/privacypolicy/privacypolicy.html">SharpRise プライバシーポリシー</a>
-          をご確認ください。
-        </p>
-      </section>
-
-      <!-- ===== FAQ ===== -->
-      <section class="sb-delete-section sb-delete-faq" aria-labelledby="faq">
-        <h2 id="faq" class="sb-delete-section-title">よくある質問</h2>
-
-        <details>
-          <summary>アプリにログインできなくても削除できますか？</summary>
-          <p>
-            はい。本ページから申請できます。登録メールアドレス等を用いて本人確認を行った後に削除処理を行います。
-          </p>
-        </details>
-
-        <details>
-          <summary>別の人のアカウントを削除できますか？</summary>
-          <p>
-            できません。第三者による不正な削除を防ぐため、本人確認が完了しない限りアカウント削除は行いません。
-          </p>
-        </details>
-
-        <details>
-          <summary>同じメールアドレスで再登録できますか？</summary>
-          <p>
-            削除完了後に同じメールアドレスで再登録する場合は、新規ユーザーとしての取り扱いとなります。
-            過去のアカウント状態やデータが自動的に復元されるものではありません。
-          </p>
-        </details>
-      </section>
-    </div>
+      <h2>個人情報の取り扱い</h2>
+      <p>
+        詳細は
+        <a href="../privacypolicy/privacypolicy.html">SharpRise プライバシーポリシー</a>
+        をご確認ください。
+      </p>
+    </article>
   </main>
 
-  <!-- ===== SharpRise 共通フッター ===== -->
-  <footer class="sb-site-footer">
-    <div class="sb-delete-container">
-      <div class="sb-site-footer__grid">
-        <div>
-          <h2>SharpRise</h2>
-          <p>生成AI・DXコンサルティング、スキルアップ研修、自社開発サービスを提供しています。</p>
-          <p><a href="/">TOP</a></p>
-        </div>
+  <!-- ===== SharpRise 共通フッター：既存テンプレートと同一構造 ===== -->
+  <footer class="l-footer">
+    <div class="s-footContent">
+      <nav class="c-footSitemap">
+        <p class="c-footLogo">
+          <a href="../">
+            <img src="../img/Logo2.png" alt="シャープライズのロゴ">
+          </a>
+        </p>
 
-        <div>
+        <section>
           <h3>会社について</h3>
           <ul>
-            <li><a href="/company/company.html">会社概要</a></li>
-            <li><a href="/business/business.html">事業内容</a></li>
+            <li><a href="../company/company.html">会社概要</a></li>
+            <li><a href="../business/business.html">事業内容</a></li>
           </ul>
-        </div>
+        </section>
 
-        <div>
+        <section>
           <h3>お問い合わせ</h3>
           <ul>
-            <li><a href="/inquiry/inquiry_top.html">業務コンサルティング事業</a></li>
-            <li><a href="/inquiry/inquiry_top.html">スキルアップ研修事業</a></li>
-            <li><a href="/inquiry/inquiry_top.html">自社開発事業</a></li>
-            <li><a href="/privacypolicy/privacypolicy.html">プライバシーポリシー</a></li>
+            <li><a href="../inquiry/inquiry_top.html">業務コンサルティング事業</a></li>
+            <li><a href="../inquiry/inquiry_iotskill.html">スキルアップ研修事業</a></li>
+            <li><a href="../inquiry/inquiry_iotsolution.html">自社開発事業</a></li>
+            <li><a href="../privacypolicy/privacypolicy.html">プライバシーポリシー</a></li>
           </ul>
-        </div>
-      </div>
+        </section>
+      </nav>
 
-      <div class="sb-site-footer__bottom">
-        ©2024 sharprise
+      <div class="c-footMeta">
+        <p class="c-footMeta_copy">
+          <small>&copy;2024 sharprise</small>
+        </p>
       </div>
     </div>
   </footer>
 
-  <script>
-    (function () {
-      const form = document.getElementById('accountDeletionForm');
-      const copyButton = document.getElementById('copyRequestButton');
-      const status = document.getElementById('deleteStatus');
-      const menuButton = document.querySelector('.sb-menu-button');
-      const nav = document.getElementById('sb-global-nav');
+</div><!-- /.wrapper -->
 
-      function getRequestData() {
-        return {
-          email: document.getElementById('registeredEmail').value.trim(),
-          name: document.getElementById('userName').value.trim(),
-          team: document.getElementById('teamName').value.trim(),
-          role: document.getElementById('role').value.trim(),
-          note: document.getElementById('note').value.trim()
-        };
-      }
+<script>
+(function () {
+  const form = document.getElementById('accountDeletionForm');
+  const copyButton = document.getElementById('copyRequestButton');
+  const status = document.getElementById('deleteStatus');
 
-      function buildMailBody(data) {
-        return [
-          'SMARTBUKATSU アカウント削除申請',
-          '',
-          '以下のアカウントについて削除を申請します。',
-          '',
-          '■ 登録メールアドレス',
-          data.email || '未入力',
-          '',
-          '■ 氏名',
-          data.name || '未入力',
-          '',
-          '■ 所属チーム名',
-          data.team || '未入力',
-          '',
-          '■ 役割',
-          data.role || '未入力',
-          '',
-          '■ 補足事項',
-          data.note || 'なし',
-          '',
-          '本人確認後、SMARTBUKATSUの削除基準に従ったアカウントおよび関連データの削除を希望します。',
-          '',
-          '※パスワード・招待コード等の機密情報は送信していません。'
-        ].join('\n');
-      }
+  function getRequestData() {
+    return {
+      email: document.getElementById('registeredEmail').value.trim(),
+      name: document.getElementById('userName').value.trim(),
+      team: document.getElementById('teamName').value.trim(),
+      role: document.getElementById('role').value.trim(),
+      note: document.getElementById('note').value.trim()
+    };
+  }
 
-      function showStatus(message) {
-        status.textContent = message;
-        status.style.display = 'block';
-      }
+  function buildMailBody(data) {
+    return [
+      'SMARTBUKATSU アカウント削除申請',
+      '',
+      '以下のアカウントについて削除を申請します。',
+      '',
+      '■ 登録メールアドレス',
+      data.email || '未入力',
+      '',
+      '■ 氏名',
+      data.name || '未入力',
+      '',
+      '■ 所属チーム名',
+      data.team || '未入力',
+      '',
+      '■ 役割',
+      data.role || '未入力',
+      '',
+      '■ 補足事項',
+      data.note || 'なし',
+      '',
+      '本人確認後、SMARTBUKATSUの削除基準に従ったアカウントおよび関連データの削除を希望します。',
+      '',
+      '※パスワード・招待コード等の機密情報は送信していません。'
+    ].join('\n');
+  }
 
-      form.addEventListener('submit', function (event) {
-        event.preventDefault();
+  function showStatus(message) {
+    status.textContent = message;
+    status.style.display = 'block';
+  }
 
-        if (!form.reportValidity()) {
-          return;
-        }
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
 
-        const data = getRequestData();
-        const subject = '【SMARTBUKATSU】アカウント削除申請';
-        const body = buildMailBody(data);
-        const mailto =
-          'mailto:inoue@sharprise.jp' +
-          '?subject=' + encodeURIComponent(subject) +
-          '&body=' + encodeURIComponent(body);
+    if (!form.reportValidity()) {
+      return;
+    }
 
-        showStatus(
-          'メールアプリを起動します。起動後、送信先が inoue@sharprise.jp であることを確認して送信してください。'
-        );
+    const subject = '【SMARTBUKATSU】アカウント削除申請';
+    const body = buildMailBody(getRequestData());
 
-        window.location.href = mailto;
-      });
+    window.location.href =
+      'mailto:inoue@sharprise.jp' +
+      '?subject=' + encodeURIComponent(subject) +
+      '&body=' + encodeURIComponent(body);
 
-      copyButton.addEventListener('click', async function () {
-        if (!form.reportValidity()) {
-          return;
-        }
+    showStatus('メールアプリを起動しました。送信先と内容をご確認のうえ、メールを送信してください。');
+  });
 
-        const text =
-          '件名：【SMARTBUKATSU】アカウント削除申請\n' +
-          '送信先：inoue@sharprise.jp\n\n' +
-          buildMailBody(getRequestData());
+  copyButton.addEventListener('click', async function () {
+    if (!form.reportValidity()) {
+      return;
+    }
 
-        try {
-          await navigator.clipboard.writeText(text);
-          showStatus('申請内容をコピーしました。メールアプリ等へ貼り付けて送信できます。');
-        } catch (error) {
-          showStatus('コピーできませんでした。inoue@sharprise.jp 宛てに直接ご連絡ください。');
-        }
-      });
+    const text =
+      '送信先：inoue@sharprise.jp\n' +
+      '件名：【SMARTBUKATSU】アカウント削除申請\n\n' +
+      buildMailBody(getRequestData());
 
-      if (menuButton && nav) {
-        menuButton.addEventListener('click', function () {
-          const isOpen = nav.classList.toggle('is-open');
-          menuButton.setAttribute('aria-expanded', String(isOpen));
-        });
-      }
-    })();
-  </script>
+    try {
+      await navigator.clipboard.writeText(text);
+      showStatus('申請内容をコピーしました。メールアプリ等へ貼り付けて送信できます。');
+    } catch (error) {
+      showStatus('コピーできませんでした。inoue@sharprise.jp 宛てに直接ご連絡ください。');
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
