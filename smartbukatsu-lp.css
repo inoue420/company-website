@@ -147,6 +147,39 @@
   margin-top: 36px;
 }
 
+.sb-hero__copy .sb-hero__actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.sb-hero__copy .sb-hero__actions > :first-child {
+  grid-column: 1 / -1;
+  justify-self: start;
+}
+
+.sb-store-badges {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.sb-store-badges a {
+  display: inline-flex;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.sb-store-badges a:hover {
+  transform: translateY(-2px);
+  opacity: .9;
+}
+
+.sb-store-badges img {
+  display: block;
+  width: auto;
+  height: 54px;
+}
+
 .sb-btn {
   min-height: 58px;
   display: inline-flex;
@@ -593,6 +626,9 @@
   .sb-hero { min-height: 620px; }
   .sb-hero__copy { padding-bottom: 42px; }
   .sb-hero__actions { flex-direction: column; align-items: stretch; }
+  .sb-hero__copy .sb-hero__actions { display: flex; }
+  .sb-store-badges { flex-wrap: wrap; gap: 10px; }
+  .sb-store-badges img { height: 48px; }
   .sb-btn { width: 100%; }
   .sb-hero__meta { line-height: 1.7; }
 
