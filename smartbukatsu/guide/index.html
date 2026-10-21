@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smart BUKATSUを初めて使うチーム向けの操作ガイド。招待と権限、カレンダー、全体連絡と通知、動画の切り抜き・閲覧、戦術ノートを順番に説明します。">
+  <meta name="theme-color" content="#081f33">
+  <title>はじめての操作ガイド・Q＆A｜Smart BUKATSU</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../smartbukatsu-lp.css">
+  <link rel="stylesheet" href="guide.css">
+  <script src="guide.js" defer></script>
+</head>
+<body class="sbg-body">
+  <a class="sbg-skip" href="#guide-main">操作ガイド本文へ</a>
+  <header class="l-header sb-site-header">
+    <div class="s-headPrimary">
+      <div class="c-primaryLogo"><a href="../../index.html" aria-label="SharpRise トップページ"><img src="../../img/Logo2.png" alt="SharpRise"></a></div>
+      <nav class="c-globalNav" aria-label="メインナビゲーション">
+        <ul class="c-globalNav_list">
+          <li><a class="m-globalNav_listLink" href="../../company/company.html">会社概要</a></li>
+          <li><a class="m-globalNav_listLink" href="../../business/business.html">事業内容</a></li>
+          <li><a class="m-globalNav_listLink m-listLink_on" href="../index.html">Smart BUKATSU</a></li>
+        </ul>
+      </nav>
+      <div class="c-primarySub"><a class="m-urgeInquiry_btn" href="../../inquiry/inquiry_top.html">お問い合わせ</a></div>
+      <button class="c-navIcon" type="button" aria-label="メニューを開閉する" aria-expanded="false"><span aria-hidden="true"></span></button>
+    </div>
+  </header>
+  <div class="sbg-toolbar" id="top">
+    <div class="sbg-toolbar-inner">
+      <a href="../index.html">Smart BUKATSU サービス紹介へ</a>
+      <div class="sbg-actions">
+        <button class="sbg-button sbg-button--light sbg-menu" type="button" aria-expanded="false" aria-controls="guide-toc" hidden>ガイドの目次</button>
+        <button class="sbg-button sbg-button--light" type="button" id="print-guide" hidden>印刷する</button>
+        <a class="sbg-button" href="smartbukatsu-guide.pdf" download>配布用PDF</a>
+      </div>
+    </div>
+  </div>
+  <div class="sbg-layout">
+    <nav class="sbg-toc" id="guide-toc" aria-label="操作ガイドの目次">
+      <strong>はじめての操作ガイド</strong>
+      <a href="#start">まずはここから</a>
+      <a href="#checklist">導入チェックリスト</a>
+      <a href="#members">01 メンバー招待・参加</a>
+      <a href="#permissions">役割・個別権限の設定</a>
+      <a href="#calendar">02 スケジュール作成</a>
+      <a href="#calendar-more">複数日・添付・編集</a>
+      <a href="#communication">03 全体連絡・公開範囲</a>
+      <a href="#notifications">通知先・受信の確認</a>
+      <a href="#video-create">04 動画を登録する</a>
+      <a href="#video-clip">タグを付けて切り抜く</a>
+      <a href="#video-share">公開・切り抜き時間の調整</a>
+      <a href="#video-watch">05 閲覧用プロジェクト</a>
+      <a href="#video-filter">場面を探して再生する</a>
+      <a href="#tactics">06 戦術ノートを作る</a>
+      <a href="#tactics-more">画像・行動タスク</a>
+      <a href="#tactics-read">確認・質問・完了報告</a>
+      <a href="#faq">困ったときのQ＆A</a>
+      <a href="#workshop">講習用の練習課題</a>
+      <a href="#glossary">用語・お問い合わせ</a>
+    </nav>
+    <main class="sbg-content" id="guide-main">
+      <section class="sbg-sheet sbg-cover" id="start" aria-labelledby="start-title">
+        <p class="sbg-eyebrow">SMART BUKATSU / START GUIDE</p>
+        <h1 id="start-title">はじめての<br>操作ガイド</h1>
+        <p class="sbg-lead">招待から、連絡・予定・動画の活用まで。<br>スマートフォンを操作しながら、ひとつずつ進めましょう。</p>
+        <div class="sbg-meta"><span>管理者・スタッフ</span><span>キャプテン・一般部員</span><span>保護者</span></div>
+        <div class="sbg-flow" aria-label="導入の流れ">
+          <div><em>最初の準備</em><strong>参加と役割</strong>招待コードで参加し、必要な役割を設定します。</div>
+          <div><em>毎日の運用</em><strong>予定と連絡</strong>練習予定を登録し、連絡が届くことを確認します。</div>
+          <div><em>指導への活用</em><strong>動画とノート</strong>場面を切り抜き、見るポイントを共有します。</div>
+        </div>
+        <h3>自分に合う読み方を選んでください</h3>
+        <div class="sbg-grid">
+          <div class="sbg-card"><h4>チームを導入・管理する方</h4><p><a href="#checklist">導入チェックリスト</a>から始め、01〜06を順に進めます。設定後は、参加者側でも確認します。</p></div>
+          <div class="sbg-card"><h4>招待された部員・保護者の方</h4><p><a href="#members-join">初めて参加する手順</a>→カレンダー・全体連絡→動画閲覧の順に読みます。戦術ノートは保護者には表示されません。</p></div>
+        </div>
+        <div class="sbg-callout"><strong>最初は「1人・1件・1場面」で試しましょう</strong><p>招待を1人、予定と連絡を各1件、動画の場面を1つ。少ない量で操作と見え方を確認してから、チーム全体へ広げます。</p></div>
+        <p class="sbg-small">初版・確認用 / 作成日：2026年10月21日 / 対象：現行ソースのアプリ1.1.3。画面の文言・操作条件をコードと照合しています。掲載の操作案内図は実画面のスクリーンショットではありません。配布中アプリとの実機照合は公開前の確認項目です。</p>
+      </section>
+
+      <section class="sbg-sheet" id="checklist" aria-labelledby="checklist-title">
+        <p class="sbg-eyebrow">GET READY</p><h2 id="checklist-title">始める前の準備とチェックリスト</h2>
+        <p>この資料では、チーム名が表示され、連絡のタブが並ぶ画面を「ホーム」と呼びます。所属チームが複数ある方は、操作するチーム名を先に確認してください。</p>
+        <div class="sbg-route" aria-label="ホーム画面の目印"><b>ホーム上部のチーム名</b><span>／</span><b>ベル：通知センター</b><span>／</span><b>歯車：設定</b></div>
+        <p class="sbg-small">カレンダー・動画・戦術ノートはホーム上部の横並びのメニューにあります。見当たらないときは横にスクロールします。表示は役割により異なります。</p>
+        <h3>用意するもの</h3>
+        <ul><li>アプリを利用できるスマートフォンとインターネット接続。</li><li>確認メールを受け取れるメールアドレス。招待される方はチームの招待コード。</li><li>動画を試す場合は、参加者が再生できる動画URLと、短い練習用の映像。</li></ul>
+        <h3>管理者の導入チェック</h3>
+        <ul class="sbg-checks">
+          <li>自分のメール確認を終え、正しいチームのホームを開いた。</li>
+          <li>確認に協力するメンバー1人を招待し、参加を確認した。</li>
+          <li>メンバーの役割・学年やグループ・必要な個別権限を設定した。</li>
+          <li>共有予定を1件登録し、相手の端末でも表示された。</li>
+          <li>全体連絡の公開範囲と通知先を確認し、テスト連絡を投稿した。</li>
+          <li>相手がプッシュ通知設定を確認し、連絡を開けた。</li>
+          <li>動画のタグを1件記録・公開し、動画閲覧で再生できた。</li>
+          <li>戦術ノートを1件投稿し、確認対象者が確認・質問を試した。</li>
+        </ul>
+        <div class="sbg-callout sbg-callout--note"><strong>チーム管理の操作と、個人の設定を区別します</strong><p>役割・共有範囲は管理する方が設定します。メール確認と自分の端末の通知許可は、各自が行います。相手に届くかの確認は、投稿した本人とは別のアカウントで行ってください。</p></div>
+        <div class="sbg-print-only">
+          <h3>目次・必要なページを開く</h3>
+          <table><tbody>
+            <tr><td><a href="#members">01 招待・参加・権限</a>：p.3-4</td><td><a href="#calendar">02 スケジュール</a>：p.5-6</td></tr>
+            <tr><td><a href="#communication">03 全体連絡・通知</a>：p.7-8</td><td><a href="#video-create">04 動画登録・切り抜き</a>：p.9-11</td></tr>
+            <tr><td><a href="#video-watch">05 動画閲覧</a>：p.12-13</td><td><a href="#tactics">06 戦術ノート</a>：p.14-16</td></tr>
+            <tr><td><a href="#faq">困ったときのQ＆A</a>：p.17-20</td><td><a href="#workshop">講習の課題</a>：p.21 ／ <a href="#glossary">用語</a>：p.22</td></tr>
+          </tbody></table>
+        </div>
+        <p class="sbg-next">次は <a href="#members">01 メンバーを招待して参加する</a></p>
+      </section>
+
+      <section class="sbg-sheet" id="members" aria-labelledby="members-title">
+        <p class="sbg-eyebrow">01 / MEMBERS</p><h2 id="members-title">メンバーを招待して参加する</h2>
+        <div class="sbg-meta"><span>招待：監督・管理者・スタッフ</span><span>参加：招待された方全員</span></div>
+        <h3>招待する方の操作</h3>
+        <div class="sbg-route"><b>ホームの歯車</b><span>→</span><b>所属チーム情報・入部用コード</b><span>→</span><b>招待コードをコピー</b></div>
+        <p>コピーした招待コードと、このガイドの参加手順を相手に共有します。相手が参加すると、部員リストに自動で追加されます。</p>
+        <h3 id="members-join">初めて参加する方の操作</h3>
+        <ol class="sbg-steps">
+          <li><strong class="sbg-step-title">アプリを開き「新規登録」を押します</strong><p>「役割を選択」では「部員として参加」を選びます。招待されたスタッフ・保護者も、この入口から参加し、参加後に管理者が役割を変更します。</p></li>
+          <li><strong class="sbg-step-title">名前と招待コードを入力します</strong><p>「お名前（表示名）」と「チームの招待コード」を入力します。招待コードは英字の大文字・小文字を区別するため、コピーして貼り付けると確実です。</p></li>
+          <li><strong class="sbg-step-title">メールアドレス・パスワードを入力し、登録します</strong><p>パスワードは6文字以上です。表示された年齢・同意条件、利用規約、プライバシーポリシーを確認し、「登録して始める」を押します。</p></li>
+          <li><strong class="sbg-step-title">確認メールのリンクを開き、アプリに戻ります</strong><p>登録したメールを確認し、リンクを開きます。その後アプリへ戻り、「確認状態を再取得」を押します。メール確認が終わるまでは主要機能を利用できません。</p></li>
+          <li><strong class="sbg-step-title">所属チームと表示名を確認します</strong><p>チーム選択が表示されたら、参加したチームを選びます。管理者へ参加できたことと希望する役割を伝えます。</p></li>
+        </ol>
+        <div class="sbg-callout"><strong>すでにアカウントがある方</strong><p>「ログイン」で入ります。ホーム上部のチーム名からチーム選択を開き、「招待コードで参加」にコードを入力して「参加する」を押します。同じメールアドレスで新規登録を繰り返す必要はありません。</p></div>
+        <p class="sbg-next">次は管理者が <a href="#permissions">役割と必要な権限を設定</a>します。</p>
+      </section>
+
+      <section class="sbg-sheet" id="permissions" aria-labelledby="permissions-title">
+        <p class="sbg-eyebrow">01 / PERMISSIONS</p><h2 id="permissions-title">役割と、個別に許可する操作を設定する</h2>
+        <div class="sbg-meta"><span>設定する方：監督・管理者・スタッフ</span></div>
+        <div class="sbg-route"><b>ホームの歯車</b><span>→</span><b>部員リスト・権限・担当管理</b></div>
+        <ol class="sbg-steps">
+          <li><strong class="sbg-step-title">対象メンバーの名前を見つけます</strong><p>名前の横の現在の役割（「一般部員」など）を押し、変更する役割を選びます。監督・管理者への変更は、チーム作成者などの条件により選択肢が異なります。</p></li>
+          <li><strong class="sbg-step-title">一般部員・キャプテンの所属を整えます</strong><p>「学年・グループ」を押して必要な項目を選び、「学年・グループを保存」を押します。候補がなければ「学年・グループ管理」で先に登録します。スタッフへ相談する部員には「担当」も設定します。</p></li>
+          <li><strong class="sbg-step-title">一般部員・保護者には、必要な個別権限を設定します</strong><p>「動画追加」「タグ編集」はそれぞれ別の許可です。一般部員には「カレンダー編集」「戦術ノート投稿」も設定できます。各項目を押し、ON/OFFの表示を確認します。</p></li>
+          <li><strong class="sbg-step-title">本人の画面で使えるかを確認します</strong><p>本人に対象画面を開き直してもらい、必要なボタンが表示されるか確認します。保護者は必要に応じて「子供」も設定し、「子供の設定を保存」で確定します。</p></li>
+        </ol>
+        <div class="sbg-table-wrap"><table><caption>このガイドで扱う主な役割と操作</caption><thead><tr><th scope="col">役割</th><th scope="col">主な操作・確認点</th></tr></thead><tbody>
+          <tr><th scope="row">監督・管理者・スタッフ</th><td>メンバー管理、共有予定・動画・戦術ノートの作成。スタッフの記録閲覧には「全体／担当のみ」の設定もあります。</td></tr>
+          <tr><th scope="row">キャプテン</th><td>共有予定・動画・戦術ノートの作成、閲覧専用タブへの投稿。連絡タブの公開範囲設定は管理側へ依頼します。</td></tr>
+          <tr><th scope="row">一般部員</th><td>公開された内容の閲覧。予定編集・動画追加・タグ編集・戦術ノート投稿は個別許可で利用します。</td></tr>
+          <tr><th scope="row">保護者</th><td>公開対象となる連絡、予定、動画の閲覧。動画追加・タグ編集は個別許可で利用。戦術ノートは対象外です。</td></tr>
+        </tbody></table></div>
+        <p class="sbg-small">「スタッフ」は管理操作ができる役割です。動画追加だけを任せたい場合などは、その人の役割と個別権限を分けて検討してください。</p>
+        <p class="sbg-next">次は <a href="#calendar">02 スケジュールを作る</a></p>
+      </section>
+
+      <section class="sbg-sheet" id="calendar" aria-labelledby="calendar-title">
+        <p class="sbg-eyebrow">02 / CALENDAR</p><h2 id="calendar-title">チームで共有する予定を1件作る</h2>
+        <div class="sbg-meta"><span>監督・管理者・スタッフ・キャプテン</span><span>一般部員は「カレンダー編集」の許可が必要</span></div>
+        <div class="sbg-route"><b>ホーム</b><span>→</span><b>カレンダー</b><span>→</span><b>予定日</b><span>→</span><b>部活の予定（共有）の「＋ 追加」</b></div>
+        <div class="sbg-callout"><strong>「部活の予定（共有）」を選びます</strong><p>「個人の予定（非公開）」に登録した内容は、チームの共有予定にはなりません。練習・試合の連絡は、共有の欄から登録します。</p></div>
+        <ol class="sbg-steps">
+          <li><strong class="sbg-step-title">カレンダーで予定日を押します</strong><p>最初は1日分の練習予定で試します。日付を選んだ後、「部活の予定（共有）」の右側にある「＋ 追加」を押します。</p></li>
+          <li><strong class="sbg-step-title">予定の種類を選びます</strong><p>「新しい予定を追加」で「練習」「試合」「その他」から選びます。日程は「当日のみ」のまま進めます。</p></li>
+          <li><strong class="sbg-step-title">開始・終了時刻と説明を入れます</strong><p>時刻を押して変更します。「詳細説明・備考」には集合時間や持ち物などを入力します。</p><div class="sbg-example"><strong>入力例</strong><br>種類：練習 / 時間：16:00〜18:00<br>備考：15:50に体育館入口集合。飲み物と室内シューズを持参。</div></li>
+          <li><strong class="sbg-step-title">画面下の「保存する」を押します</strong><p>入力欄に隠れている場合は、キーボードを閉じて画面を下へスクロールします。保存後、同じ日の共有欄に予定があるか確認します。</p></li>
+          <li><strong class="sbg-step-title">別のメンバーにも同じ日付を開いてもらいます</strong><p>予定の種類、開始・終了時刻、備考が意図した内容か確認します。「保存できた」と「相手が見られた」の両方を確認して完了です。</p></li>
+        </ol>
+        <p class="sbg-next">続けて <a href="#calendar-more">複数日・添付・編集の操作</a>を確認できます。</p>
+      </section>
+
+      <section class="sbg-sheet" id="calendar-more" aria-labelledby="calendar-more-title">
+        <p class="sbg-eyebrow">02 / CALENDAR OPTIONS</p><h2 id="calendar-more-title">複数日・添付資料・予定の変更</h2>
+        <h3>同じ時間の予定を複数日に入れる</h3>
+        <ol class="sbg-steps">
+          <li><strong class="sbg-step-title">予定の登録画面で「複数日」を選びます</strong><p>表示されたカレンダーで登録したい日を押します。選択中の日付を確認し、不要な日はもう一度押して外します。</p></li>
+          <li><strong class="sbg-step-title">共通の時刻を設定して保存します</strong><p>選択した各日に、同じ時間設定で保存されます。毎週繰り返す自動登録とは異なるため、登録したい日を選択してください。</p></li>
+        </ol>
+        <h3>写真・PDF・場所を追加する</h3>
+        <ul><li>「写真・PDF添付」の「写真を追加」「PDFを追加」から選びます。複数日の場合は、添付対象の日付も確認します。合計3ファイル、各10MBまでです。</li><li>添付の選択後は、予定の「保存する」で確定します。添付資料はアップロードから3か月後に自動削除されます。後からも必要な原本は別に保管してください。</li><li>「場所」には施設名・住所・集合場所名を入力します。地図を使うときは「場所詳細機能」をONにし、「座標を取得」「地図でピンを調整」で位置を確認します。</li></ul>
+        <h3>登録済みの予定を変更する</h3>
+        <p>対象日を選び、予定カードの鉛筆マーク（✏️）を押すと「予定の編集」が開きます。内容を変更し「保存する」を押します。複数日に登録した予定も、編集する日はカレンダーで先に選びます。変更後、その日の予定を確認してください。</p>
+        <div class="sbg-callout sbg-callout--note"><strong>予定が見えることと、通知が届くことは別に確認します</strong><p>予定の変更通知には、チームの設定に応じた「直近の日数」の条件があります。先の日程を登録した直後に通知が来ない場合も、まずカレンダーで保存結果を確認してください。受信側の通知設定では「予定の作成・変更」を確認します。</p></div>
+        <h3>この章の完了チェック</h3>
+        <ul class="sbg-checks"><li>共有欄に予定が表示され、参加者も内容を確認できた。</li><li>添付した場合は、保存後に写真・PDFを開けた。</li><li>変更後の日時・集合場所を参加者側でも確認した。</li></ul>
+        <p class="sbg-next">次は <a href="#communication">03 全体連絡と公開範囲</a></p>
+      </section>
+
+      <section class="sbg-sheet" id="communication" aria-labelledby="communication-title">
+        <p class="sbg-eyebrow">03 / COMMUNICATION</p><h2 id="communication-title">全体連絡の「見られる人」を設定する</h2>
+        <div class="sbg-meta"><span>タブの設定：監督・管理者・スタッフ</span></div>
+        <p>ホームの「全体連絡」などのタブを、この資料では「連絡タブ」と呼びます。アプリの設定画面では「チャンネル」と表示される箇所もあります。</p>
+        <div class="sbg-route"><b>ホーム</b><span>→</span><b>「全体連絡」のタブを長押し</b><span>→</span><b>「全体連絡」の設定</b></div>
+        <ol class="sbg-steps">
+          <li><strong class="sbg-step-title">設定したいタブを長押しします</strong><p>短く押すとタブの切り替え、指を置いたまま押すと設定を開きます。新しい連絡先のまとまりを作る場合は、タブ横の「＋ 追加」を押します。</p></li>
+          <li><strong class="sbg-step-title">投稿できる人を決めます</strong><p>「部員は閲覧のみ（投稿不可）」をONにすると、一般部員・保護者は新規投稿できません。監督・管理者・スタッフ・キャプテンは投稿できます。</p></li>
+          <li><strong class="sbg-step-title">「共有範囲」を確認します</strong><p>「スタッフ」「部員」「保護者」から対象を選びます。この画面の「スタッフ」には、監督・管理者も含まれます。保護者へ見せる場合は「保護者」をONにします。</p></li>
+          <li><strong class="sbg-step-title">部員全体か、学年・グループかを選びます</strong><p>「部員全体」は学年・グループ未設定の部員も対象です。「学年・グループごと」は、選んだいずれかの学年・グループに所属する部員・キャプテンが対象です。</p></li>
+          <li><strong class="sbg-step-title">続いて、管理側の通知先を設定します</strong><p>同じ画面の下にある「管理者・スタッフの通知先」を設定してから保存します。操作は次のページで説明します。</p></li>
+        </ol>
+        <div class="sbg-callout sbg-callout--note"><strong>「全体連絡」という名前でも、公開対象は設定によります</strong><p>保護者は新規作成時にはOFFです。タブ名だけで全員に見えると判断せず、共有範囲を確認してください。公開範囲を変更すると、そのタブの過去の投稿の見え方にも関係するため、既存の内容も確認します。</p></div>
+        <p class="sbg-next">次は <a href="#notifications">通知先の設定とテスト投稿</a></p>
+      </section>
+
+      <section class="sbg-sheet" id="notifications" aria-labelledby="notifications-title">
+        <p class="sbg-eyebrow">03 / NOTIFICATIONS</p><h2 id="notifications-title">知らせる相手を選び、受信を確認する</h2>
+        <div class="sbg-flow"><div><em>見られる人</em><strong>共有範囲</strong>連絡を閲覧できる対象です。</div><div><em>管理側へ知らせる人</em><strong>通知先</strong>公開対象の監督・管理者・スタッフから選びます。</div><div><em>自分の受信</em><strong>通知設定</strong>各自がアプリと端末で設定します。</div></div>
+        <ol class="sbg-steps">
+          <li><strong class="sbg-step-title">管理者・スタッフの通知先を選び、保存します</strong><p>連絡タブの設定で「管理者・スタッフの通知先（複数選択可）」をONにします。共有範囲の「スタッフ」もONにし、「保存する」で確定します。新しいタブの場合は「作成する」を押します。</p></li>
+          <li><strong class="sbg-step-title">参加者が自分の通知設定を確認します</strong><p>ホームの歯車→「プッシュ通知」→「通知設定を開く」へ進みます。全体の「プッシュ通知」、通知する項目の「チャンネルの新規投稿」、対象チームをONにします。端末の通知許可も確認します。</p></li>
+          <li><strong class="sbg-step-title">「全体連絡」を開いてテスト投稿します</strong><p>ホームでタブを選び、下の入力欄に本文を入力して「投稿」を押します。入力欄がない場合は、投稿できる役割か確認します。</p><div class="sbg-example"><strong>投稿例</strong><br>【導入テスト】明日の練習は16時からです。この連絡を開けるか確認をお願いします。</div></li>
+          <li><strong class="sbg-step-title">投稿者以外の端末で確認します</strong><p>公開対象の部員・キャプテン・保護者と、通知先に選んだ管理側の人に確認してもらいます。投稿者本人には新規投稿の通知は届きません。ホーム上部のベルから通知センターも確認します。</p></li>
+        </ol>
+        <div class="sbg-callout"><strong>通知が来ない場合は、この順で確認します</strong><p>①正しいチーム・連絡タブか → ②公開対象か → ③管理側の人は通知先に選ばれているか → ④アプリの全体・項目別・チーム別設定 → ⑤端末の通知許可。</p></div>
+        <p class="sbg-small">通知設定をOFFにすると、該当する通知は通知センターと未読件数にも表示されません。履歴は保存され、ONに戻すと再表示されます。通知の受信可否だけで、投稿の公開範囲は変わりません。</p>
+        <p class="sbg-next">次は <a href="#video-create">04 動画を登録する</a></p>
+      </section>
+      <section class="sbg-sheet" id="video-create" aria-labelledby="video-create-title">
+        <p class="sbg-eyebrow">04 / VIDEO SETUP</p><h2 id="video-create-title">切り抜きの元になる動画を登録する</h2>
+        <div class="sbg-meta"><span>監督・管理者・スタッフ・キャプテン</span><span>一般部員・保護者は「動画追加」の許可が必要</span></div>
+        <div class="sbg-route"><b>ホーム</b><span>→</span><b>動画</b><span>→</span><b>動画編集（タグ付け）</b><span>→</span><b>新規追加</b></div>
+        <p>この画面では、動画ファイルを端末から選ぶのではなく、元動画のURLを登録します。初回は、参加者も再生できる練習用の動画URLを用意してください。</p>
+        <ol class="sbg-steps">
+          <li><strong class="sbg-step-title">「動画編集（タグ付け）」を開きます</strong><p>「動画」画面には「動画編集（タグ付け）」と「動画閲覧」の2つのタブがあります。元動画の登録とタグ記録は、編集側のタブで行います。</p></li>
+          <li><strong class="sbg-step-title">「新規追加」を押し、動画名・種類を入力します</strong><p>「新しい動画を追加」で、動画名と「試合」「練習」「その他」のいずれかを選びます。</p><div class="sbg-example"><strong>入力例</strong><br>動画名：導入練習用・パス練習 / 種類：練習</div></li>
+          <li><strong class="sbg-step-title">共有範囲とタグリストを選びます</strong><p>チームで見る練習には共有範囲「全体」を選びます。「指導者のみ」は監督・管理者・スタッフ向けの選択肢です。タグリストは、その映像で記録したい項目のまとまりを選びます。</p></li>
+          <li><strong class="sbg-step-title">「動画のURL（YouTubeなど）」へ貼り付けます</strong><p>URL全体を貼り付けます。Androidには「貼り付け」ボタンがあります。iOSは入力欄を長押しして貼り付けます。元動画側の公開設定によっては、他の参加者が再生できないことがあります。</p></li>
+          <li><strong class="sbg-step-title">「作成する」を押し、追加された動画を開きます</strong><p>一覧の「種類」「月」が閉じている場合は見出しを押して展開します。動画を開き、再生できることを確認します。</p></li>
+        </ol>
+        <div class="sbg-callout"><strong>ここまでの完了確認</strong><p>編集側の動画一覧に名前が表示され、元動画を再生できれば登録完了です。次に、その動画の中で「見返したい時点」をタグとして記録します。</p></div>
+        <p class="sbg-next">次は <a href="#video-clip">タグを付けて場面を切り抜く</a></p>
+      </section>
+
+      <section class="sbg-sheet" id="video-clip" aria-labelledby="video-clip-title">
+        <p class="sbg-eyebrow">04 / RECORD A SCENE</p><h2 id="video-clip-title">タグを付けて場面を切り抜く</h2>
+        <div class="sbg-meta"><span>監督・管理者・スタッフ・キャプテン</span><span>一般部員・保護者は「タグ編集」の許可が必要</span></div>
+        <p>「タグ」は場面につける目印です。記録した時点の前後を指定して再生することで、見たいプレーだけを振り返れます。</p>
+        <div class="sbg-flow"><div><em>① 見る位置</em><strong>時点を決める</strong>例：動画の1分00秒。</div><div><em>② 前後の長さ</em><strong>前5秒・後3秒</strong>例：0分55秒〜1分03秒。</div><div><em>③ 検索の目印</em><strong>タグで記録</strong>例：その競技の技術名・判断。</div></div>
+        <ol class="sbg-steps">
+          <li><strong class="sbg-step-title">元動画を再生し、残したい場面で止めます</strong><p>プレーが起きた時点を基準にします。必要に応じて前後への移動で位置を調整します。</p></li>
+          <li><strong class="sbg-step-title">「全体切り抜き」の前・後の秒数を確認します</strong><p>まずは前5秒・後3秒など、短い区間で試します。この動画の共通設定として使われ、画面を戻ると保存されます。</p></li>
+          <li><strong class="sbg-step-title">記録するタグを1つ以上選びます</strong><p>画面に表示されたタグボタンを押します。複数選択もできます。選んだタグ名が、記録ボタンに表示されます。</p></li>
+          <li><strong class="sbg-step-title">「『選択したタグ名』で記録する」を押します</strong><p>タグを選ぶだけでは記録されません。「タグを記録しました（未公開）」が表示され、記録一覧に増えたことを確認します。</p></li>
+          <li><strong class="sbg-step-title">記録一覧の「▶ 時刻」で、記録位置を確認します</strong><p>その時点へ移動して再生します。前後の切り抜き区間は、この後の「動画閲覧」で確認します。個別の長さ調整と公開は次のページで説明します。</p></li>
+        </ol>
+        <div class="sbg-callout sbg-callout--note"><strong>記録した直後は「自分のみ」です</strong><p>未公開のタグは、そのタグを記録した本人だけが見られます。他のメンバーに見てもらうには、公開操作が必要です。</p></div>
+        <p class="sbg-small">このガイドの「切り抜き」は、元動画の時点と再生区間を記録する操作です。切り抜いた動画ファイルを端末へ保存する手順ではありません。</p>
+        <p class="sbg-next">次は <a href="#video-share">公開と切り抜き時間の調整</a></p>
+      </section>
+
+      <section class="sbg-sheet" id="video-share" aria-labelledby="video-share-title">
+        <p class="sbg-eyebrow">04 / SHARE &amp; ADJUST</p><h2 id="video-share-title">場面を公開し、切り抜き時間を整える</h2>
+        <h3>記録した場面を公開する</h3>
+        <ol class="sbg-steps">
+          <li><strong class="sbg-step-title">「自分のみのタグ（○件）を一括公開」を押します</strong><p>対象動画の編集画面で操作します。この操作で公開されるのは、自分が記録した未公開タグです。件数と内容を先に確認してください。</p></li>
+          <li><strong class="sbg-step-title">確認画面で「公開する」を押します</strong><p>公開後は、元動画を閲覧できる他のメンバーにも場面が表示されるか確認します。元動画が「指導者のみ」の場合は、その共有条件も確認します。</p></li>
+        </ol>
+        <h3>1つの場面だけ長さを変える</h3>
+        <ol class="sbg-steps">
+          <li><strong class="sbg-step-title">記録済みの場面の「編集」を押します</strong><p>記録一覧の「編集」から「切り取りタグを編集」を開きます。動画閲覧の場面カードでは、編集できる場合は長押しでも開けます。</p></li>
+          <li><strong class="sbg-step-title">「個別の切り抜き時間」をONにします</strong><p>前・後の秒数を入力します。OFFの場合は、その動画の「全体切り抜き」の秒数を使います。タグを変更したいときは、この画面で付け直せます。</p></li>
+          <li><strong class="sbg-step-title">「保存」を押します</strong><p>例えば前5秒・後3秒で短い場合、後を6秒に変更します。基準の時点はそのままです。次章の「動画閲覧」で、プレーの前後が収まるか再生して確認します。</p></li>
+        </ol>
+        <div class="sbg-callout"><strong>共通設定と個別設定の使い分け</strong><p>全体の傾向を揃えるなら「全体切り抜き」、そのプレーだけ長く見せるなら「個別の切り抜き時間」を使います。個別設定をONにした場面は、その個別の秒数を使います。</p></div>
+        <h3>この章の完了チェック</h3>
+        <ul class="sbg-checks"><li>タグを選ぶだけでなく、記録ボタンを押した。</li><li>タグの公開操作を完了し、別のメンバーの記録一覧にも表示された。</li><li>動画閲覧で確認する、前後の秒数を設定した。</li></ul>
+        <p class="sbg-next">次は <a href="#video-watch">05 見返すためのプロジェクトを作る</a></p>
+      </section>
+
+      <section class="sbg-sheet" id="video-watch" aria-labelledby="video-watch-title">
+        <p class="sbg-eyebrow">05 / VIEWING PROJECT</p><h2 id="video-watch-title">見返す動画をプロジェクトにまとめる</h2>
+        <div class="sbg-meta"><span>作成：動画追加ができる役割・個別権限の方</span><span>閲覧：元動画の公開条件に合うメンバー</span></div>
+        <p>「動画閲覧」のプロジェクトは、見返す元動画をまとめる入れ物です。元動画を登録しただけでは、閲覧用プロジェクトは自動では作成されません。</p>
+        <div class="sbg-route"><b>ホーム</b><span>→</span><b>動画</b><span>→</span><b>動画閲覧</b><span>→</span><b>＋ 新規追加</b></div>
+        <ol class="sbg-steps">
+          <li><strong class="sbg-step-title">「動画閲覧」タブを選びます</strong><p>「プロジェクト一覧」が表示されます。登録済みのプロジェクトがある参加者は、新規作成せず、その名前を押して開けます。</p></li>
+          <li><strong class="sbg-step-title">「＋ 新規追加」を押します</strong><p>「新しいプロジェクトを追加」が開きます。「プロジェクト名」には、見返す目的が分かる名前を入れます。</p><div class="sbg-example"><strong>入力例</strong><br>プロジェクト名：パス練習の振り返り</div></li>
+          <li><strong class="sbg-step-title">「格納する動画」を選びます</strong><p>種類・月の見出しを開き、対象動画にチェックを入れます。初回は1本で試します。過去の動画が見当たらない場合は「過去の動画を追加読み込み」を確認します。</p></li>
+          <li><strong class="sbg-step-title">「作成する」を押し、一覧から開きます</strong><p>追加したプロジェクトを開き、公開済みのタグ場面が表示されるか確認します。次のページの方法で、場面を絞り込んで再生できます。</p></li>
+        </ol>
+        <div class="sbg-grid"><div class="sbg-card"><h4>編集側の「動画」</h4><p>元動画のURL・タグ・切り抜き時間を扱います。</p></div><div class="sbg-card"><h4>閲覧側の「プロジェクト」</h4><p>元動画を1本以上まとめ、タグで場面を探して再生します。</p></div></div>
+        <div class="sbg-callout sbg-callout--note"><strong>場面がないときは、元動画側も確認します</strong><p>動画が格納されているか、タグを記録したか、そのタグを公開したかを順に確認します。閲覧する人が元動画の公開対象かも確認してください。</p></div>
+        <p class="sbg-next">次は <a href="#video-filter">見たい場面を探して再生する</a></p>
+      </section>
+
+      <section class="sbg-sheet" id="video-filter" aria-labelledby="video-filter-title">
+        <p class="sbg-eyebrow">05 / FIND &amp; PLAY</p><h2 id="video-filter-title">見たい場面を探して再生する</h2>
+        <div class="sbg-meta"><span>公開対象のメンバー・保護者</span><span>閲覧だけならタグ編集の許可は不要</span></div>
+        <div class="sbg-route"><b>ホーム</b><span>→</span><b>動画</b><span>→</span><b>動画閲覧</b><span>→</span><b>プロジェクト名</b></div>
+        <ol class="sbg-steps">
+          <li><strong class="sbg-step-title">指定されたプロジェクトを開きます</strong><p>まずタグを絞らず、場面カードが表示されるか確認します。場面カードを押すと、その場面を再生します。</p></li>
+          <li><strong class="sbg-step-title">見たいタグを選びます</strong><p>「検索条件」で「OR（いずれか）」か「AND（すべて）」を選び、タグを押します。初回はタグ1つから始めると、結果を理解しやすくなります。</p></li>
+          <li><strong class="sbg-step-title">場面を再生して、同じプレーを比較します</strong><p>表示された場面を押して再生します。再生モードでは、1タグリピート・全体リピート・最後で終了を切り替えられます。画面の「再生モード」を確認します。</p></li>
+          <li><strong class="sbg-step-title">見つからない場合は条件を減らします</strong><p>選択したタグを外す、ANDをORへ変える、格納動画を確認する、の順で試します。「条件に一致するシーンはありません」は、検索条件に合う場面がない状態です。</p></li>
+        </ol>
+        <div class="sbg-table-wrap"><table><caption>ORとANDの違い（タグ名は説明用の例です）</caption><thead><tr><th scope="col">条件</th><th scope="col">タグA・タグBを選んだとき</th></tr></thead><tbody><tr><th scope="row">OR（いずれか）</th><td>AまたはBのどちらかが付いた場面。広く探すときに使います。</td></tr><tr><th scope="row">AND（すべて）</th><td>同じ場面にAとBの両方が付いたもの。条件を絞るときに使います。</td></tr></tbody></table></div>
+        <div class="sbg-callout"><strong>その場面を指導につなげたいとき</strong><p>戦術ノートを作成できる方は、「戦術ノート」を開いて場面を選択できます。動画閲覧側で「戦術ノート」を展開し、場面の左にチェックして「選択した○件でノートを作成」へ進む方法もあります。</p></div>
+        <p class="sbg-next">次は <a href="#tactics">06 戦術ノートを作る</a></p>
+      </section>
+
+      <section class="sbg-sheet" id="tactics" aria-labelledby="tactics-title">
+        <p class="sbg-eyebrow">06 / TACTICAL NOTES</p><h2 id="tactics-title">動画の場面と伝えたいことをまとめる</h2>
+        <div class="sbg-meta"><span>監督・管理者・スタッフ・キャプテン</span><span>一般部員は「戦術ノート投稿」の許可が必要</span></div>
+        <div class="sbg-callout sbg-callout--note"><strong>事前準備：動画の場面を使うには「動画閲覧」への登録が必須です</strong><p>先に「動画閲覧」のプロジェクトを作成し、対象動画を「格納する動画」に登録してください。「動画編集（タグ付け）」へ元動画を追加しただけでは、戦術ノートに場面を添付できません。未登録の方は、<a href="#video-watch">05 閲覧用プロジェクトの作成手順</a>を先に行ってください。</p></div>
+        <div class="sbg-route"><b>ホーム</b><span>→</span><b>戦術ノート</b><span>→</span><b>＋ ノートを作成</b></div>
+        <ol class="sbg-steps">
+          <li><strong class="sbg-step-title">タイトルと「全体説明」を入力します</strong><p>何を見て、次に何をするかが伝わる文章にします。初回は1つのテーマと1場面に絞ります。</p><div class="sbg-example"><strong>入力例</strong><br>タイトル：パスを受ける前の準備<br>全体説明：受ける前に周囲を確認しましょう。添付の場面で、確認するタイミングを見てください。</div></li>
+          <li><strong class="sbg-step-title">確認対象者を選びます</strong><p>確認してほしい人を選びます。「全員」はキャプテン・一般部員を選択します。監督・管理者・スタッフは必要に応じて個別に選びます。指定なしでも投稿できますが、確認義務は設定されません。</p></li>
+          <li><strong class="sbg-step-title">「動画閲覧から場面を選ぶ」を押します</strong><p>閲覧用プロジェクトを開き、再生して内容を確認します。場面カードを押す操作は「再生」、左のチェックは「添付する場面の選択」です。</p></li>
+          <li><strong class="sbg-step-title">「選択した○件を追加」を押します</strong><p>ノートの作成画面に戻り、「添付場面」に選んだ場面があるか確認します。「場面ごとの指導コメント」も入力できます。場面を選べない場合は、元のタグの公開状態を確認します。</p></li>
+          <li><strong class="sbg-step-title">「投稿を保存」を押します</strong><p>必要な場面または画像を添付して保存します。一覧に戻ってノートを開き、タイトル・本文・場面・確認対象者を確認します。</p></li>
+        </ol>
+        <div class="sbg-callout sbg-callout--note"><strong>確認対象者は「この人だけに見せる」の設定ではありません</strong><p>戦術ノートは、保護者以外のチーム全員に公開されます。確認対象者は、確認・理解・質問の反応を求める相手です。個人だけへ限定した内容を投稿する用途には使わないでください。</p></div>
+        <p class="sbg-next">次は <a href="#tactics-more">画像や行動タスクを加える</a>、または <a href="#tactics-read">読む側の操作</a>へ。</p>
+      </section>
+
+      <section class="sbg-sheet" id="tactics-more" aria-labelledby="tactics-more-title">
+        <p class="sbg-eyebrow">06 / IMAGES &amp; ACTIONS</p><h2 id="tactics-more-title">画像・行動タスクで、次の行動を示す</h2>
+        <p>基本のノート作成に慣れたら追加します。初回の講習では、動画場面を1つ添付したノートだけでも構いません。</p>
+        <h3>図や写真で伝える</h3>
+        <ol class="sbg-steps">
+          <li><strong class="sbg-step-title">「画像を選ぶ」から指導画像を追加します</strong><p>ノートの作成・編集画面の「指導画像」で選択します。画像は6枚までです。動画場面がなくても、画像が1枚以上あれば投稿できます。</p></li>
+          <li><strong class="sbg-step-title">不要な画像を外し、保存します</strong><p>添付内容を確認し、不要なら「画像を取り外す」を押します。「投稿を保存」でノートを確定します。</p></li>
+        </ol>
+        <h3>「やってみること」を担当者へ伝える</h3>
+        <ol class="sbg-steps">
+          <li><strong class="sbg-step-title">「行動タスク（任意）」で「＋ タスクを追加」を押します</strong><p>「実施内容」に、何をすれば完了かが分かる文章を入力します。例：「次の練習で、受ける前に周囲を確認する動きを3回試す」。</p></li>
+          <li><strong class="sbg-step-title">そのタスクの担当者を選びます</strong><p>ノート全体の「確認対象者」と、タスクの「担当者」は別の設定です。タスクごとに実施する人を選びます。タスク側の「全員」は、表示された対象メンバー全員を選択します。</p></li>
+          <li><strong class="sbg-step-title">「投稿を保存」を押し、担当者側で確認します</strong><p>担当者がノートの「確認・質問・タスクを開く」へ進み、自分のタスクと「完了を報告」を確認できれば準備完了です。</p></li>
+        </ol>
+        <div class="sbg-callout"><strong>内容を変更すると、再確認が必要になる場合があります</strong><p>本文・場面・画像・確認対象者を変更すると、その内容への再確認を求めます。タスク内容・担当者を変更した場合は、そのタスクの完了報告が再度必要になります。</p></div>
+        <p class="sbg-small">ノートは動画場面100件まで、画像6枚まで、行動タスク30件までです。最初の運用は少ない数で始めてください。</p>
+        <p class="sbg-next">次は <a href="#tactics-read">確認・質問・完了報告</a></p>
+      </section>
+
+      <section class="sbg-sheet" id="tactics-read" aria-labelledby="tactics-read-title">
+        <p class="sbg-eyebrow">06 / READ &amp; RESPOND</p><h2 id="tactics-read-title">ノートを読み、確認・質問を返す</h2>
+        <div class="sbg-meta"><span>保護者以外のメンバー</span><span>確認の登録：そのノートの確認対象者</span></div>
+        <div class="sbg-route"><b>ホーム</b><span>→</span><b>戦術ノート</b><span>→</span><b>対象ノート</b><span>→</span><b>確認・質問・タスクを開く</b></div>
+        <ol class="sbg-steps">
+          <li><strong class="sbg-step-title">自分に向けられたノートを開きます</strong><p>一覧の「自分向け」「未確認」で探せます。月の見出しが閉じている場合は押して開きます。まず本文を読み、添付の動画場面を再生します。</p></li>
+          <li><strong class="sbg-step-title">確認・質問の画面を開きます</strong><p>「確認・質問・タスクを開く」を押します。画像がある場合は、ボタン名に画像の枚数も表示されます。画像だけのノートは、開くと確認画面が表示されます。</p></li>
+          <li><strong class="sbg-step-title">自分の反応を登録します</strong><p>確認対象者には「確認しました」「理解しました」が表示されます。質問がある場合は「質問本文」を入力し、「質問があります：送信」を押します。ノートを開くだけでは確認登録にはなりません。</p></li>
+          <li><strong class="sbg-step-title">返信を読み、解決したら登録します</strong><p>「質問を表示」「返信を表示」から確認します。ノートを管理できる方は「返信を保存」で返答します。質問した本人が、解決後に「この質問は解決しました」を押します。</p></li>
+          <li><strong class="sbg-step-title">タスクを実施したら「完了を報告」を押します</strong><p>自分が担当する行動タスクで操作します。必要に応じて完了コメントを入力します。管理する方は、完了報告を理由付きで差し戻すこともできます。</p></li>
+        </ol>
+        <div class="sbg-callout"><strong>「未確認」と「未完了」は意味が違います</strong><p>「未確認」は、自分に求められているノートの確認待ちです。「未完了／完了済み」は、ノート全体のタスク進捗です。ノートを確認しても、タスクを実施するまでは完了報告を行いません。</p></div>
+        <p class="sbg-small">ノートの編集・削除は、監督・管理者または作成者が行えます。スタッフ・キャプテンでも、他の人が作成したノートを一律に編集できるわけではありません。</p>
+        <p class="sbg-next">困ったら <a href="#faq">Q＆A</a>、講習では <a href="#workshop">練習課題</a>を使えます。</p>
+      </section>
+      <section class="sbg-sheet" id="faq" aria-labelledby="faq-title">
+        <p class="sbg-eyebrow">Q&amp;A / ACCOUNT &amp; MEMBERS</p><h2 id="faq-title">困ったとき：参加・役割</h2>
+        <p>質問を押すと回答を開けます。PDFでは回答をすべて掲載しています。</p>
+        <div class="sbg-search sbg-no-print" hidden><label for="faq-search">Q＆A全体を言葉で探す</label><input type="search" id="faq-search" placeholder="例：通知 来ない、タグ、保護者" autocomplete="off"><p class="sbg-small" id="faq-status" role="status" aria-live="polite">全32件の質問を表示しています。</p></div>
+        <details class="sbg-faq" id="faq-invite" data-keywords="招待 入れない 参加できない エラー"><summary>Q01 招待コードを入れても参加できません。</summary><div>大文字・小文字、前後の空白、別チームのコードではないかを確認します。可能なら管理者からコピーしたコードを貼り付けます。解決しない場合は管理者に現在の招待コードを確認してください。<a href="#members">招待・参加の手順へ</a></div></details>
+        <details class="sbg-faq" id="faq-email" data-keywords="メール 来ない 届かない"><summary>Q02 確認メールが届きません。</summary><div>迷惑メールフォルダと登録したメールアドレスを確認し、アプリの「確認メールを再送」を試します。短時間に繰り返すと再送できない場合があるため、時間をおいて試してください。</div></details>
+        <details class="sbg-faq" id="faq-verified"><summary>Q03 メールのリンクを開いたのに、確認画面のままです。</summary><div>アプリへ戻り「確認状態を再取得」を押します。メール内のリンクを開く操作と、アプリで確認状態を読み直す操作の両方が必要です。</div></details>
+        <details class="sbg-faq" id="faq-existing"><summary>Q04 「このメールアドレスは既に登録されています」と出ます。</summary><div>「ログイン」で既存アカウントへ入ります。ホーム上部のチーム名からチーム選択を開き、「招待コードで参加」を使います。パスワードを忘れた場合は、ログイン画面の再設定案内を使います。</div></details>
+        <details class="sbg-faq" id="faq-guardian-join"><summary>Q05 スタッフ・保護者は、どこから登録しますか。</summary><div>招待された方は「新規登録」→「部員として参加」から参加し、管理者が参加後に「スタッフ」「保護者」へ変更します。「管理者として作成」は新しいチームを作る入口です。</div></details>
+        <details class="sbg-faq" id="faq-permission"><summary>Q06 説明にあるボタンが見つかりません。</summary><div>ホーム上部のチーム名、現在の役割、個別権限を確認します。ホームのメニューは横にスクロールできます。キーボードを閉じて下まで確認し、それでも表示されない場合は管理者へ相談してください。<a href="#permissions">役割・権限の説明へ</a></div></details>
+        <details class="sbg-faq" id="faq-limited"><summary>Q07 動画追加だけ任せたい場合も、スタッフに変更しますか。</summary><div>一般部員・保護者には「動画追加」と「タグ編集」を別々に許可できます。一般部員は「カレンダー編集」「戦術ノート投稿」も個別設定できます。必要な操作に応じて管理者が設定してください。</div></details>
+        <details class="sbg-faq" id="faq-grade"><summary>Q08 学年・グループに候補がありません。</summary><div>管理者が設定の「学年・グループ管理」で候補を登録してから、メンバーの「学年・グループ」を設定します。学年・グループを使わず全員へ連絡したい場合は、連絡タブの「部員全体」を使えます。</div></details>
+      </section>
+
+      <section class="sbg-sheet" id="faq-communication" aria-labelledby="faq-communication-title">
+        <p class="sbg-eyebrow">Q&amp;A / CALENDAR &amp; COMMUNICATION</p><h2 id="faq-communication-title">困ったとき：予定・全体連絡・通知</h2>
+        <details class="sbg-faq" id="faq-add-event"><summary>Q09 カレンダーの共有予定に「＋ 追加」がありません。</summary><div>共有予定を作成できるのは、監督・管理者・スタッフ・キャプテンと、「カレンダー編集」を許可された一般部員です。現在の役割と個別権限を管理者に確認してください。</div></details>
+        <details class="sbg-faq" id="faq-private-event"><summary>Q10 保存した予定が、他の人には見えません。</summary><div>「個人の予定（非公開）」へ登録していないか、同じチーム・同じ日付を見ているかを確認します。チーム向けの練習予定は「部活の予定（共有）」から登録します。<a href="#calendar">予定作成の手順へ</a></div></details>
+        <details class="sbg-faq" id="faq-schedule-notification" data-keywords="予定 通知 来ない 届かない"><summary>Q11 先の日程を登録しましたが、通知が届きません。</summary><div>予定の変更通知には、チーム設定に応じた直近の日数の条件があります。まずカレンダーに保存されたか確認します。受信側は「通知設定を開く」で「予定の作成・変更」と対象チームがONか確認してください。</div></details>
+        <details class="sbg-faq" id="faq-channel-settings"><summary>Q12 全体連絡の設定はどこですか。</summary><div>監督・管理者・スタッフが、ホームの「全体連絡」タブを長押しすると開けます。短く押すとタブの切り替えです。キャプテン・一般部員・保護者は管理側へ設定を依頼してください。</div></details>
+        <details class="sbg-faq" id="faq-guardian-channel" data-keywords="保護者 全体連絡 見えない 見られない"><summary>Q13 保護者に全体連絡が表示されません。</summary><div>管理者がタブを長押しし、共有範囲の「保護者」を確認します。新規作成時は保護者がOFFです。また、参加後の役割が「保護者」へ変更されているかも確認します。</div></details>
+        <details class="sbg-faq" id="faq-no-post"><summary>Q14 全体連絡を読めますが、投稿できません。</summary><div>「部員は閲覧のみ（投稿不可）」がONの場合、一般部員・保護者は新規投稿できません。監督・管理者・スタッフ・キャプテンは投稿できます。運用上の投稿可否は管理者へ確認してください。</div></details>
+        <details class="sbg-faq" id="faq-notify" data-keywords="通知 来ない 届かない 鳴らない プッシュ"><summary>Q15 投稿は見えますが、通知が届きません。</summary><div>投稿者本人でテストしていないか確認します。管理側の人は連絡タブの通知先の選択も確認します。受信者は全体・項目別・チーム別の通知設定と、端末の通知許可を確認します。全体連絡の新規投稿は「チャンネルの新規投稿」の項目です。<a href="#notifications">通知の確認手順へ</a></div></details>
+        <details class="sbg-faq" id="faq-center"><summary>Q16 通知をOFFにしたら、ベルの一覧や件数も消えました。</summary><div>現行の仕様では、通知設定が通知センターと未読件数にも連動します。履歴は保存され、ONへ戻すと再表示されます。投稿そのものの閲覧範囲は、連絡タブの公開設定で決まります。</div></details>
+      </section>
+
+      <section class="sbg-sheet" id="faq-video" aria-labelledby="faq-video-title">
+        <p class="sbg-eyebrow">Q&amp;A / VIDEO</p><h2 id="faq-video-title">困ったとき：動画・切り抜き・閲覧</h2>
+        <details class="sbg-faq" id="faq-video-add"><summary>Q17 動画の「新規追加」が表示されません。</summary><div>「動画編集（タグ付け）」タブを開いているか確認します。一般部員・保護者は、管理者が「動画追加」をONにする必要があります。見るだけの場合は、登録済みの「動画閲覧」プロジェクトを開いてください。</div></details>
+        <details class="sbg-faq" id="faq-url" data-keywords="動画 見れない 見られない 再生できない"><summary>Q18 動画を登録しましたが、再生できません。</summary><div>URLが途中で切れていないか、元動画が削除・非公開になっていないかを確認します。参加者の端末でも元動画を再生できる公開設定か確認してください。通信状態も確認し、動画を開き直します。</div></details>
+        <details class="sbg-faq" id="faq-record"><summary>Q19 タグを選びましたが、場面が増えません。</summary><div>タグボタンを選んだ後に「『タグ名』で記録する」を押します。「タグを記録しました（未公開）」と記録一覧の追加を確認してください。一般部員・保護者には「タグ編集」の許可が必要です。</div></details>
+        <details class="sbg-faq" id="faq-private-tag" data-keywords="切り抜き タグ 見えない 共有できない"><summary>Q20 自分には見えますが、他の人に切り抜きが見えません。</summary><div>タグは記録直後には未公開です。記録した本人が「自分のみのタグ（○件）を一括公開」→「公開する」を実行します。元動画の共有範囲と、閲覧用プロジェクトの格納動画も確認します。</div></details>
+        <details class="sbg-faq" id="faq-empty-project"><summary>Q21 元動画を追加したのに、動画閲覧の一覧が空です。</summary><div>元動画の登録と、閲覧用プロジェクトの作成は別の操作です。「動画閲覧」の「＋ 新規追加」から名前を付け、「格納する動画」を選びます。<a href="#video-watch">プロジェクト作成の手順へ</a></div></details>
+        <details class="sbg-faq" id="faq-filter"><summary>Q22 「条件に一致するシーンはありません」と出ます。</summary><div>タグ条件を外す、ANDをORへ変える、対象の元動画が格納されているかを確認する、の順で試します。公開済みのタグがあるかも確認してください。<a href="#video-filter">OR・ANDの違いへ</a></div></details>
+        <details class="sbg-faq" id="faq-duration"><summary>Q23 切り抜きが短すぎます／全体の秒数変更が反映されません。</summary><div>基準時点の前後の秒数を調整します。場面の「個別の切り抜き時間」がONなら個別の秒数を使います。全体の値を使いたい場面は、個別設定をOFFにして保存します。</div></details>
+        <details class="sbg-faq" id="faq-export"><summary>Q24 切り抜いた動画ファイルは、端末のどこに保存されますか。</summary><div>この手順では、元動画の時点・前後の再生区間・タグを記録します。切り抜き動画ファイルを端末に書き出す操作ではないため、端末の写真一覧には追加されません。</div></details>
+      </section>
+
+      <section class="sbg-sheet" id="faq-tactics" aria-labelledby="faq-tactics-title">
+        <p class="sbg-eyebrow">Q&amp;A / TACTICAL NOTES</p><h2 id="faq-tactics-title">困ったとき：戦術ノート</h2>
+        <details class="sbg-faq" id="faq-note-role"><summary>Q25 戦術ノートが見えません／作成ボタンがありません。</summary><div>保護者には戦術ノートは表示されません。一般部員は閲覧できますが、作成には「戦術ノート投稿」の許可が必要です。一覧を準備中の場合は待ち、再試行の案内が出たときは画面のボタンを押します。</div></details>
+        <details class="sbg-faq" id="faq-note-public"><summary>Q26 確認対象者に指定した人だけがノートを見られますか。</summary><div>いいえ。保護者以外のチーム全員に公開されます。確認対象者は、内容の確認を求める相手です。閲覧を特定の相手だけに限定する設定ではありません。</div></details>
+        <details class="sbg-faq" id="faq-note-select"><summary>Q27 場面を再生しましたが、ノートに添付されません。</summary><div>場面カードを押すのは再生の操作です。カード左のチェックで選び、「選択した○件を追加」を押します。すでに添付済みの場面や未公開のタグは、追加対象にできません。</div></details>
+        <details class="sbg-faq" id="faq-note-save" data-keywords="戦術ノート 保存できない エラー"><summary>Q28 タイトルと説明を入れても、保存できません。</summary><div>動画場面または画像が1つ以上必要です。動画場面は100件まで、画像は6枚までです。行動タスクを付けた場合は、実施内容と担当者も確認します。保存時に表示された案内に沿って入力を直してください。</div></details>
+        <details class="sbg-faq" id="faq-note-all"><summary>Q29 確認対象者の「全員」にスタッフが含まれていません。</summary><div>確認対象者の「全員」はキャプテン・一般部員を選択します。監督・管理者・スタッフは個別に選びます。行動タスク側の「全員」とは対象が異なるため、選択後の名前を確認してください。</div></details>
+        <details class="sbg-faq" id="faq-note-reconfirm"><summary>Q30 確認したノートが、また未確認になりました。</summary><div>本文・場面・画像・確認対象者が変更されると、新しい内容への再確認が必要になります。タスク内容・担当者の変更でも、そのタスクの完了報告が再度必要になります。最新の内容を確認してください。</div></details>
+        <details class="sbg-faq" id="faq-note-edit"><summary>Q31 スタッフですが、他の人のノートを編集できません。</summary><div>ノートを編集・削除できるのは監督・管理者または作成者です。スタッフ・キャプテンは、自分が作成したノートを編集できます。内容の修正が必要な場合は作成者か監督・管理者へ依頼します。</div></details>
+        <details class="sbg-faq" id="faq-note-playback"><summary>Q32 ノートに付いていた場面が再生できなくなりました。</summary><div>元動画が削除・変更されていないか確認します。ノートに場面を添付しても、元動画のコピーを別に保存するわけではありません。作成者に利用できる場面への差し替えを依頼してください。</div></details>
+      </section>
+
+      <section class="sbg-sheet" id="workshop" aria-labelledby="workshop-title">
+        <p class="sbg-eyebrow">PRACTICE TOGETHER</p><h2 id="workshop-title">講習用：一緒に操作する4つの課題</h2>
+        <p>管理側と参加者側の2つのアカウントを使い、各課題で相手側の画面を確認します。全体で30〜45分を目安に、動画は準備済みの短い映像を使います。</p>
+        <div class="sbg-table-wrap"><table><caption>講師が進行し、参加者も自分で操作する練習</caption><thead><tr><th scope="col">課題・目安</th><th scope="col">実際に行うこと</th><th scope="col">完了の確認</th></tr></thead><tbody>
+          <tr><th scope="row">1 参加と役割<br>約10分</th><td>管理側がコードを共有。参加者が登録・メール確認。管理側が役割と必要な権限を設定します。</td><td>参加者が同じチームのホームを開ける。<a href="#members">01へ</a></td></tr>
+          <tr><th scope="row">2 予定<br>約5分</th><td>練習予定を1件登録。参加者が同じ日付を開き、時間と持ち物を読みます。</td><td>参加者が日時・集合場所を説明できる。<a href="#calendar">02へ</a></td></tr>
+          <tr><th scope="row">3 連絡と通知<br>約5〜10分</th><td>共有範囲・通知先を設定。参加者も通知をONにし、管理側がテスト投稿します。</td><td>投稿者以外が通知から連絡を開ける。<a href="#communication">03へ</a></td></tr>
+          <tr><th scope="row">4 動画とノート<br>約10〜20分</th><td>タグを1件記録・公開。閲覧用プロジェクトで再生し、ノートに添付。参加者が確認を返します。</td><td>場面を再生でき、確認状態が変わる。<a href="#video-create">04〜06へ</a></td></tr>
+        </tbody></table></div>
+        <h3>講師の説明で使える言葉</h3>
+        <div class="sbg-callout"><strong>連絡の公開範囲と通知先</strong><p>「共有範囲は、この連絡を読める人です。通知先は、管理側の誰に新着を知らせるかです。最後に、受け取る人が自分の通知設定を確認します。」</p></div>
+        <div class="sbg-callout"><strong>動画と戦術ノート</strong><p>「動画にタグを付けて、見てほしい場面に目印を残します。公開してからノートに添え、見るポイントを書きます。見る人は、確認や質問で反応を返します。」</p></div>
+        <h3>講習の最後に参加者へ確認すること</h3>
+        <ul class="sbg-checks"><li>自分だけで、共有予定と全体連絡を開ける。</li><li>通知が来ないときに確認する設定を見つけられる。</li><li>指定された動画場面を再生できる。</li><li>対象者は、ノートの確認・質問の画面を開ける。</li></ul>
+        <p class="sbg-small">例文・練習用の予定や動画名は説明用です。既存の運用内容と混同しない名前を付け、練習後の整理はチーム内で担当者を決めて行ってください。</p>
+      </section>
+
+      <section class="sbg-sheet" id="glossary" aria-labelledby="glossary-title">
+        <p class="sbg-eyebrow">REFERENCE</p><h2 id="glossary-title">用語と、困ったときの伝え方</h2>
+        <div class="sbg-table-wrap"><table><caption>このガイドの用語</caption><thead><tr><th scope="col">言葉</th><th scope="col">意味</th></tr></thead><tbody>
+          <tr><th scope="row">ホーム</th><td>チーム名と連絡タブが表示される、チームの基本画面。</td></tr>
+          <tr><th scope="row">役割／個別権限</th><td>監督・スタッフ・部員などの立場／その人に追加で許可する操作。</td></tr>
+          <tr><th scope="row">連絡タブ／チャンネル</th><td>「全体連絡」など、テーマや対象ごとに投稿をまとめる場所。</td></tr>
+          <tr><th scope="row">共有範囲／公開範囲</th><td>その情報を閲覧できる人の範囲。</td></tr>
+          <tr><th scope="row">通知先</th><td>連絡タブの新規投稿を知らせる管理者・スタッフの指定。</td></tr>
+          <tr><th scope="row">タグ／切り抜き</th><td>動画の時点に付ける目印／その時点の前後を再生する区間。</td></tr>
+          <tr><th scope="row">閲覧用プロジェクト</th><td>「動画閲覧」で元動画をまとめ、タグ場面を探して再生する入れ物。</td></tr>
+          <tr><th scope="row">確認対象者／タスク担当者</th><td>ノートへの確認を求める人／行動タスクを実施する人。</td></tr>
+        </tbody></table></div>
+        <h3>管理者へ相談するとき</h3>
+        <p>「どのチーム」「自分の役割」「どの画面」「何を押したか」「何が起きたか」を伝えると確認しやすくなります。</p>
+        <div class="sbg-example"><strong>相談文の例</strong><br>自分の役割は一般部員です。「動画」→「動画編集（タグ付け）」を開きましたが、「新規追加」がありません。動画追加の許可があるか確認をお願いします。</div>
+        <h3>アプリのサポートへ相談するとき</h3>
+        <p>設定の「法務・サポート」→「Webお問い合わせ」、または<a href="https://sharprise.jp/inquiry/inquiry_top.html">SharpRiseのお問い合わせページ</a>を利用できます。端末のOS、アプリのバージョン、操作した日時、表示されたエラーを添えると状況を伝えやすくなります。パスワードや他の人の個人情報は送らないでください。</p>
+        <div class="sbg-callout"><strong>この資料について</strong><p>2026年10月21日時点の現行画面を基にした初版・確認用です。端末・役割・設定・アプリのバージョンにより表示は異なります。操作案内図は画面の見つけ方を示すもので、実画面のスクリーンショットではありません。公開前にAndroid・iOSの配布版で照合します。</p></div>
+      </section>
+    </main>
+  </div>
+  <a class="sbg-backtop" href="#top">ガイドの先頭へ戻る</a>
+  <footer>
+    <div class="c-footSitemap">
+      <div class="c-footLogo"><a href="../../index.html"><img src="../../img/Logo2.png" alt="SharpRise"></a></div>
+      <section><h3>会社について</h3><ul><li><a href="../../company/company.html">会社概要</a></li><li><a href="../../business/business.html">事業内容</a></li></ul></section>
+      <section><h3>Smart BUKATSU</h3><ul><li><a href="../index.html">サービス紹介</a></li><li><a href="#start">操作ガイド・Q＆A</a></li><li><a href="../terms.html">利用規約</a></li><li><a href="../privacy.html">プライバシーポリシー</a></li><li><a href="../account-deletion.html">アカウント削除</a></li></ul></section>
+      <section><h3>サポート</h3><ul><li><a href="../../inquiry/inquiry_top.html">お問い合わせ</a></li><li><a href="../../privacypolicy/privacypolicy.html">SharpRiseプライバシーポリシー</a></li></ul></section>
+    </div>
+    <div class="c-footMeta"><p class="c-footMeta_copy">©2024 SharpRise</p></div>
+  </footer>
+</body>
+</html>
