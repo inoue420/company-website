@@ -107,6 +107,14 @@
   .sbg-toolbar-inner > a { font-size: 13px; }
   .sbg-sheet th, .sbg-sheet td { padding: 8px; font-size: 12px; }
 }
+/* Screen previews stay compact. Keep the existing print/PDF dimensions below. */
+@media screen {
+  .sbg-shot > a { align-items: center; }
+  .sbg-shot img { width: auto; max-width: 100%; max-height: min(440px, 60vh); object-fit: contain; }
+}
+@media screen and (max-width: 520px) {
+  .sbg-shot img { max-height: min(340px, 50vh); }
+}
 @page { size: A4; margin: 15mm 15mm 18mm; }
 @media print {
   html { font-size: 10pt !important; }
