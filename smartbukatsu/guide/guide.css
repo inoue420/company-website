@@ -21,7 +21,7 @@
 .sbg-toc a { display: block; padding: 9px; color: var(--sb-text); font-size: 14px; line-height: 1.55; text-decoration: none; border-bottom: 1px solid #edf1f4; }
 .sbg-toc a:hover { background: var(--sb-soft); color: #07594f; }
 .sbg-content { min-width: 0; }
-.sbg-sheet { margin-bottom: 26px; padding: 42px 44px; background: #fff; border: 1px solid var(--sb-line); border-radius: 6px; scroll-margin-top: 20px; }
+.sbg-sheet { margin-bottom: 26px; padding: 42px 44px; background: #fff; border: 1px solid var(--sb-line); border-radius: 6px; scroll-margin-top: 96px; }
 .sbg-sheet h1, .sbg-sheet h2, .sbg-sheet h3, .sbg-sheet h4, .sbg-sheet p { margin: 0; }
 .sbg-sheet h1 { margin-top: 20px; font-size: 42px; line-height: 1.5; letter-spacing: .035em; }
 .sbg-sheet h2 { margin-top: 8px; margin-bottom: 18px; font-size: 27px; line-height: 1.5; }
@@ -75,6 +75,17 @@
 .sbg-backtop { display: block; margin: 24px auto; text-align: center; font-size: 14px; }
 .sbg-body footer a { text-decoration: none; }
 .sbg-print-only { display: none; }
+.sbg-image-link { margin-bottom: 14px !important; font-size: 14px; }
+.sbg-shots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 24px; margin: 24px 0 8px; }
+.sbg-shot { margin: 0; min-width: 0; }
+.sbg-shot > a { display: flex; justify-content: center; padding: 8px; border: 1px solid var(--sb-line); border-radius: 5px; background: #f5f7f9; }
+.sbg-shot img { display: block; width: 100%; height: auto; max-width: 420px; }
+.sbg-shot figcaption { margin-top: 12px; font-size: 14px; line-height: 1.75; }
+.sbg-shot figcaption strong { display: block; color: var(--sb-navy); }
+.sbg-shot figcaption ol { margin: 8px 0; padding-left: 1.7em; }
+.sbg-shot figcaption li { margin: 5px 0; }
+.sbg-shots--single { grid-template-columns: minmax(0, 620px); justify-content: center; }
+.sbg-shots--single img { max-width: 620px; }
 @media (min-width: 901px) { .sbg-menu { display: none !important; } }
 @media (max-width: 900px) {
   .sbg-layout { display: block; margin-top: 18px; padding: 0 14px; }
@@ -89,6 +100,7 @@
   .sbg-sheet h1 { font-size: 30px; }
   .sbg-sheet h2 { font-size: 23px; }
   .sbg-grid, .sbg-flow { grid-template-columns: 1fr; }
+  .sbg-shots { grid-template-columns: 1fr; gap: 28px; }
   .sbg-route { padding: 12px; font-size: 13px; }
   .sbg-steps > li { padding-left: 38px; }
   .sbg-steps p { font-size: 14px; }
@@ -136,4 +148,13 @@
   .sbg-cover .sbg-callout { margin-top: 8mm; }
   .sbg-body a { color: #14486c; }
   .sbg-sheet h2, .sbg-sheet h3 { break-after: avoid; }
+  .sbg-gallery-page > .sbg-small { font-size: 8pt; line-height: 1.6; }
+  .sbg-shots { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6mm; margin: 5mm 0 0; }
+  .sbg-shots--single { grid-template-columns: minmax(0, 140mm); }
+  .sbg-shot { break-inside: avoid; }
+  .sbg-shot > a { padding: 1mm; }
+  .sbg-shot img { width: auto; height: auto; max-width: 100%; max-height: 174mm; }
+  .sbg-shot figcaption { margin-top: 3mm; font-size: 8.5pt; line-height: 1.65; }
+  .sbg-shot figcaption ol { margin: 2mm 0; }
+  .sbg-shot figcaption li { margin: 1mm 0; }
 }

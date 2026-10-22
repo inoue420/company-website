@@ -77,7 +77,7 @@
           <div class="sbg-card"><h4>招待された部員・保護者の方</h4><p><a href="#members-join">初めて参加する手順</a>→カレンダー・全体連絡→動画閲覧の順に読みます。戦術ノートは保護者には表示されません。</p></div>
         </div>
         <div class="sbg-callout"><strong>最初は「1人・1件・1場面」で試しましょう</strong><p>招待を1人、予定と連絡を各1件、動画の場面を1つ。少ない量で操作と見え方を確認してから、チーム全体へ広げます。</p></div>
-        <p class="sbg-small">初版・確認用 / 作成日：2026年10月21日 / 対象：現行ソースのアプリ1.1.3。画面の文言・操作条件をコードと照合しています。掲載の操作案内図は実画面のスクリーンショットではありません。配布中アプリとの実機照合は公開前の確認項目です。</p>
+        <p class="sbg-small">実画面追加：2026年10月22日 / 対象：アプリ1.1.3の現行ソース。掲載画像はAndroid開発版を練習用データで撮影したものです。赤枠・番号で押す場所を示しています。iOSや配布版では表示が異なる場合があります。</p>
       </section>
 
       <section class="sbg-sheet" id="checklist" aria-labelledby="checklist-title">
@@ -102,17 +102,17 @@
         <div class="sbg-print-only">
           <h3>目次・必要なページを開く</h3>
           <table><tbody>
-            <tr><td><a href="#members">01 招待・参加・権限</a>：p.3-4</td><td><a href="#calendar">02 スケジュール</a>：p.5-6</td></tr>
-            <tr><td><a href="#communication">03 全体連絡・通知</a>：p.7-8</td><td><a href="#video-create">04 動画登録・切り抜き</a>：p.9-11</td></tr>
-            <tr><td><a href="#video-watch">05 動画閲覧</a>：p.12-13</td><td><a href="#tactics">06 戦術ノート</a>：p.14-16</td></tr>
-            <tr><td><a href="#faq">困ったときのQ＆A</a>：p.17-20</td><td><a href="#workshop">講習の課題</a>：p.21 ／ <a href="#glossary">用語</a>：p.22</td></tr>
+            <tr><td><a href="#members">01 招待・参加・権限</a>：p.3-6</td><td><a href="#calendar">02 スケジュール</a>：p.7-10</td></tr>
+            <tr><td><a href="#communication">03 全体連絡・通知</a>：p.11-14</td><td><a href="#video-create">04 動画登録・切り抜き</a>：p.15-20</td></tr>
+            <tr><td><a href="#video-watch">05 動画閲覧</a>：p.21-24</td><td><a href="#tactics">06 戦術ノート</a>：p.25-30</td></tr>
+            <tr><td><a href="#faq">困ったときのQ＆A</a>：p.31-34</td><td><a href="#workshop">講習の課題</a>：p.35 ／ <a href="#glossary">用語</a>：p.36</td></tr>
           </tbody></table>
         </div>
         <p class="sbg-next">次は <a href="#members">01 メンバーを招待して参加する</a></p>
       </section>
 
       <section class="sbg-sheet" id="members" aria-labelledby="members-title">
-        <p class="sbg-eyebrow">01 / MEMBERS</p><h2 id="members-title">メンバーを招待して参加する</h2>
+        <p class="sbg-eyebrow">01 / MEMBERS</p><h2 id="members-title">メンバーを招待して参加する</h2><p class="sbg-no-print sbg-image-link"><a href="#screens-members">番号付きの実画面を見る</a></p>
         <div class="sbg-meta"><span>招待：監督・管理者・スタッフ</span><span>参加：招待された方全員</span></div>
         <h3>招待する方の操作</h3>
         <div class="sbg-route"><b>ホームの歯車</b><span>→</span><b>所属チーム情報・入部用コード</b><span>→</span><b>招待コードをコピー</b></div>
@@ -129,8 +129,11 @@
         <p class="sbg-next">次は管理者が <a href="#permissions">役割と必要な権限を設定</a>します。</p>
       </section>
 
+      <section class="sbg-sheet sbg-gallery-page" id="screens-members" aria-labelledby="screens-members-title"><p class="sbg-eyebrow">実画面 / ANDROID</p><h2 id="screens-members-title">招待する場所・参加する場所</h2><p class="sbg-small">Android開発版・練習用データ（2026年10月22日撮影）。赤枠と番号は押す場所の目印です。番号は各画像内で対応します。画像を押すと拡大できます。</p><div class="sbg-shots"><figure class="sbg-shot"><a href="images/invite-entry.svg" target="_blank" rel="noopener" aria-label="招待する方：設定の入口を拡大"><img src="images/invite-entry.svg" width="1080" height="840" alt="招待する方：設定の入口。赤枠の番号は下の説明と対応します。" loading="lazy"></a><figcaption><strong>招待する方：設定の入口</strong><ol><li>「所属チーム情報・入部用コード」を開きます。開いた先の「招待コードをコピー」を使います。コードそのものは掲載していません。</li></ol></figcaption></figure>
+<figure class="sbg-shot"><a href="images/join-existing.svg" target="_blank" rel="noopener" aria-label="参加する方：既存アカウントの場合を拡大"><img src="images/join-existing.svg" width="970" height="470" alt="参加する方：既存アカウントの場合。赤枠の番号は下の説明と対応します。" loading="lazy"></a><figcaption><strong>参加する方：既存アカウントの場合</strong><ol><li>招待コードの入力欄です。画像は未入力の状態です。</li><li>コードを入力した後に「参加する」を押します。新規登録する方は本文の手順を使います。</li></ol></figcaption></figure></div><p class="sbg-next"><a href="#members">この操作の説明へ戻る</a></p></section>
+
       <section class="sbg-sheet" id="permissions" aria-labelledby="permissions-title">
-        <p class="sbg-eyebrow">01 / PERMISSIONS</p><h2 id="permissions-title">役割と、個別に許可する操作を設定する</h2>
+        <p class="sbg-eyebrow">01 / PERMISSIONS</p><h2 id="permissions-title">役割と、個別に許可する操作を設定する</h2><p class="sbg-no-print sbg-image-link"><a href="#screens-permissions">番号付きの実画面を見る</a></p>
         <div class="sbg-meta"><span>設定する方：監督・管理者・スタッフ</span></div>
         <div class="sbg-route"><b>ホームの歯車</b><span>→</span><b>部員リスト・権限・担当管理</b></div>
         <ol class="sbg-steps">
@@ -149,8 +152,10 @@
         <p class="sbg-next">次は <a href="#calendar">02 スケジュールを作る</a></p>
       </section>
 
+      <section class="sbg-sheet sbg-gallery-page" id="screens-permissions" aria-labelledby="screens-permissions-title"><p class="sbg-eyebrow">実画面 / ANDROID</p><h2 id="screens-permissions-title">一般部員の役割・個別権限</h2><p class="sbg-small">Android開発版・練習用データ（2026年10月22日撮影）。赤枠と番号は押す場所の目印です。番号は各画像内で対応します。画像を押すと拡大できます。</p><div class="sbg-shots sbg-shots--single"><figure class="sbg-shot"><a href="images/member-permissions.svg" target="_blank" rel="noopener" aria-label="一般部員の役割と個別権限を拡大"><img src="images/member-permissions.svg" width="940" height="630" alt="一般部員の役割と個別権限。赤枠の番号は下の説明と対応します。" loading="lazy"></a><figcaption><strong>一般部員の役割と個別権限</strong><ol><li>現在の役割を押して変更します。</li><li>学年・グループと担当を設定します。</li><li>動画追加・タグ編集・カレンダー編集・戦術ノート投稿は個別の許可です。必要な項目を押してON/OFFを確認します。</li></ol></figcaption></figure></div><p class="sbg-next"><a href="#permissions">この操作の説明へ戻る</a></p></section>
+
       <section class="sbg-sheet" id="calendar" aria-labelledby="calendar-title">
-        <p class="sbg-eyebrow">02 / CALENDAR</p><h2 id="calendar-title">チームで共有する予定を1件作る</h2>
+        <p class="sbg-eyebrow">02 / CALENDAR</p><h2 id="calendar-title">チームで共有する予定を1件作る</h2><p class="sbg-no-print sbg-image-link"><a href="#screens-calendar">番号付きの実画面を見る</a></p>
         <div class="sbg-meta"><span>監督・管理者・スタッフ・キャプテン</span><span>一般部員は「カレンダー編集」の許可が必要</span></div>
         <div class="sbg-route"><b>ホーム</b><span>→</span><b>カレンダー</b><span>→</span><b>予定日</b><span>→</span><b>部活の予定（共有）の「＋ 追加」</b></div>
         <div class="sbg-callout"><strong>「部活の予定（共有）」を選びます</strong><p>「個人の予定（非公開）」に登録した内容は、チームの共有予定にはなりません。練習・試合の連絡は、共有の欄から登録します。</p></div>
@@ -164,8 +169,11 @@
         <p class="sbg-next">続けて <a href="#calendar-more">複数日・添付・編集の操作</a>を確認できます。</p>
       </section>
 
+      <section class="sbg-sheet sbg-gallery-page" id="screens-calendar" aria-labelledby="screens-calendar-title"><p class="sbg-eyebrow">実画面 / ANDROID</p><h2 id="screens-calendar-title">共有予定の入口と入力欄</h2><p class="sbg-small">Android開発版・練習用データ（2026年10月22日撮影）。赤枠と番号は押す場所の目印です。番号は各画像内で対応します。画像を押すと拡大できます。</p><div class="sbg-shots"><figure class="sbg-shot"><a href="images/calendar-day.svg" target="_blank" rel="noopener" aria-label="共有予定を追加する入口を拡大"><img src="images/calendar-day.svg" width="1080" height="1940" alt="共有予定を追加する入口。赤枠の番号は下の説明と対応します。" loading="lazy"></a><figcaption><strong>共有予定を追加する入口</strong><ol><li>予定日を選びます。</li><li>「部活の予定（共有）」の「＋ 追加」を押します。</li><li>登録後の変更は予定カードの鉛筆から開きます。</li></ol></figcaption></figure>
+<figure class="sbg-shot"><a href="images/calendar-form.svg" target="_blank" rel="noopener" aria-label="予定の種類・日程・時刻・説明を拡大"><img src="images/calendar-form.svg" width="970" height="1310" alt="予定の種類・日程・時刻・説明。赤枠の番号は下の説明と対応します。" loading="lazy"></a><figcaption><strong>予定の種類・日程・時刻・説明</strong><ol><li>予定の種類を選びます。</li><li>1日なら「当日のみ」、複数日なら「複数日」を選びます。</li><li>開始と終了の時刻欄をそれぞれ押します。</li><li>集合時間や持ち物を「詳細説明・備考」に入力します。</li></ol></figcaption></figure></div><p class="sbg-next"><a href="#calendar">この操作の説明へ戻る</a></p></section>
+
       <section class="sbg-sheet" id="calendar-more" aria-labelledby="calendar-more-title">
-        <p class="sbg-eyebrow">02 / CALENDAR OPTIONS</p><h2 id="calendar-more-title">複数日・添付資料・予定の変更</h2>
+        <p class="sbg-eyebrow">02 / CALENDAR OPTIONS</p><h2 id="calendar-more-title">複数日・添付資料・予定の変更</h2><p class="sbg-no-print sbg-image-link"><a href="#screens-calendar-more">番号付きの実画面を見る</a></p>
         <h3>同じ時間の予定を複数日に入れる</h3>
         <ol class="sbg-steps">
           <li><strong class="sbg-step-title">予定の登録画面で「複数日」を選びます</strong><p>表示されたカレンダーで登録したい日を押します。選択中の日付を確認し、不要な日はもう一度押して外します。</p></li>
@@ -181,8 +189,10 @@
         <p class="sbg-next">次は <a href="#communication">03 全体連絡と公開範囲</a></p>
       </section>
 
+      <section class="sbg-sheet sbg-gallery-page" id="screens-calendar-more" aria-labelledby="screens-calendar-more-title"><p class="sbg-eyebrow">実画面 / ANDROID</p><h2 id="screens-calendar-more-title">添付・場所・保存ボタン</h2><p class="sbg-small">Android開発版・練習用データ（2026年10月22日撮影）。赤枠と番号は押す場所の目印です。番号は各画像内で対応します。画像を押すと拡大できます。</p><div class="sbg-shots sbg-shots--single"><figure class="sbg-shot"><a href="images/calendar-save.svg" target="_blank" rel="noopener" aria-label="添付・場所を確認して保存を拡大"><img src="images/calendar-save.svg" width="970" height="1150" alt="添付・場所を確認して保存。赤枠の番号は下の説明と対応します。" loading="lazy"></a><figcaption><strong>添付・場所を確認して保存</strong><ol><li>必要なら写真・PDFを添付します。個人の写真一覧は掲載していません。</li><li>場所を入力します。</li><li>画面下へスクロールし「保存する」を押します。</li></ol></figcaption></figure></div><p class="sbg-next"><a href="#calendar-more">この操作の説明へ戻る</a></p></section>
+
       <section class="sbg-sheet" id="communication" aria-labelledby="communication-title">
-        <p class="sbg-eyebrow">03 / COMMUNICATION</p><h2 id="communication-title">全体連絡の「見られる人」を設定する</h2>
+        <p class="sbg-eyebrow">03 / COMMUNICATION</p><h2 id="communication-title">全体連絡の「見られる人」を設定する</h2><p class="sbg-no-print sbg-image-link"><a href="#screens-communication">番号付きの実画面を見る</a></p>
         <div class="sbg-meta"><span>タブの設定：監督・管理者・スタッフ</span></div>
         <p>ホームの「全体連絡」などのタブを、この資料では「連絡タブ」と呼びます。アプリの設定画面では「チャンネル」と表示される箇所もあります。</p>
         <div class="sbg-route"><b>ホーム</b><span>→</span><b>「全体連絡」のタブを長押し</b><span>→</span><b>「全体連絡」の設定</b></div>
@@ -197,8 +207,11 @@
         <p class="sbg-next">次は <a href="#notifications">通知先の設定とテスト投稿</a></p>
       </section>
 
+      <section class="sbg-sheet sbg-gallery-page" id="screens-communication" aria-labelledby="screens-communication-title"><p class="sbg-eyebrow">実画面 / ANDROID</p><h2 id="screens-communication-title">全体連絡の長押しと共有範囲</h2><p class="sbg-small">Android開発版・練習用データ（2026年10月22日撮影）。赤枠と番号は押す場所の目印です。番号は各画像内で対応します。画像を押すと拡大できます。</p><div class="sbg-shots"><figure class="sbg-shot"><a href="images/channel-entry.svg" target="_blank" rel="noopener" aria-label="全体連絡のタブを長押しを拡大"><img src="images/channel-entry.svg" width="1080" height="1200" alt="全体連絡のタブを長押し。赤枠の番号は下の説明と対応します。" loading="lazy"></a><figcaption><strong>全体連絡のタブを長押し</strong><ol><li>「全体連絡」に指を置いたまま長押しすると、次の設定画面が開きます。</li></ol></figcaption></figure>
+<figure class="sbg-shot"><a href="images/channel-audience.svg" target="_blank" rel="noopener" aria-label="投稿できる人と共有範囲を拡大"><img src="images/channel-audience.svg" width="970" height="1850" alt="投稿できる人と共有範囲。赤枠の番号は下の説明と対応します。" loading="lazy"></a><figcaption><strong>投稿できる人と共有範囲</strong><ol><li>「部員は閲覧のみ（投稿不可）」で投稿できる人を設定します。</li><li>スタッフ・部員・保護者の共有範囲を選びます。画像は操作例で、各チームの初期状態とは異なる場合があります。</li></ol></figcaption></figure></div><p class="sbg-next"><a href="#communication">この操作の説明へ戻る</a></p></section>
+
       <section class="sbg-sheet" id="notifications" aria-labelledby="notifications-title">
-        <p class="sbg-eyebrow">03 / NOTIFICATIONS</p><h2 id="notifications-title">知らせる相手を選び、受信を確認する</h2>
+        <p class="sbg-eyebrow">03 / NOTIFICATIONS</p><h2 id="notifications-title">知らせる相手を選び、受信を確認する</h2><p class="sbg-no-print sbg-image-link"><a href="#screens-notifications">番号付きの実画面を見る</a></p>
         <div class="sbg-flow"><div><em>見られる人</em><strong>共有範囲</strong>連絡を閲覧できる対象です。</div><div><em>管理側へ知らせる人</em><strong>通知先</strong>公開対象の監督・管理者・スタッフから選びます。</div><div><em>自分の受信</em><strong>通知設定</strong>各自がアプリと端末で設定します。</div></div>
         <ol class="sbg-steps">
           <li><strong class="sbg-step-title">管理者・スタッフの通知先を選び、保存します</strong><p>連絡タブの設定で「管理者・スタッフの通知先（複数選択可）」をONにします。共有範囲の「スタッフ」もONにし、「保存する」で確定します。新しいタブの場合は「作成する」を押します。</p></li>
@@ -210,8 +223,10 @@
         <p class="sbg-small">通知設定をOFFにすると、該当する通知は通知センターと未読件数にも表示されません。履歴は保存され、ONに戻すと再表示されます。通知の受信可否だけで、投稿の公開範囲は変わりません。</p>
         <p class="sbg-next">次は <a href="#video-create">04 動画を登録する</a></p>
       </section>
+
+      <section class="sbg-sheet sbg-gallery-page" id="screens-notifications" aria-labelledby="screens-notifications-title"><p class="sbg-eyebrow">実画面 / ANDROID</p><h2 id="screens-notifications-title">通知先を選んで保存する</h2><p class="sbg-small">Android開発版・練習用データ（2026年10月22日撮影）。赤枠と番号は押す場所の目印です。番号は各画像内で対応します。画像を押すと拡大できます。</p><div class="sbg-shots sbg-shots--single"><figure class="sbg-shot"><a href="images/notification-targets.svg" target="_blank" rel="noopener" aria-label="管理者・スタッフの通知先を拡大"><img src="images/notification-targets.svg" width="970" height="1045" alt="管理者・スタッフの通知先。赤枠の番号は下の説明と対応します。" loading="lazy"></a><figcaption><strong>管理者・スタッフの通知先</strong><ol><li>通知する管理者・スタッフを複数選択します。ここに部員・保護者の個別選択欄はありません。</li><li>共有範囲と通知先を確認して「保存する」を押します。実プッシュ配信の確認は別端末で行います。</li></ol></figcaption></figure></div><p class="sbg-next"><a href="#notifications">この操作の説明へ戻る</a></p></section>
       <section class="sbg-sheet" id="video-create" aria-labelledby="video-create-title">
-        <p class="sbg-eyebrow">04 / VIDEO SETUP</p><h2 id="video-create-title">切り抜きの元になる動画を登録する</h2>
+        <p class="sbg-eyebrow">04 / VIDEO SETUP</p><h2 id="video-create-title">切り抜きの元になる動画を登録する</h2><p class="sbg-no-print sbg-image-link"><a href="#screens-video-create">番号付きの実画面を見る</a></p>
         <div class="sbg-meta"><span>監督・管理者・スタッフ・キャプテン</span><span>一般部員・保護者は「動画追加」の許可が必要</span></div>
         <div class="sbg-route"><b>ホーム</b><span>→</span><b>動画</b><span>→</span><b>動画編集（タグ付け）</b><span>→</span><b>新規追加</b></div>
         <p>この画面では、動画ファイルを端末から選ぶのではなく、元動画のURLを登録します。初回は、参加者も再生できる練習用の動画URLを用意してください。</p>
@@ -226,8 +241,11 @@
         <p class="sbg-next">次は <a href="#video-clip">タグを付けて場面を切り抜く</a></p>
       </section>
 
+      <section class="sbg-sheet sbg-gallery-page" id="screens-video-create" aria-labelledby="screens-video-create-title"><p class="sbg-eyebrow">実画面 / ANDROID</p><h2 id="screens-video-create-title">元動画の登録</h2><p class="sbg-small">Android開発版・練習用データ（2026年10月22日撮影）。赤枠と番号は押す場所の目印です。番号は各画像内で対応します。画像を押すと拡大できます。</p><div class="sbg-shots"><figure class="sbg-shot"><a href="images/video-entry.svg" target="_blank" rel="noopener" aria-label="元動画を登録する入口を拡大"><img src="images/video-entry.svg" width="1080" height="950" alt="元動画を登録する入口。赤枠の番号は下の説明と対応します。" loading="lazy"></a><figcaption><strong>元動画を登録する入口</strong><ol><li>「動画編集（タグ付け）」を選びます。</li><li>「新規追加」で登録フォームを開きます。</li><li>登録済み動画を押すとタグ付け画面が開きます。</li></ol></figcaption></figure>
+<figure class="sbg-shot"><a href="images/video-add.svg" target="_blank" rel="noopener" aria-label="動画の登録フォームを拡大"><img src="images/video-add.svg" width="920" height="1840" alt="動画の登録フォーム。赤枠の番号は下の説明と対応します。" loading="lazy"></a><figcaption><strong>動画の登録フォーム</strong><ol><li>動画名を入力します。</li><li>試合・練習・その他から種類を選びます。</li><li>共有範囲と使用するタグリストを選びます。</li><li>参加者が再生できる元動画のURLを入力します。</li><li>「作成する」で登録します。</li></ol></figcaption></figure></div><p class="sbg-next"><a href="#video-create">この操作の説明へ戻る</a></p></section>
+
       <section class="sbg-sheet" id="video-clip" aria-labelledby="video-clip-title">
-        <p class="sbg-eyebrow">04 / RECORD A SCENE</p><h2 id="video-clip-title">タグを付けて場面を切り抜く</h2>
+        <p class="sbg-eyebrow">04 / RECORD A SCENE</p><h2 id="video-clip-title">タグを付けて場面を切り抜く</h2><p class="sbg-no-print sbg-image-link"><a href="#screens-video-clip">番号付きの実画面を見る</a></p>
         <div class="sbg-meta"><span>監督・管理者・スタッフ・キャプテン</span><span>一般部員・保護者は「タグ編集」の許可が必要</span></div>
         <p>「タグ」は場面につける目印です。記録した時点の前後を指定して再生することで、見たいプレーだけを振り返れます。</p>
         <div class="sbg-flow"><div><em>① 見る位置</em><strong>時点を決める</strong>例：動画の1分00秒。</div><div><em>② 前後の長さ</em><strong>前5秒・後3秒</strong>例：0分55秒〜1分03秒。</div><div><em>③ 検索の目印</em><strong>タグで記録</strong>例：その競技の技術名・判断。</div></div>
@@ -243,8 +261,10 @@
         <p class="sbg-next">次は <a href="#video-share">公開と切り抜き時間の調整</a></p>
       </section>
 
+      <section class="sbg-sheet sbg-gallery-page" id="screens-video-clip" aria-labelledby="screens-video-clip-title"><p class="sbg-eyebrow">実画面 / ANDROID</p><h2 id="screens-video-clip-title">タグを選び、場面を記録する</h2><p class="sbg-small">Android開発版・練習用データ（2026年10月22日撮影）。赤枠と番号は押す場所の目印です。番号は各画像内で対応します。画像を押すと拡大できます。</p><div class="sbg-shots sbg-shots--single"><figure class="sbg-shot"><a href="images/tag-record.svg" target="_blank" rel="noopener" aria-label="タグを選んで記録するを拡大"><img src="images/tag-record.svg" width="1080" height="1680" alt="タグを選んで記録する。赤枠の番号は下の説明と対応します。" loading="lazy"></a><figcaption><strong>タグを選んで記録する</strong><ol><li>場面に合うタグを選びます。複数選択できます。</li><li>全タグ共通の前後秒数を設定します。</li><li>場面の位置で赤い「記録する」ボタンを押します。選ぶだけでは記録されません。</li></ol></figcaption></figure></div><p class="sbg-next"><a href="#video-clip">この操作の説明へ戻る</a></p></section>
+
       <section class="sbg-sheet" id="video-share" aria-labelledby="video-share-title">
-        <p class="sbg-eyebrow">04 / SHARE &amp; ADJUST</p><h2 id="video-share-title">場面を公開し、切り抜き時間を整える</h2>
+        <p class="sbg-eyebrow">04 / SHARE &amp; ADJUST</p><h2 id="video-share-title">場面を公開し、切り抜き時間を整える</h2><p class="sbg-no-print sbg-image-link"><a href="#screens-video-share">番号付きの実画面を見る</a></p>
         <h3>記録した場面を公開する</h3>
         <ol class="sbg-steps">
           <li><strong class="sbg-step-title">「自分のみのタグ（○件）を一括公開」を押します</strong><p>対象動画の編集画面で操作します。この操作で公開されるのは、自分が記録した未公開タグです。件数と内容を先に確認してください。</p></li>
@@ -262,8 +282,11 @@
         <p class="sbg-next">次は <a href="#video-watch">05 見返すためのプロジェクトを作る</a></p>
       </section>
 
+      <section class="sbg-sheet sbg-gallery-page" id="screens-video-share" aria-labelledby="screens-video-share-title"><p class="sbg-eyebrow">実画面 / ANDROID</p><h2 id="screens-video-share-title">公開と個別の切り抜き時間</h2><p class="sbg-small">Android開発版・練習用データ（2026年10月22日撮影）。赤枠と番号は押す場所の目印です。番号は各画像内で対応します。画像を押すと拡大できます。</p><div class="sbg-shots"><figure class="sbg-shot"><a href="images/tag-publish.svg" target="_blank" rel="noopener" aria-label="記録直後は自分のみ・公開は別操作を拡大"><img src="images/tag-publish.svg" width="1080" height="2140" alt="記録直後は自分のみ・公開は別操作。赤枠の番号は下の説明と対応します。" loading="lazy"></a><figcaption><strong>記録直後は自分のみ・公開は別操作</strong><ol><li>緑の「自分のみのタグを一括公開」で共有します。</li><li>未公開の場面には「自分のみ」が表示されます。</li><li>「編集」から、その場面だけの切り抜き時間を変更できます。</li></ol></figcaption></figure>
+<figure class="sbg-shot"><a href="images/clip-time.svg" target="_blank" rel="noopener" aria-label="1場面だけ切り抜き時間を調整するを拡大"><img src="images/clip-time.svg" width="920" height="1090" alt="1場面だけ切り抜き時間を調整する。赤枠の番号は下の説明と対応します。" loading="lazy"></a><figcaption><strong>1場面だけ切り抜き時間を調整する</strong><ol><li>「個別の切り抜き時間」をONにします。</li><li>前・後の秒数を入力します。OFFでは全体設定を使用します。</li><li>「保存」で確定します。</li></ol></figcaption></figure></div><p class="sbg-next"><a href="#video-share">この操作の説明へ戻る</a></p></section>
+
       <section class="sbg-sheet" id="video-watch" aria-labelledby="video-watch-title">
-        <p class="sbg-eyebrow">05 / VIEWING PROJECT</p><h2 id="video-watch-title">見返す動画をプロジェクトにまとめる</h2>
+        <p class="sbg-eyebrow">05 / VIEWING PROJECT</p><h2 id="video-watch-title">見返す動画をプロジェクトにまとめる</h2><p class="sbg-no-print sbg-image-link"><a href="#screens-video-watch">番号付きの実画面を見る</a></p>
         <div class="sbg-meta"><span>作成：動画追加ができる役割・個別権限の方</span><span>閲覧：元動画の公開条件に合うメンバー</span></div>
         <p>「動画閲覧」のプロジェクトは、見返す元動画をまとめる入れ物です。元動画を登録しただけでは、閲覧用プロジェクトは自動では作成されません。</p>
         <div class="sbg-route"><b>ホーム</b><span>→</span><b>動画</b><span>→</span><b>動画閲覧</b><span>→</span><b>＋ 新規追加</b></div>
@@ -278,8 +301,11 @@
         <p class="sbg-next">次は <a href="#video-filter">見たい場面を探して再生する</a></p>
       </section>
 
+      <section class="sbg-sheet sbg-gallery-page" id="screens-video-watch" aria-labelledby="screens-video-watch-title"><p class="sbg-eyebrow">実画面 / ANDROID</p><h2 id="screens-video-watch-title">閲覧用プロジェクトと動画選択</h2><p class="sbg-small">Android開発版・練習用データ（2026年10月22日撮影）。赤枠と番号は押す場所の目印です。番号は各画像内で対応します。画像を押すと拡大できます。</p><div class="sbg-shots"><figure class="sbg-shot"><a href="images/view-entry.svg" target="_blank" rel="noopener" aria-label="閲覧用プロジェクトを作るを拡大"><img src="images/view-entry.svg" width="1080" height="900" alt="閲覧用プロジェクトを作る。赤枠の番号は下の説明と対応します。" loading="lazy"></a><figcaption><strong>閲覧用プロジェクトを作る</strong><ol><li>「動画閲覧」を選びます。</li><li>「＋ 新規追加」を押します。</li><li>作成済みならプロジェクト名を押して開きます。</li></ol></figcaption></figure>
+<figure class="sbg-shot"><a href="images/view-project.svg" target="_blank" rel="noopener" aria-label="格納する動画を選ぶを拡大"><img src="images/view-project.svg" width="970" height="1280" alt="格納する動画を選ぶ。赤枠の番号は下の説明と対応します。" loading="lazy"></a><figcaption><strong>格納する動画を選ぶ</strong><ol><li>プロジェクト名を入力します。</li><li>格納する元動画の左のチェックを選びます。</li><li>「作成する」で確定します。元動画の登録とは別の操作です。</li></ol></figcaption></figure></div><p class="sbg-next"><a href="#video-watch">この操作の説明へ戻る</a></p></section>
+
       <section class="sbg-sheet" id="video-filter" aria-labelledby="video-filter-title">
-        <p class="sbg-eyebrow">05 / FIND &amp; PLAY</p><h2 id="video-filter-title">見たい場面を探して再生する</h2>
+        <p class="sbg-eyebrow">05 / FIND &amp; PLAY</p><h2 id="video-filter-title">見たい場面を探して再生する</h2><p class="sbg-no-print sbg-image-link"><a href="#screens-video-filter">番号付きの実画面を見る</a></p>
         <div class="sbg-meta"><span>公開対象のメンバー・保護者</span><span>閲覧だけならタグ編集の許可は不要</span></div>
         <div class="sbg-route"><b>ホーム</b><span>→</span><b>動画</b><span>→</span><b>動画閲覧</b><span>→</span><b>プロジェクト名</b></div>
         <ol class="sbg-steps">
@@ -293,8 +319,10 @@
         <p class="sbg-next">次は <a href="#tactics">06 戦術ノートを作る</a></p>
       </section>
 
+      <section class="sbg-sheet sbg-gallery-page" id="screens-video-filter" aria-labelledby="screens-video-filter-title"><p class="sbg-eyebrow">実画面 / ANDROID</p><h2 id="screens-video-filter-title">タグ検索と場面の再生</h2><p class="sbg-small">Android開発版・練習用データ（2026年10月22日撮影）。赤枠と番号は押す場所の目印です。番号は各画像内で対応します。画像を押すと拡大できます。</p><div class="sbg-shots sbg-shots--single"><figure class="sbg-shot"><a href="images/view-scenes.svg" target="_blank" rel="noopener" aria-label="タグで絞り込み、場面カードで再生するを拡大"><img src="images/view-scenes.svg" width="1080" height="2140" alt="タグで絞り込み、場面カードで再生する。赤枠の番号は下の説明と対応します。" loading="lazy"></a><figcaption><strong>タグで絞り込み、場面カードで再生する</strong><ol><li>OR／ANDの検索条件を選びます。</li><li>探したいタグを押します。</li><li>場面カードを押すと、その区間を再生します。練習用アニメーションを使っています。</li></ol></figcaption></figure></div><p class="sbg-next"><a href="#video-filter">この操作の説明へ戻る</a></p></section>
+
       <section class="sbg-sheet" id="tactics" aria-labelledby="tactics-title">
-        <p class="sbg-eyebrow">06 / TACTICAL NOTES</p><h2 id="tactics-title">動画の場面と伝えたいことをまとめる</h2>
+        <p class="sbg-eyebrow">06 / TACTICAL NOTES</p><h2 id="tactics-title">動画の場面と伝えたいことをまとめる</h2><p class="sbg-no-print sbg-image-link"><a href="#screens-tactics">番号付きの実画面を見る</a></p>
         <div class="sbg-meta"><span>監督・管理者・スタッフ・キャプテン</span><span>一般部員は「戦術ノート投稿」の許可が必要</span></div>
         <div class="sbg-callout sbg-callout--note"><strong>事前準備：動画の場面を使うには「動画閲覧」への登録が必須です</strong><p>先に「動画閲覧」のプロジェクトを作成し、対象動画を「格納する動画」に登録してください。「動画編集（タグ付け）」へ元動画を追加しただけでは、戦術ノートに場面を添付できません。未登録の方は、<a href="#video-watch">05 閲覧用プロジェクトの作成手順</a>を先に行ってください。</p></div>
         <div class="sbg-route"><b>ホーム</b><span>→</span><b>戦術ノート</b><span>→</span><b>＋ ノートを作成</b></div>
@@ -309,8 +337,11 @@
         <p class="sbg-next">次は <a href="#tactics-more">画像や行動タスクを加える</a>、または <a href="#tactics-read">読む側の操作</a>へ。</p>
       </section>
 
+      <section class="sbg-sheet sbg-gallery-page" id="screens-tactics" aria-labelledby="screens-tactics-title"><p class="sbg-eyebrow">実画面 / ANDROID</p><h2 id="screens-tactics-title">戦術ノートの入口と作成フォーム</h2><p class="sbg-small">Android開発版・練習用データ（2026年10月22日撮影）。赤枠と番号は押す場所の目印です。番号は各画像内で対応します。画像を押すと拡大できます。</p><div class="sbg-shots"><figure class="sbg-shot"><a href="images/note-entry.svg" target="_blank" rel="noopener" aria-label="戦術ノートの入口を拡大"><img src="images/note-entry.svg" width="1080" height="1000" alt="戦術ノートの入口。赤枠の番号は下の説明と対応します。" loading="lazy"></a><figcaption><strong>戦術ノートの入口</strong><ol><li>「＋ ノートを作成」で新規作成します。</li><li>「自分向け」「未確認」「タスクあり」などで一覧を絞り込めます。</li></ol></figcaption></figure>
+<figure class="sbg-shot"><a href="images/note-form.svg" target="_blank" rel="noopener" aria-label="タイトル・説明・確認対象者を拡大"><img src="images/note-form.svg" width="1080" height="2195" alt="タイトル・説明・確認対象者。赤枠の番号は下の説明と対応します。" loading="lazy"></a><figcaption><strong>タイトル・説明・確認対象者</strong><ol><li>タイトルを入力します。</li><li>全体説明を入力します。</li><li>確認対象者を選びます。閲覧範囲の制限ではありません。</li><li>場面や画像を添付し、内容を確認して「投稿を保存」で確定します。</li></ol></figcaption></figure></div><p class="sbg-next"><a href="#tactics">この操作の説明へ戻る</a></p></section>
+
       <section class="sbg-sheet" id="tactics-more" aria-labelledby="tactics-more-title">
-        <p class="sbg-eyebrow">06 / IMAGES &amp; ACTIONS</p><h2 id="tactics-more-title">画像・行動タスクで、次の行動を示す</h2>
+        <p class="sbg-eyebrow">06 / IMAGES &amp; ACTIONS</p><h2 id="tactics-more-title">画像・行動タスクで、次の行動を示す</h2><p class="sbg-no-print sbg-image-link"><a href="#screens-tactics-more">番号付きの実画面を見る</a></p>
         <p>基本のノート作成に慣れたら追加します。初回の講習では、動画場面を1つ添付したノートだけでも構いません。</p>
         <h3>図や写真で伝える</h3>
         <ol class="sbg-steps">
@@ -328,8 +359,11 @@
         <p class="sbg-next">次は <a href="#tactics-read">確認・質問・完了報告</a></p>
       </section>
 
+      <section class="sbg-sheet sbg-gallery-page" id="screens-tactics-more" aria-labelledby="screens-tactics-more-title"><p class="sbg-eyebrow">実画面 / ANDROID</p><h2 id="screens-tactics-more-title">場面を選んで、コメントやタスクを加える</h2><p class="sbg-small">Android開発版・練習用データ（2026年10月22日撮影）。赤枠と番号は押す場所の目印です。番号は各画像内で対応します。画像を押すと拡大できます。</p><div class="sbg-shots"><figure class="sbg-shot"><a href="images/note-pick.svg" target="_blank" rel="noopener" aria-label="動画閲覧から場面を選ぶ方法を拡大"><img src="images/note-pick.svg" width="1080" height="2140" alt="動画閲覧から場面を選ぶ方法。赤枠の番号は下の説明と対応します。" loading="lazy"></a><figcaption><strong>動画閲覧から場面を選ぶ方法</strong><ol><li>「戦術ノート」を展開します。</li><li>選択件数を確認して「選択した○件でノートを作成」を押します。ノートから選びに来た場合は「選択した○件を追加」です。</li><li>左のチェックは添付用、場面カードは再生用です。公開済みの場面を選びます。</li></ol></figcaption></figure>
+<figure class="sbg-shot"><a href="images/note-attachments.svg" target="_blank" rel="noopener" aria-label="添付場面・画像・行動タスクを拡大"><img src="images/note-attachments.svg" width="1080" height="1920" alt="添付場面・画像・行動タスク。赤枠の番号は下の説明と対応します。" loading="lazy"></a><figcaption><strong>添付場面・画像・行動タスク</strong><ol><li>「動画閲覧から場面を選ぶ」で場面を追加します。</li><li>場面ごとの指導コメントを入力できます。</li><li>図や写真を添付する場合は「画像を選ぶ」を押します。</li><li>「＋ タスクを追加」で実施内容と担当者を設定します。</li></ol></figcaption></figure></div><p class="sbg-next"><a href="#tactics-more">この操作の説明へ戻る</a></p></section>
+
       <section class="sbg-sheet" id="tactics-read" aria-labelledby="tactics-read-title">
-        <p class="sbg-eyebrow">06 / READ &amp; RESPOND</p><h2 id="tactics-read-title">ノートを読み、確認・質問を返す</h2>
+        <p class="sbg-eyebrow">06 / READ &amp; RESPOND</p><h2 id="tactics-read-title">ノートを読み、確認・質問を返す</h2><p class="sbg-no-print sbg-image-link"><a href="#screens-tactics-read">番号付きの実画面を見る</a></p>
         <div class="sbg-meta"><span>保護者以外のメンバー</span><span>確認の登録：そのノートの確認対象者</span></div>
         <div class="sbg-route"><b>ホーム</b><span>→</span><b>戦術ノート</b><span>→</span><b>対象ノート</b><span>→</span><b>確認・質問・タスクを開く</b></div>
         <ol class="sbg-steps">
@@ -343,6 +377,8 @@
         <p class="sbg-small">ノートの編集・削除は、監督・管理者または作成者が行えます。スタッフ・キャプテンでも、他の人が作成したノートを一律に編集できるわけではありません。</p>
         <p class="sbg-next">困ったら <a href="#faq">Q＆A</a>、講習では <a href="#workshop">練習課題</a>を使えます。</p>
       </section>
+
+      <section class="sbg-sheet sbg-gallery-page" id="screens-tactics-read" aria-labelledby="screens-tactics-read-title"><p class="sbg-eyebrow">実画面 / ANDROID</p><h2 id="screens-tactics-read-title">ノートの動画場面を確認する</h2><p class="sbg-small">Android開発版・練習用データ（2026年10月22日撮影）。赤枠と番号は押す場所の目印です。番号は各画像内で対応します。画像を押すと拡大できます。</p><div class="sbg-shots sbg-shots--single"><figure class="sbg-shot"><a href="images/note-play.svg" target="_blank" rel="noopener" aria-label="ノートに添付された場面を見るを拡大"><img src="images/note-play.svg" width="1080" height="1860" alt="ノートに添付された場面を見る。赤枠の番号は下の説明と対応します。" loading="lazy"></a><figcaption><strong>ノートに添付された場面を見る</strong><ol><li>場面カードを押して、コメントと動画を確認します。確認・質問・完了報告は本文の手順で別に登録します。</li></ol></figcaption></figure></div><p class="sbg-next"><a href="#tactics-read">この操作の説明へ戻る</a></p></section>
       <section class="sbg-sheet" id="faq" aria-labelledby="faq-title">
         <p class="sbg-eyebrow">Q&amp;A / ACCOUNT &amp; MEMBERS</p><h2 id="faq-title">困ったとき：参加・役割</h2>
         <p>質問を押すと回答を開けます。PDFでは回答をすべて掲載しています。</p>
@@ -427,7 +463,7 @@
         <div class="sbg-example"><strong>相談文の例</strong><br>自分の役割は一般部員です。「動画」→「動画編集（タグ付け）」を開きましたが、「新規追加」がありません。動画追加の許可があるか確認をお願いします。</div>
         <h3>アプリのサポートへ相談するとき</h3>
         <p>設定の「法務・サポート」→「Webお問い合わせ」、または<a href="https://sharprise.jp/inquiry/inquiry_top.html">SharpRiseのお問い合わせページ</a>を利用できます。端末のOS、アプリのバージョン、操作した日時、表示されたエラーを添えると状況を伝えやすくなります。パスワードや他の人の個人情報は送らないでください。</p>
-        <div class="sbg-callout"><strong>この資料について</strong><p>2026年10月21日時点の現行画面を基にした初版・確認用です。端末・役割・設定・アプリのバージョンにより表示は異なります。操作案内図は画面の見つけ方を示すもので、実画面のスクリーンショットではありません。公開前にAndroid・iOSの配布版で照合します。</p></div>
+        <div class="sbg-callout"><strong>この資料について</strong><p>本文は現行ソースと照合し、2026年10月22日にAndroid開発版の実画面を追加しました。掲載データ・人物名・動画は練習用です。画像は操作箇所に合わせて表示範囲を切り出し、番号・赤枠を重ねています。端末・役割・設定・アプリの版により表示は異なります。実際の通知受信とiOS・配布版の表示は、利用する端末で確認してください。</p></div>
       </section>
     </main>
   </div>
