@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["83427FXVCY.com.sharprise.smartbukatsu"],
+        "components": [
+          { "/": "/smartbukatsu/invite/" },
+          { "/": "/smartbukatsu/invite" }
+        ]
+      }
+    ]
+  }
+}

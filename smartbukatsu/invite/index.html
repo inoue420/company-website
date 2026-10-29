@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#081f33">
+  <title>チームへの招待｜Smart BUKATSU</title>
+  <link rel="stylesheet" href="/reset.css">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/smartbukatsu-lp.css">
+  <link rel="stylesheet" href="invite.css">
+  <script src="invite.js" defer></script>
+</head>
+<body>
+  <header class="l-header sb-site-header">
+    <div class="s-headPrimary">
+      <div class="c-primaryLogo"><a href="/" aria-label="SharpRise トップページ"><img src="/img/Logo2.png" alt="SharpRise"></a></div>
+      <nav class="c-globalNav" aria-label="メインナビゲーション"><ul class="c-globalNav_list">
+        <li><a class="m-globalNav_listLink" href="/company/company.html">会社概要</a></li>
+        <li><a class="m-globalNav_listLink" href="/business/business.html">事業内容</a></li>
+        <li><a class="m-globalNav_listLink m-listLink_on" href="/smartbukatsu/">Smart BUKATSU</a></li>
+      </ul></nav>
+      <div class="c-primarySub"><a class="m-urgeInquiry_btn" href="/inquiry/inquiry_top.html">お問い合わせ</a></div>
+      <button class="c-navIcon" type="button" aria-label="メニューを開閉する" aria-expanded="false"><span aria-hidden="true"></span></button>
+    </div>
+  </header>
+  <main class="sb-lp sb-invite">
+    <section class="sb-section sb-section--soft" aria-labelledby="invite-title">
+      <div class="sb-wrap">
+        <div class="sb-section-head">
+          <p class="sb-kicker">Smart BUKATSU</p>
+          <h1 id="invite-title">チームへの招待が<br>届いています。</h1>
+          <p id="invite-intro">はじめての方は、アプリの取得とチーム参加の2段階で進めます。アプリをお持ちの方は②へ。</p>
+        </div>
+        <p id="invite-error" role="alert" hidden>招待コードを確認できませんでした。送信者から届いた招待リンクを開き直してください。本文のコードを使って参加することもできます。</p>
+        <noscript><p>リンクからの自動入力にはJavaScriptが必要です。アプリ取得後、招待文のコードをコピーして「新規登録」または「招待コードで参加」へ入力してください。</p></noscript>
+        <div class="sb-invite__steps">
+          <section class="sb-invite__step" aria-labelledby="download-title">
+            <h2 id="download-title">① アプリをインストール</h2>
+            <p>お使いのスマートフォンのストアを選んでください。</p>
+            <div class="sb-invite__actions">
+              <a class="sb-btn sb-btn--primary" id="android-store" href="https://play.google.com/store/apps/details?id=com.sharprise.smartbukatsu">Android：Google Play</a>
+              <a class="sb-btn sb-btn--primary" id="ios-store" href="https://apps.apple.com/jp/app/smart-bukatsu/id6764191653">iPhone：App Store</a>
+            </div>
+            <p>インストールが終わったら、このページへ戻って②へ進んでください。元のLINE・メールの参加リンクをもう一度押しても進めます。</p>
+          </section>
+          <section class="sb-invite__step" id="join-step" aria-labelledby="join-title">
+            <h2 id="join-title">② アプリを開いてチームに参加</h2>
+            <p>下のボタンから開くと、招待コードが自動入力されます。</p>
+            <div class="sb-invite__actions"><a class="sb-btn sb-btn--primary" id="open-app" hidden>アプリを開いて参加する</a></div>
+            <p>初めての方は「新規登録」で名前・メールアドレス・パスワードを入力し、利用条件の確認と確認メールの手続きを進めます。アカウントをお持ちの方はログインし、「参加する」を押してください。</p>
+            <p>Androidでコードが引き継がれている場合は、そのまま登録できます。iPhoneは、取得後にこのページのボタンか元の参加リンクを押してください。</p>
+          </section>
+        </div>
+        <section class="sb-invite__step" aria-labelledby="fallback-title">
+          <h2 id="fallback-title">自動入力されないとき</h2>
+          <p>アプリを最新版に更新してください。LINEの画面内で開けない場合は、メニューからSafariやChromeなどの外部ブラウザで開いてください。</p>
+          <p id="code-row" hidden>招待コード：<strong id="invite-code"></strong></p>
+          <button class="sb-btn sb-btn--primary" type="button" id="copy-code" hidden>招待コードをコピー</button>
+          <p id="copy-status" role="status" aria-live="polite"></p>
+          <p>アプリの「新規登録」→「部員として参加」、またはログイン後にホーム上部のチーム名→「招待コードで参加」へ入力してください。英字の大文字・小文字を区別します。</p>
+          <p>このページを開いただけではチームへの参加は確定しません。</p>
+          <p><a href="/smartbukatsu/guide/#members">参加手順の詳しい説明を見る</a></p>
+        </section>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="c-footSitemap">
+      <div class="c-footLogo"><a href="/"><img src="/img/Logo2.png" alt="SharpRise"></a></div>
+      <section><h3>会社について</h3><ul><li><a href="/company/company.html">会社概要</a></li><li><a href="/business/business.html">事業内容</a></li></ul></section>
+      <section><h3>Smart BUKATSU</h3><ul>
+        <li><a href="/smartbukatsu/">サービス紹介</a></li><li><a href="/smartbukatsu/guide/">操作ガイド・Q＆A</a></li>
+        <li><a href="/smartbukatsu/terms.html">利用規約</a></li><li><a href="/smartbukatsu/privacy.html">プライバシーポリシー</a></li><li><a href="/smartbukatsu/account-deletion.html">アカウント削除</a></li>
+      </ul></section>
+      <section><h3>サポート</h3><ul><li><a href="/inquiry/inquiry_top.html">お問い合わせ</a></li><li><a href="/privacypolicy/privacypolicy.html">SharpRiseプライバシーポリシー</a></li></ul></section>
+    </div>
+    <div class="c-footMeta"><p class="c-footMeta_copy">©2024 SharpRise</p></div>
+  </footer>
+</body>
+</html>
