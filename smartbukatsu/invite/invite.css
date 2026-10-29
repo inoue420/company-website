@@ -1,0 +1,18 @@
+/* Invitation layout; colors, buttons, header and footer use the shared site CSS. */
+.sb-invite .sb-wrap { max-width: 880px; }
+.sb-invite .sb-section { padding-top: 60px; }
+.sb-invite h1 { font-size: clamp(3.2rem, 6vw, 4.8rem); line-height: 1.35; }
+.sb-invite p { margin-top: 16px; font-size: 1.5rem; line-height: 1.9; }
+.sb-invite__step { padding: 28px; margin-top: 24px; border: 1px solid var(--sb-line); border-radius: 18px; background: #fff; }
+.sb-invite__step h2 { font-size: 2.1rem; line-height: 1.5; }
+.sb-invite__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 24px; }
+.sb-invite #invite-code { font-size: 2.2rem; letter-spacing: .12em; user-select: all; }
+.sb-invite #copy-code { margin-top: 16px; cursor: pointer; }
+.sb-invite a:not(.sb-btn) { color: var(--sb-teal-dark); text-decoration: underline; }
+.sb-invite [hidden] { display: none !important; }
+.sb-invite #invite-error { padding: 20px; border: 1px solid var(--sb-line); background: #fff; }
+@media (max-width: 600px) {
+  .sb-invite .sb-section { padding-top: 32px; }
+  .sb-invite__step { padding: 22px 18px; }
+  .sb-invite__actions { flex-direction: column; }
+}

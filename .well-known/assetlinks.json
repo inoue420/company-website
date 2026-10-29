@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.sharprise.smartbukatsu",
+      "sha256_cert_fingerprints": [
+        "4A:B5:13:36:B9:C3:90:41:50:A6:E3:CE:4F:7B:6C:F2:78:FA:39:90:B8:05:7F:D1:E1:85:86:EA:6E:06:D3:31"
+      ]
+    }
+  }
+]
