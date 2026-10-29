@@ -8,7 +8,7 @@
   <title>はじめての操作ガイド・Q＆A｜Smart BUKATSU</title>
   <link rel="stylesheet" href="../../style.css">
   <link rel="stylesheet" href="../../smartbukatsu-lp.css">
-  <link rel="stylesheet" href="guide.css?v=20261022-mobile-2">
+  <link rel="stylesheet" href="guide.css?v=20261029-invitations">
   <script src="guide.js" defer></script>
 </head>
 <body class="sbg-body">
@@ -43,6 +43,8 @@
       <a href="#start">まずはここから</a>
       <a href="#checklist">導入チェックリスト</a>
       <a href="#members">01 メンバー招待・参加</a>
+      <a href="#members-join">初めて登録する方</a>
+      <a href="#members-existing">アカウントをお持ちの方</a>
       <a href="#permissions">役割・個別権限の設定</a>
       <a href="#calendar">02 スケジュール作成</a>
       <a href="#calendar-more">複数日・添付・編集</a>
@@ -57,6 +59,7 @@
       <a href="#tactics-more">画像・行動タスク</a>
       <a href="#tactics-read">確認・質問・完了報告</a>
       <a href="#faq">困ったときのQ＆A</a>
+      <a href="#faq-invitation-links">招待リンクで困ったとき</a>
       <a href="#workshop">講習用の練習課題</a>
       <a href="#glossary">用語・お問い合わせ</a>
     </nav>
@@ -67,7 +70,7 @@
         <p class="sbg-lead">招待から、連絡・予定・動画の活用まで。<br>スマートフォンを操作しながら、ひとつずつ進めましょう。</p>
         <div class="sbg-meta"><span>管理者・スタッフ</span><span>キャプテン・一般部員</span><span>保護者</span></div>
         <div class="sbg-flow" aria-label="導入の流れ">
-          <div><em>最初の準備</em><strong>参加と役割</strong>招待コードで参加し、必要な役割を設定します。</div>
+          <div><em>最初の準備</em><strong>参加と役割</strong>招待文のリンクから参加し、必要な役割を設定します。</div>
           <div><em>毎日の運用</em><strong>予定と連絡</strong>練習予定を登録し、連絡が届くことを確認します。</div>
           <div><em>指導への活用</em><strong>動画とノート</strong>場面を切り抜き、見るポイントを共有します。</div>
         </div>
@@ -77,7 +80,7 @@
           <div class="sbg-card"><h4>招待された部員・保護者の方</h4><p><a href="#members-join">初めて参加する手順</a>→カレンダー・全体連絡→動画閲覧の順に読みます。戦術ノートは保護者には表示されません。</p></div>
         </div>
         <div class="sbg-callout"><strong>最初は「1人・1件・1場面」で試しましょう</strong><p>招待を1人、予定と連絡を各1件、動画の場面を1つ。少ない量で操作と見え方を確認してから、チーム全体へ広げます。</p></div>
-        <p class="sbg-small">実画面追加：2026年10月22日 / 対象：アプリ1.1.3の現行ソース。掲載画像はAndroid開発版を練習用データで撮影したものです。赤枠・番号で押す場所を示しています。iOSや配布版では表示が異なる場合があります。</p>
+        <p class="sbg-small">招待・参加の本文改定：2026年10月29日。掲載画像は2026年10月22日、アプリ1.1.3のAndroid開発版を練習用データで撮影しました。新しい招待ボタンは画像に含まれません。赤枠・番号は操作場所の目印です。iOSや利用中の版では表示が異なる場合があります。</p>
       </section>
 
       <section class="sbg-sheet" id="checklist" aria-labelledby="checklist-title">
@@ -86,7 +89,7 @@
         <div class="sbg-route" aria-label="ホーム画面の目印"><b>ホーム上部のチーム名</b><span>／</span><b>ベル：通知センター</b><span>／</span><b>歯車：設定</b></div>
         <p class="sbg-small">カレンダー・動画・戦術ノートはホーム上部の横並びのメニューにあります。見当たらないときは横にスクロールします。表示は役割により異なります。</p>
         <h3>用意するもの</h3>
-        <ul><li>アプリを利用できるスマートフォンとインターネット接続。</li><li>確認メールを受け取れるメールアドレス。招待される方はチームの招待コード。</li><li>動画を試す場合は、参加者が再生できる動画URLと、短い練習用の映像。</li></ul>
+        <ul><li>アプリを利用できるスマートフォンとインターネット接続。</li><li>確認メールを受け取れるメールアドレス。招待される方は、管理者から届いた招待文（参加リンク・招待コード）。</li><li>動画を試す場合は、参加者が再生できる動画URLと、短い練習用の映像。</li></ul>
         <h3>管理者の導入チェック</h3>
         <ul class="sbg-checks">
           <li>自分のメール確認を終え、正しいチームのホームを開いた。</li>
@@ -102,10 +105,10 @@
         <div class="sbg-print-only">
           <h3>目次・必要なページを開く</h3>
           <table><tbody>
-            <tr><td><a href="#members">01 招待・参加・権限</a>：p.3-6</td><td><a href="#calendar">02 スケジュール</a>：p.7-10</td></tr>
-            <tr><td><a href="#communication">03 全体連絡・通知</a>：p.11-14</td><td><a href="#video-create">04 動画登録・切り抜き</a>：p.15-20</td></tr>
-            <tr><td><a href="#video-watch">05 動画閲覧</a>：p.21-24</td><td><a href="#tactics">06 戦術ノート</a>：p.25-30</td></tr>
-            <tr><td><a href="#faq">困ったときのQ＆A</a>：p.31-34</td><td><a href="#workshop">講習の課題</a>：p.35 ／ <a href="#glossary">用語</a>：p.36</td></tr>
+            <tr><td><a href="#members">01 招待・参加・権限</a>：p.3-8</td><td><a href="#calendar">02 スケジュール</a>：p.9-12</td></tr>
+            <tr><td><a href="#communication">03 全体連絡・通知</a>：p.13-16</td><td><a href="#video-create">04 動画登録・切り抜き</a>：p.17-22</td></tr>
+            <tr><td><a href="#video-watch">05 動画閲覧</a>：p.23-26</td><td><a href="#tactics">06 戦術ノート</a>：p.27-32</td></tr>
+            <tr><td><a href="#faq">困ったときのQ＆A</a>：p.33-37</td><td><a href="#workshop">講習の課題</a>：p.38 ／ <a href="#glossary">用語</a>：p.39</td></tr>
           </tbody></table>
         </div>
         <p class="sbg-next">次は <a href="#members">01 メンバーを招待して参加する</a></p>
@@ -116,20 +119,50 @@
         <div class="sbg-meta"><span>招待：監督・管理者・スタッフ</span><span>参加：招待された方全員</span></div>
         <h3>招待する方の操作</h3>
         <div class="sbg-route"><b>ホームの歯車</b><span>→</span><b>所属チーム情報・入部用コード</b><span>→</span><b>部員を招待（LINE・メールなど）</b></div>
-        <p>共有画面で送信先を選びます。招待文にはアプリ取得・参加リンク、招待コード、2段階の手順が自動で入ります。「招待文をコピー」や従来の「招待コードをコピー」も使えます。相手が参加すると、部員リストに自動で追加されます。</p>
-        <h3 id="members-join">初めて参加する方の操作</h3>
         <ol class="sbg-steps">
-          <li><strong class="sbg-step-title">① 招待文の取得リンクからアプリを入れます</strong><p>案内ページでGoogle PlayまたはApp Storeを選びます。すでにアプリをお持ちの方は②へ進めます。</p></li>
-          <li><strong class="sbg-step-title">② 元の招待文に戻り、参加リンクを押します</strong><p>招待コードが入力された部員登録画面が開きます。Androidで取得時のコードが引き継がれた場合は、そのまま登録できます。iPhoneは取得後に参加リンクをもう一度押してください。案内ページの「アプリを開いて参加する」も使えます。初めての方は表示名を入力します。スタッフ・保護者も部員として登録し、参加後に管理者が役割を変更します。</p></li>
-          <li><strong class="sbg-step-title">メールアドレス・パスワードを入力し、登録します</strong><p>パスワードは6文字以上です。表示された年齢・同意条件、利用規約、プライバシーポリシーを確認し、「登録して始める」を押します。</p></li>
-          <li><strong class="sbg-step-title">確認メールのリンクを開き、アプリに戻ります</strong><p>登録したメールを確認し、リンクを開きます。その後アプリへ戻り、「確認状態を再取得」を押します。メール確認が終わるまでは主要機能を利用できません。</p></li>
-          <li><strong class="sbg-step-title">所属チームと表示名を確認します</strong><p>チーム選択が表示されたら、参加したチームを選びます。管理者へ参加できたことと希望する役割を伝えます。</p></li>
+          <li><strong class="sbg-step-title">招待するチームを確認します</strong><p>ホーム上部のチーム名を確認し、設定の「所属チーム情報・入部用コード」を開きます。チーム名と招待コードが読み込まれるまで待ちます。</p></li>
+          <li><strong class="sbg-step-title">「部員を招待（LINE・メールなど）」を押します</strong><p>端末の共有画面でLINE・メールなどのアプリと送信先を選び、内容を確認して送信します。ボタンを押すだけで自動送信されることはありません。</p></li>
+          <li><strong class="sbg-step-title">相手に届いた招待文から参加してもらいます</strong><p>招待文にはチーム名、アプリの取得リンク、参加リンク、招待コードと手順が入ります。参加が終わったら部員リストで確認し、必要な役割・権限を設定します。</p></li>
         </ol>
-        <div class="sbg-callout"><strong>すでにアカウントがある方・リンクで開けない場合</strong><p>参加リンクを開き、「ログイン」で入るとコードがチーム参加へ引き継がれます。「参加する」を押して確定してください。同じメールアドレスで新規登録を繰り返す必要はありません。リンクで開けない場合はアプリを更新し、LINE内なら外部ブラウザで開いてください。招待文のコードをコピーし、新規登録またはホーム上部のチーム名→「招待コードで参加」へ手入力する方法も使えます。</p></div>
-        <p class="sbg-next">次は管理者が <a href="#permissions">役割と必要な権限を設定</a>します。</p>
+        <div class="sbg-callout"><strong>招待文は「取得」→「参加」の2段階です</strong><p>アプリがない方は、招待文の①で取得し、元のメッセージに戻って②の参加リンクを押します。すでにアプリをお持ちの方は②から進めます。リンクを開いただけでは、登録やチーム参加は確定しません。</p></div>
+        <h3>コピーして送りたいとき</h3>
+        <p>「招待文をコピー」で取得・参加リンクとコードをまとめてコピーできます。使いたいアプリへ貼り付け、送信先を確認して送ります。「招待コードをコピー」でコードだけを伝える従来の方法も使えます。</p>
+        <p class="sbg-small">リンクの自動入力には対応版アプリが必要です。利用中の版で入力されない場合は、招待文のコードを手入力できます。ストアに更新がある場合は更新してください。</p>
+        <p class="sbg-next">参加する方は <a href="#members-join">初めて登録する手順</a>、または <a href="#members-existing">既存アカウントで参加する手順</a>へ進みます。</p>
       </section>
 
-      <section class="sbg-sheet sbg-gallery-page" id="screens-members" aria-labelledby="screens-members-title"><p class="sbg-eyebrow">実画面 / ANDROID</p><h2 id="screens-members-title">招待する場所・参加する場所</h2><p class="sbg-small">Android開発版・練習用データ（2026年10月22日撮影）。赤枠と番号は押す場所の目印です。番号は各画像内で対応します。画像を押すと拡大できます。</p><div class="sbg-shots"><figure class="sbg-shot"><a href="images/invite-entry.svg" target="_blank" rel="noopener" aria-label="招待する方：設定の入口を拡大"><img src="images/invite-entry.svg" width="1080" height="840" alt="招待する方：設定の入口。赤枠の番号は下の説明と対応します。" loading="lazy"></a><figcaption><strong>招待する方：設定の入口</strong><ol><li>「所属チーム情報・入部用コード」を開きます。開いた先の「招待コードをコピー」を使います。コードそのものは掲載していません。</li></ol></figcaption></figure>
+      <section class="sbg-sheet" id="members-join" aria-labelledby="members-join-title">
+        <p class="sbg-eyebrow">01 / FIRST REGISTRATION</p><h2 id="members-join-title">初めて登録する方の参加手順</h2>
+        <p>SMARTBUKATSUのアカウントを初めて作る方の手順です。スタッフ・保護者も、まず「部員として参加」で登録し、参加後に管理者が役割を変更します。</p>
+        <ol class="sbg-steps">
+          <li><strong class="sbg-step-title">招待文の①からアプリを取得します</strong><p>案内ページでGoogle PlayまたはApp Storeを選びます。取得済みの方は、次の参加リンクから始めます。</p></li>
+          <li><strong class="sbg-step-title">元の招待文に戻り、②の参加リンクを押します</strong><p>コードが入力された「新規登録」画面が開きます。「部員として参加」と「チームの招待コード」を確認します。案内ページが開いたら「アプリを開いて参加する」を押します。</p></li>
+          <li><strong class="sbg-step-title">表示名・メールアドレス・パスワードを入力します</strong><p>パスワードは6文字以上です。画面の年齢・同意条件、利用規約、プライバシーポリシーを確認し、同意して「登録して始める」を押します。登録成功時に招待先チームへ参加します。</p></li>
+          <li><strong class="sbg-step-title">確認メールのリンクを開き、アプリに戻ります</strong><p>登録したメールを確認し、メール内のリンクを開きます。アプリへ戻って「確認状態を再取得」を押します。メール確認が終わるまでは主要機能を利用できません。</p></li>
+          <li><strong class="sbg-step-title">参加したチームのホームを確認します</strong><p>チーム選択が表示された場合は、参加したチームを選びます。ホームのチーム名と表示名を確認し、管理者へ参加できたことと希望する役割を伝えます。</p></li>
+        </ol>
+        <div class="sbg-callout sbg-callout--note"><strong>iPhoneは取得後に元のメッセージへ戻ります</strong><p>App Storeから取得しただけでは、招待コードは引き継がれません。元の招待文の②をもう一度押してください。AndroidはGoogle Play経由でコードが引き継がれる場合があります。コードが入っていればそのまま登録し、入らなければ②を再タップします。</p></div>
+        <p class="sbg-small">「このメールアドレスは既に登録されています」と出た場合は、新規登録を繰り返さず、既存アカウントでログインします。</p>
+        <p class="sbg-next">アカウントをお持ちの方は <a href="#members-existing">次の参加手順へ</a>。参加後は管理者が <a href="#permissions">役割・権限を設定</a>します。</p>
+      </section>
+
+      <section class="sbg-sheet" id="members-existing" aria-labelledby="members-existing-title">
+        <p class="sbg-eyebrow">01 / JOIN WITH YOUR ACCOUNT</p><h2 id="members-existing-title">アカウントをお持ちの方の参加手順</h2>
+        <p>同じメールアドレスで新規登録し直す必要はありません。すでにログイン中の場合は、参加リンクからチーム参加画面へ進みます。</p>
+        <ol class="sbg-steps">
+          <li><strong class="sbg-step-title">招待文の②の参加リンクを押します</strong><p>案内ページが開いたら「アプリを開いて参加する」を押します。未取得の場合はアプリを取得し、元の招待文の②をもう一度押します。</p></li>
+          <li><strong class="sbg-step-title">未ログインなら「ログイン」に切り替えます</strong><p>登録画面が開いても、上部の「ログイン」へ切り替え、登録済みのメールアドレスとパスワードで入ります。招待コードは引き継がれます。メール確認を求められた場合は、確認メールのリンクを開き、アプリへ戻って「確認状態を再取得」を押します。</p></li>
+          <li><strong class="sbg-step-title">「招待コードで参加」の「参加する」を押します</strong><p>「チーム管理」に入力されたコードを招待文と照合し、「参加する」で確定します。参加後、ホーム上部のチーム名を確認します。すでに所属しているチームへの招待では、そのチームへ切り替わります。</p></li>
+        </ol>
+        <h3>途中で閉じた・参加に失敗したとき</h3>
+        <p>受け取った招待は通常、ログインやアプリの再起動をまたいで端末に保持されます。登録・参加に失敗した場合は、表示された原因を確認して再試行してください。「端末へ保存できませんでした」と出た場合は、アプリを開き直した後に元の参加リンクをもう一度押します。</p>
+        <h3>招待を取り消して、通常の画面へ戻るとき</h3>
+        <p>受信した招待の案内にある「この招待を取り消す」を押します。招待コードの保持が解除されます。ログイン中は通常のホームやチーム管理へ戻ります。チーム管理を開くと、通常の所属一覧・チーム作成が表示されます。すでに参加したチームからの退会や、アカウントの削除にはなりません。</p>
+        <div class="sbg-callout"><strong>参加したいチームの招待文を使います</strong><p>別の招待リンクを開くと、新しく受け取った招待へ切り替わります。やり直す場合は、参加したいチームの招待文から②を開いてください。参加中に所属一覧や新規チーム作成が見えない場合は、招待の案内を先に確認します。</p></div>
+        <p class="sbg-next">開けない・コードが入らない場合は <a href="#faq-invitation-links">招待リンクのQ＆A</a>へ。参加後は <a href="#permissions">役割・権限の設定</a>へ進みます。</p>
+      </section>
+
+      <section class="sbg-sheet sbg-gallery-page" id="screens-members" aria-labelledby="screens-members-title"><p class="sbg-eyebrow">実画面 / ANDROID</p><h2 id="screens-members-title">招待する場所・参加する場所</h2><p class="sbg-small">Android開発版・練習用データ（2026年10月22日撮影）。赤枠と番号は押す場所の目印です。番号は各画像内で対応します。画像を押すと拡大できます。</p><div class="sbg-shots"><figure class="sbg-shot"><a href="images/invite-entry.svg" target="_blank" rel="noopener" aria-label="招待する方：設定の入口を拡大"><img src="images/invite-entry.svg" width="1080" height="840" alt="招待する方：設定の入口。赤枠の番号は下の説明と対応します。" loading="lazy"></a><figcaption><strong>招待する方：設定の入口</strong><ol><li>「所属チーム情報・入部用コード」を開きます。対応版では、開いた先の「部員を招待（LINE・メールなど）」または「招待文をコピー」を使います。画像は追加前の入口で、コードそのものは掲載していません。</li></ol></figcaption></figure>
 <figure class="sbg-shot"><a href="images/join-existing.svg" target="_blank" rel="noopener" aria-label="参加する方：既存アカウントの場合を拡大"><img src="images/join-existing.svg" width="970" height="470" alt="参加する方：既存アカウントの場合。赤枠の番号は下の説明と対応します。" loading="lazy"></a><figcaption><strong>参加する方：既存アカウントの場合</strong><ol><li>招待コードの入力欄です。画像は未入力の状態です。</li><li>コードを入力した後に「参加する」を押します。新規登録する方は本文の手順を使います。</li></ol></figcaption></figure></div><p class="sbg-next"><a href="#members">この操作の説明へ戻る</a></p></section>
 
       <section class="sbg-sheet" id="permissions" aria-labelledby="permissions-title">
@@ -382,11 +415,11 @@
       <section class="sbg-sheet" id="faq" aria-labelledby="faq-title">
         <p class="sbg-eyebrow">Q&amp;A / ACCOUNT &amp; MEMBERS</p><h2 id="faq-title">困ったとき：参加・役割</h2>
         <p>質問を押すと回答を開けます。PDFでは回答をすべて掲載しています。</p>
-        <div class="sbg-search sbg-no-print" hidden><label for="faq-search">Q＆A全体を言葉で探す</label><input type="search" id="faq-search" placeholder="例：通知 来ない、タグ、保護者" autocomplete="off"><p class="sbg-small" id="faq-status" role="status" aria-live="polite">全32件の質問を表示しています。</p></div>
-        <details class="sbg-faq" id="faq-invite" data-keywords="招待 入れない 参加できない エラー"><summary>Q01 招待コードを入れても参加できません。</summary><div>大文字・小文字、前後の空白、別チームのコードではないかを確認します。可能なら管理者からコピーしたコードを貼り付けます。解決しない場合は管理者に現在の招待コードを確認してください。<a href="#members">招待・参加の手順へ</a></div></details>
+        <div class="sbg-search sbg-no-print" hidden><label for="faq-search">Q＆A全体を言葉で探す</label><input type="search" id="faq-search" placeholder="例：通知 来ない、タグ、保護者" autocomplete="off"><p class="sbg-small" id="faq-status" role="status" aria-live="polite">全36件の質問を表示しています。</p></div>
+        <details class="sbg-faq" id="faq-invite" data-keywords="招待 入れない 参加できない エラー リンク 自動入力"><summary>Q01 招待コードを入れても参加できません。</summary><div>自動入力された場合も、招待文と同じコードか確認します。大文字・小文字、前後の空白、別チームのコードではないかを確認し、手入力よりコピーを使います。参加の上限や通信エラーの案内が出ていれば、その内容も確認します。解決しない場合は管理者に現在の招待コードを確認してください。<a href="#members">招待・参加の手順へ</a></div></details>
         <details class="sbg-faq" id="faq-email" data-keywords="メール 来ない 届かない"><summary>Q02 確認メールが届きません。</summary><div>迷惑メールフォルダと登録したメールアドレスを確認し、アプリの「確認メールを再送」を試します。短時間に繰り返すと再送できない場合があるため、時間をおいて試してください。</div></details>
         <details class="sbg-faq" id="faq-verified"><summary>Q03 メールのリンクを開いたのに、確認画面のままです。</summary><div>アプリへ戻り「確認状態を再取得」を押します。メール内のリンクを開く操作と、アプリで確認状態を読み直す操作の両方が必要です。</div></details>
-        <details class="sbg-faq" id="faq-existing"><summary>Q04 「このメールアドレスは既に登録されています」と出ます。</summary><div>「ログイン」で既存アカウントへ入ります。ホーム上部のチーム名からチーム選択を開き、「招待コードで参加」を使います。パスワードを忘れた場合は、ログイン画面の再設定案内を使います。</div></details>
+        <details class="sbg-faq" id="faq-existing"><summary>Q04 「このメールアドレスは既に登録されています」と出ます。</summary><div>「ログイン」で既存アカウントへ入ります。招待リンクを開いていればコードがチーム参加へ引き継がれるので、「参加する」を押します。入力されない場合は、ホーム上部のチーム名→「招待コードで参加」へ招待文のコードを入れます。パスワードを忘れた場合は、ログイン画面の再設定案内を使います。</div></details>
         <details class="sbg-faq" id="faq-guardian-join"><summary>Q05 スタッフ・保護者は、どこから登録しますか。</summary><div>招待された方は「新規登録」→「部員として参加」から参加し、管理者が参加後に「スタッフ」「保護者」へ変更します。「管理者として作成」は新しいチームを作る入口です。</div></details>
         <details class="sbg-faq" id="faq-permission"><summary>Q06 説明にあるボタンが見つかりません。</summary><div>ホーム上部のチーム名、現在の役割、個別権限を確認します。ホームのメニューは横にスクロールできます。キーボードを閉じて下まで確認し、それでも表示されない場合は管理者へ相談してください。<a href="#permissions">役割・権限の説明へ</a></div></details>
         <details class="sbg-faq" id="faq-limited"><summary>Q07 動画追加だけ任せたい場合も、スタッフに変更しますか。</summary><div>一般部員・保護者には「動画追加」と「タグ編集」を別々に許可できます。一般部員は「カレンダー編集」「戦術ノート投稿」も個別設定できます。必要な操作に応じて管理者が設定してください。</div></details>
@@ -429,11 +462,19 @@
         <details class="sbg-faq" id="faq-note-playback"><summary>Q32 ノートに付いていた場面が再生できなくなりました。</summary><div>元動画が削除・変更されていないか確認します。ノートに場面を添付しても、元動画のコピーを別に保存するわけではありません。作成者に利用できる場面への差し替えを依頼してください。</div></details>
       </section>
 
+      <section class="sbg-sheet" id="faq-invitation-links" aria-labelledby="faq-invitation-links-title">
+        <p class="sbg-eyebrow">Q&amp;A / INVITATION LINKS</p><h2 id="faq-invitation-links-title">困ったとき：招待リンク・引き継ぎ</h2>
+        <details class="sbg-faq" id="faq-invite-browser" data-keywords="招待 リンク LINE メール ブラウザ 開けない 自動入力"><summary>Q33 招待リンクを押してもアプリが開かず、コードも入りません。</summary><div>案内ページの「アプリを開いて参加する」を押します。LINEなどのアプリ内で開けない場合は、メニューからSafari・Chromeなどの外部ブラウザで開き直します。ストアにアプリの更新があれば更新してください。それでも開けない場合は、招待文のコードをコピーします。初めての方は「新規登録」→「部員として参加」のコード欄へ、既存の方はログイン後にホーム上部のチーム名→「招待コードで参加」へ入力します。リンク先でコードが無効と出る場合は、管理者から招待文を送り直してもらいます。</div></details>
+        <details class="sbg-faq" id="faq-invite-install" data-keywords="招待 iPhone Android App Store Google Play インストール 取得 引き継ぎ 再タップ"><summary>Q34 アプリを取得しましたが、招待コードが入力されていません。</summary><div>元のLINE・メールなどの招待文に戻り、②の参加リンクをもう一度押してください。iPhoneは取得後の再タップが必要です。AndroidもGoogle Play経由の引き継ぎが利用できない環境では、再タップまたはコードの手入力を使います。コードがすでに入っている場合は、そのまま登録・参加の操作へ進めます。</div></details>
+        <details class="sbg-faq" id="faq-invite-cancel" data-keywords="招待 取り消す キャンセル 再起動 保存 所属チーム 一覧 作成 消えた"><summary>Q35 アプリを開き直しても招待が表示されます。取り消せますか。</summary><div>登録・参加を終えるまで招待は通常、端末に保持されます。別の操作へ戻る場合は「この招待を取り消す」を押してください。ログイン中は通常のホームやチーム管理へ戻れます。チーム管理を開くと、所属一覧・新規チーム作成が表示されます。取り消しても既存チームから退会することはありません。再開するときは、参加したいチームの招待リンクをもう一度開きます。端末への保存エラーが出た場合も、再起動後にリンクを開き直してください。</div></details>
+        <details class="sbg-faq" id="faq-invite-share" data-keywords="招待 共有 コピー ボタン 押せない 無効 スタッフ 管理者"><summary>Q36 「部員を招待」が見つからない／押せません。</summary><div>招待できるのは監督・管理者・スタッフです。正しいチームの設定で「所属チーム情報・入部用コード」を開いてください。チーム名とコードの読み込み中は押せないため、通信状態を確認して待ちます。旧版では従来の「招待コードをコピー」を使えます。ストアに更新がある場合は更新してください。<a href="#members">招待する手順へ</a></div></details>
+      </section>
+
       <section class="sbg-sheet" id="workshop" aria-labelledby="workshop-title">
         <p class="sbg-eyebrow">PRACTICE TOGETHER</p><h2 id="workshop-title">講習用：一緒に操作する4つの課題</h2>
         <p>管理側と参加者側の2つのアカウントを使い、各課題で相手側の画面を確認します。全体で30〜45分を目安に、動画は準備済みの短い映像を使います。</p>
         <div class="sbg-table-wrap"><table><caption>講師が進行し、参加者も自分で操作する練習</caption><thead><tr><th scope="col">課題・目安</th><th scope="col">実際に行うこと</th><th scope="col">完了の確認</th></tr></thead><tbody>
-          <tr><th scope="row">1 参加と役割<br>約10分</th><td>管理側がコードを共有。参加者が登録・メール確認。管理側が役割と必要な権限を設定します。</td><td>参加者が同じチームのホームを開ける。<a href="#members">01へ</a></td></tr>
+          <tr><th scope="row">1 参加と役割<br>約10分</th><td>招待文を共有し、リンクから登録・メール確認またはログインして参加。管理側が役割・権限を設定します。</td><td>参加者が同じチームのホームを開ける。<a href="#members">01へ</a></td></tr>
           <tr><th scope="row">2 予定<br>約5分</th><td>練習予定を1件登録。参加者が同じ日付を開き、時間と持ち物を読みます。</td><td>参加者が日時・集合場所を説明できる。<a href="#calendar">02へ</a></td></tr>
           <tr><th scope="row">3 連絡と通知<br>約5〜10分</th><td>共有範囲・通知先を設定。参加者も通知をONにし、管理側がテスト投稿します。</td><td>投稿者以外が通知から連絡を開ける。<a href="#communication">03へ</a></td></tr>
           <tr><th scope="row">4 動画とノート<br>約10〜20分</th><td>タグを1件記録・公開。閲覧用プロジェクトで再生し、ノートに添付。参加者が確認を返します。</td><td>場面を再生でき、確認状態が変わる。<a href="#video-create">04〜06へ</a></td></tr>
@@ -463,7 +504,7 @@
         <div class="sbg-example"><strong>相談文の例</strong><br>自分の役割は一般部員です。「動画」→「動画編集（タグ付け）」を開きましたが、「新規追加」がありません。動画追加の許可があるか確認をお願いします。</div>
         <h3>アプリのサポートへ相談するとき</h3>
         <p>設定の「法務・サポート」→「Webお問い合わせ」、または<a href="https://sharprise.jp/inquiry/inquiry_top.html">SharpRiseのお問い合わせページ</a>を利用できます。端末のOS、アプリのバージョン、操作した日時、表示されたエラーを添えると状況を伝えやすくなります。パスワードや他の人の個人情報は送らないでください。</p>
-        <div class="sbg-callout"><strong>この資料について</strong><p>本文は現行ソースと照合し、2026年10月22日にAndroid開発版の実画面を追加しました。掲載データ・人物名・動画は練習用です。画像は操作箇所に合わせて表示範囲を切り出し、番号・赤枠を重ねています。端末・役割・設定・アプリの版により表示は異なります。実際の通知受信とiOS・配布版の表示は、利用する端末で確認してください。</p></div>
+        <div class="sbg-callout"><strong>この資料について</strong><p>招待・参加の本文とQ＆Aは2026年10月29日に現行ソースと照合して改定しました。画像は2026年10月22日のAndroid開発版で、新しい招待ボタンの追加前です。掲載データ・人物名・動画は練習用です。操作箇所を切り出し、番号・赤枠を重ねています。端末・役割・設定・アプリの版により表示は異なります。実際の通知受信とiOS・配布版の表示は、利用する端末で確認してください。</p></div>
       </section>
     </main>
   </div>

@@ -156,6 +156,9 @@
   .sbg-cover .sbg-callout { margin-top: 8mm; }
   .sbg-body a { color: #14486c; }
   .sbg-sheet h2, .sbg-sheet h3 { break-after: avoid; }
+  /* Keep the workshop instructions and closing note on the same printed page. */
+  #workshop .sbg-callout { margin: 3mm 0; }
+  #workshop .sbg-checks li { margin: 1mm 0; }
   .sbg-gallery-page > .sbg-small { font-size: 8pt; line-height: 1.6; }
   .sbg-shots { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6mm; margin: 5mm 0 0; }
   .sbg-shots--single { grid-template-columns: minmax(0, 140mm); }
