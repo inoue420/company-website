@@ -514,6 +514,202 @@
 .sb-video-list strong { font-size: 1.25rem; }
 .sb-video-list small { margin-top: 2px; color: rgba(255,255,255,.58); font-size: 1rem; }
 
+/* ---------- Video tagging introduction ---------- */
+.sb-hero__resource { text-align: center; }
+
+.sb-video__panel > .sb-btn { margin-top: 24px; text-align: center; }
+
+.sb-video-tagging .sb-btn--primary { color: var(--sb-navy); }
+.sb-video-tagging .sb-btn--primary:hover { color: #fff; background: var(--sb-navy); }
+
+.sb-hero--video .sb-btn { text-align: center; }
+@media (min-width: 769px) {
+  .sb-hero--video .sb-hero__copy { width: min(570px, 55%); margin-left: auto; }
+  .sb-hero--video .sb-hero__shade {
+    background: linear-gradient(270deg, rgba(8,31,51,.98), rgba(8,31,51,.9) 45%, rgba(8,31,51,.12) 72%);
+  }
+}
+
+@media (max-width: 768px) {
+  .sb-hero--video .sb-hero__media img { object-position: 25% center; }
+}
+
+/* ---------- Free access ---------- */
+.sb-free .sb-feature__grid { grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); }
+.sb-free .sb-feature__copy h2 { margin-top: 0; text-wrap: balance; }
+.sb-free .sb-feature__copy > p:not(.sb-feature__index) { font-size: 1.6rem; }
+.sb-free__price {
+  padding: clamp(28px, 4vw, 48px);
+  border-radius: 24px;
+  color: #fff;
+  background: var(--sb-navy);
+}
+.sb-free__price p { font-size: 1.6rem; }
+.sb-free__price strong {
+  display: block;
+  margin-block: 8px 24px;
+  color: var(--sb-teal);
+  font-size: 7.2rem;
+  line-height: 1;
+}
+.sb-free__price strong span { margin-left: .15em; font-size: .4em; }
+.sb-free__price p + p { padding-top: 18px; border-top: 1px solid rgba(255,255,255,.25); }
+
+/* ---------- Video review stories ---------- */
+.sb-story-nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
+.sb-lp .sb-story-nav a {
+  padding: 9px 15px;
+  border: 1px solid var(--sb-line);
+  border-radius: 12px;
+  color: var(--sb-navy);
+  background: #fff;
+  font-size: 1.45rem;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+.sb-video-story {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2.5fr);
+  margin-bottom: 24px;
+  overflow: hidden;
+  scroll-margin-top: 100px;
+  border: 1px solid var(--sb-line);
+  border-radius: 24px;
+  background: #fff;
+}
+.sb-video-story:last-child { margin-bottom: 0; }
+.sb-video-story__problem {
+  padding: clamp(24px, 3vw, 40px);
+  color: #fff;
+  background: var(--sb-navy);
+}
+.sb-video-story__label { color: #096e65; font-size: 1.4rem; font-weight: 800; }
+.sb-video-story__problem .sb-video-story__label { color: #65ddcd; }
+.sb-video-story__problem h3 {
+  margin-block: 12px;
+  font-size: clamp(2.3rem, 2.3vw, 3.1rem);
+  line-height: 1.4;
+  text-wrap: balance;
+}
+.sb-video-story__problem p:last-child { color: #e1ebf1; font-size: 1.6rem; }
+
+.sb-video-story__solution {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 220px);
+  gap: clamp(20px, 3vw, 36px);
+  align-items: start;
+  padding: clamp(24px, 3vw, 40px);
+}
+.sb-video-story__solution--wide { grid-template-columns: minmax(0, 1fr); }
+.sb-video-story__copy { color: var(--sb-text); font-size: 1.6rem; }
+.sb-video-story__copy h4 {
+  margin: 10px 0 16px;
+  color: var(--sb-ink);
+  font-size: clamp(2rem, 2vw, 2.7rem);
+  line-height: 1.45;
+}
+.sb-video-story .sb-video-story__steps { padding-left: 1.4em; }
+.sb-video-story__steps li + li { margin-top: 6px; }
+.sb-video-story__steps + p,
+.sb-video-story__copy .sb-video-story__note { margin-top: 14px; }
+.sb-video-story__note { font-size: 1.4rem; }
+.sb-lp .sb-video-story__link {
+  display: inline-block;
+  margin-top: 16px;
+  color: #096e65;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+.sb-video-story__screen { width: min(100%, 220px); margin: 0 auto; }
+.sb-video-story__screen img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--sb-line); }
+.sb-video-story__screen figcaption { margin-top: 8px; color: var(--sb-text); font-size: 1.4rem; }
+
+.sb-video-assignments {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 8px;
+  list-style: none;
+}
+.sb-video-assignments li {
+  display: grid;
+  padding: 10px 4px;
+  border-top: 3px solid var(--sb-teal-dark);
+  border-radius: 8px;
+  background: var(--sb-soft);
+  color: var(--sb-navy);
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+@media (max-width: 980px) {
+  .sb-free .sb-feature__grid, .sb-video-story { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 620px) {
+  .sb-video-story__solution { grid-template-columns: minmax(0, 1fr); }
+  .sb-video-assignments { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* ---------- Video tagging steps ---------- */
+.sb-video-workflow { scroll-margin-top: 100px; border-bottom: 1px solid var(--sb-line); }
+.sb-video-workflow__example {
+  margin-bottom: 36px;
+  padding: clamp(20px, 3vw, 32px);
+  border: 1px solid var(--sb-line);
+  border-radius: 20px;
+  background: var(--sb-soft);
+}
+.sb-video-workflow__example h3,
+.sb-video-workflow__steps h3 {
+  font-size: clamp(1.9rem, 2vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.45;
+}
+.sb-video-workflow__example p,
+.sb-video-workflow__steps p { color: var(--sb-text); font-size: 1.6rem; }
+.sb-video-workflow .sb-video-workflow__clips {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 12px;
+  margin-block: 16px;
+  list-style: none;
+}
+.sb-video-workflow__clips li {
+  padding: 14px 16px;
+  border-left: 3px solid var(--sb-teal-dark);
+  border-radius: 8px;
+  background: #fff;
+  font-size: 1.6rem;
+}
+.sb-video-workflow__grid {
+  grid-template-columns: minmax(0, 2.5fr) minmax(0, 1fr);
+  align-items: start;
+}
+.sb-video-workflow .sb-video-workflow__steps { padding-inline-start: 2.6rem; }
+.sb-video-workflow__steps > li + li { margin-top: 24px; }
+.sb-video-workflow__steps > li::marker { color: #096e65; font-size: 1.8rem; font-weight: 800; }
+.sb-video-workflow__steps h3 + p { margin-top: 6px; }
+.sb-lp .sb-video-workflow__steps a {
+  display: inline-block;
+  margin-top: 6px;
+  margin-right: 12px;
+  color: #096e65;
+  font-size: 1.45rem;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+.sb-video-workflow__steps .sb-video-workflow__note {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-left: 3px solid var(--sb-teal-dark);
+  background: var(--sb-soft);
+}
+
 /* ---------- Role table ---------- */
 .sb-role-table-wrap { overflow-x: auto; border-radius: 20px; background: #fff; box-shadow: 0 20px 60px rgba(8,31,51,.08); }
 .sb-role-table { width: 100%; min-width: 740px; border-collapse: collapse; font-size: 1.3rem; }
